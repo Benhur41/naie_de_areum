@@ -33,7 +33,7 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 
 | # | 항목 | 현재 상태 | 수정 위치 |
 |---|------|-----------|-----------|
-| 1 | **공식 도메인** | `https://www.example.com/` 임시값 | `index.html`, `robots.txt`, `sitemap.xml` 전체 검색-치환 ⚠ 배포 전 필수 |
+| 1 | **공식 도메인** | `https://nail-de-areum.pages.dev/` 사용 중 | 커스텀 도메인 연결 시 `index.html`, `robots.txt`, `sitemap.xml` 에서 전체 검색-치환 |
 | 2 | **고객 후기** | ⚠ **레이아웃 확인용 예시 문구** (실제 후기 아님) | `#reviews` 섹션 — 실제 후기/키워드로 교체 후 `.sample-notice` 문단 삭제 |
 | 3 | 리뷰 확인 기준일 · 실제 리뷰 수 | 미기재 | `#reviews` `.review-date` |
 | 4 | 네이버 예약 URL | 네이버 지도 검색 링크로 임시 연결 | `class="js-booking"` 링크 href 모두 교체 |
@@ -149,7 +149,7 @@ Pages 프로젝트 → **Custom domains** → 도메인 연결.
 
 ## 7. SEO 체크리스트 (배포 직후)
 
-- [ ] `example.com` 이 파일 어디에도 남아있지 않은지 확인 (`grep -r example.com .`)
+- [ ] 도메인을 바꿨다면 이전 주소가 남아있지 않은지 확인 (`grep -r pages.dev .`)
 - [ ] 예시 후기가 실제 후기로 교체되었는지 확인
 - [ ] https://search.google.com/test/rich-results 에서 구조화 데이터 오류 확인
 - [ ] https://pagespeed.web.dev 에서 모바일 LCP / CLS / INP 측정 (목표: 2.5s / 0.1 / 200ms — 실제 측정 필요)

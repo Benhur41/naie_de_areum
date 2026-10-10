@@ -3,5 +3,5 @@
 User-agent: *
 Allow: /
 
-# TODO(배포 전): 공식 도메인으로 교체
-Sitemap: https://www.example.com/sitemap.xml
+# 커스텀 도메인 연결 시 새 도메인으로 교체
+Sitemap: https://nail-de-areum.pages.dev/sitemap.xml

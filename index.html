@@ -10,9 +10,9 @@
   <!-- JS가 켜져 있으면 첫 렌더링 전에 no-js 표시를 지워 레이아웃 이동(CLS)을 막습니다 -->
   <script>document.documentElement.classList.remove('no-js');</script>
 
-  <!-- TODO(배포 전 필수): 공식 도메인이 정해지면 아래 https://www.example.com/ 을 모두 실제 주소로 교체하세요.
-       (index.html, robots.txt, sitemap.xml 전체 검색-치환. README 'SEO 체크리스트' 참고) -->
-  <link rel="canonical" href="https://www.example.com/">
+  <!-- 현재 공식 주소: https://nail-de-areum.pages.dev/
+       커스텀 도메인을 연결하면 이 주소를 index.html, robots.txt, sitemap.xml 에서 모두 새 도메인으로 바꾸세요. (README 1번 참고) -->
+  <link rel="canonical" href="https://nail-de-areum.pages.dev/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -20,8 +20,8 @@
   <meta property="og:site_name" content="네일드아름 NAIL DE AREUM">
   <meta property="og:title" content="네일드아름 | 대구 손톱연장 · 웨딩네일 프리미엄 네일샵">
   <meta property="og:description" content="대구 대봉교역 앞 프리미엄 네일 스튜디오. 손톱연장 · 웨딩네일 · 이달의 아트.">
-  <meta property="og:url" content="https://www.example.com/">
-  <meta property="og:image" content="https://www.example.com/images/og-image.jpg">
+  <meta property="og:url" content="https://nail-de-areum.pages.dev/">
+  <meta property="og:image" content="https://nail-de-areum.pages.dev/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="네일드아름 로고와 아몬드 쉐입 누드 손톱연장 시술 사진">
@@ -29,7 +29,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="네일드아름 | 대구 손톱연장 · 웨딩네일 프리미엄 네일샵">
   <meta name="twitter:description" content="대구 대봉교역 앞 프리미엄 네일 스튜디오. 손톱연장 · 웨딩네일 · 이달의 아트.">
-  <meta name="twitter:image" content="https://www.example.com/images/og-image.jpg">
+  <meta name="twitter:image" content="https://nail-de-areum.pages.dev/images/og-image.jpg">
 
   <!-- TODO: 서치콘솔/서치어드바이저 소유확인 메타태그가 필요하면 여기에 추가
   <meta name="google-site-verification" content="">
@@ -66,16 +66,16 @@
     "@graph": [
       {
         "@type": "NailSalon",
-        "@id": "https://www.example.com/#salon",
+        "@id": "https://nail-de-areum.pages.dev/#salon",
         "name": "네일드아름",
         "alternateName": ["NAIL DE AREUM", "Nail de AREUM", "nail de areum"],
         "description": "대구 대봉교역 1번 출구 앞에 위치한 프리미엄 네일샵. 손톱연장과 웨딩네일을 중심으로 원톤, 그라데이션, 프렌치, 이달의 아트를 시술합니다.",
-        "url": "https://www.example.com/",
-        "logo": "https://www.example.com/images/apple-touch-icon.png",
+        "url": "https://nail-de-areum.pages.dev/",
+        "logo": "https://nail-de-areum.pages.dev/images/apple-touch-icon.png",
         "image": [
-          "https://www.example.com/images/og-image.jpg",
-          "https://www.example.com/images/hero/daegu-nail-extension-almond-nude-1170.webp",
-          "https://www.example.com/images/extension/daegu-nail-extension-coffin-nude-10-1170.webp"
+          "https://nail-de-areum.pages.dev/images/og-image.jpg",
+          "https://nail-de-areum.pages.dev/images/hero/daegu-nail-extension-almond-nude-1170.webp",
+          "https://nail-de-areum.pages.dev/images/extension/daegu-nail-extension-coffin-nude-10-1170.webp"
         ],
         "address": {
           "@type": "PostalAddress",
@@ -108,11 +108,11 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.example.com/#website",
-        "url": "https://www.example.com/",
+        "@id": "https://nail-de-areum.pages.dev/#website",
+        "url": "https://nail-de-areum.pages.dev/",
         "name": "네일드아름 NAIL DE AREUM",
         "inLanguage": "ko-KR",
-        "publisher": { "@id": "https://www.example.com/#salon" }
+        "publisher": { "@id": "https://nail-de-areum.pages.dev/#salon" }
       }
     ]
   }
