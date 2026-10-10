@@ -472,6 +472,7 @@ address { font-style: normal; }
 .footer-inner { display: grid; gap: 32px; }
 .footer-logo { color: var(--off-white); align-items: flex-start; }
 .footer-desc { font-size: 0.875rem; margin-top: 14px; }
+.footer-address { font-size: 0.8rem; margin-top: 8px; color: var(--sand); line-height: 1.7; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
 .footer-links a { font-size: 0.9rem; text-underline-offset: 4px; display: inline-block; padding: 8px 0; }
 .copyright { font-size: 0.78rem; color: var(--taupe); }

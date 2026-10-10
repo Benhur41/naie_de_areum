@@ -26,47 +26,28 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 
 ---
 
-## 1. 운영자가 채워야 할 정보 (TODO)
+## 1. 매장 정보 · 준비 자료
 
-> 아래 정보는 확인되지 않아 **사이트에 사실처럼 표시하지 않았습니다.** 확인되는 대로 채워주세요.
-> `index.html`에서 `TODO` 를 검색하면 해당 위치가 모두 나옵니다.
+**앞으로 준비할 자료(사진·디자이너·시술 정보 등)는 [`CHECKLIST.md`](CHECKLIST.md) 에 정리되어 있습니다.**
+확인되지 않은 정보는 사이트에 사실처럼 표시하지 않습니다.
 
-| # | 항목 | 현재 상태 | 수정 위치 |
-|---|------|-----------|-----------|
-| 1 | **공식 도메인** | `https://nail-de-areum.pages.dev/` 사용 중 | 커스텀 도메인 연결 시 `index.html`, `robots.txt`, `sitemap.xml` 에서 전체 검색-치환 |
-| 2 | 정확한 도로명 주소 | 위치 설명만 표시 (대봉교역 1번 출구 앞 킹콩쥬스 건물 3층) | `#location` Address + JSON-LD `address.streetAddress`, `postalCode` |
-| 3 | 위도/경도 좌표 | 미기재 | JSON-LD `geo` (네이버/구글 지도에서 확인한 값만) |
-| 4 | 원장님 경력 · 자격 · 사용 제품 | 미기재 | `#story` 섹션 |
-| 5 | 연장 방식(젤/팁 등) · 시술 가능 길이 | 사진에 있는 쉐입(아몬드·코핀·스퀘어)만 기재 | `#extension` |
-| 6 | 웨딩네일 실제 사진 / 가격 | 사진 플레이스홀더, 가격 "상담" | `#bridal`, `#price` |
-| 7 | 이달의 아트 사진 · 가격 | 플레이스홀더 | `#monthly` (아래 3번 참고) |
-| 8 | 시술 소요 시간, 웨딩 예약 권장 시기 | 일반적인 안내 문구 | `#faq` |
+### 매장 정보를 바꿀 때 함께 수정할 곳
+| 정보 | 수정 위치 |
+|---|---|
+| 주소 (대구 중구 명덕로 327, 3층 · 우 41953) | `#location` Address, FAQ "어디에 위치하나요", 푸터 `.footer-address`, JSON-LD `address` |
+| 전화 (0507-1426-9612) | `#location`, FAQ, 푸터, 모바일 하단 바, JSON-LD `telephone` |
+| 영업시간 (월–토 10:00–20:00, 일 휴무) | `#location` Hours, FAQ "예약은 어떻게", 푸터, JSON-LD `openingHoursSpecification` |
+| 네이버 플레이스·예약 | `class="js-booking"` / `class="js-place"` 링크 전체, 리뷰 버튼, JSON-LD `sameAs` |
+| 인스타그램 · 카카오톡 채널 | `#location`, 푸터, FAQ, 이달의 아트·포트폴리오 링크, JSON-LD `sameAs` |
+| 공식 도메인 (현재 `https://nail-de-areum.pages.dev/`) | `index.html`, `robots.txt`, `sitemap.xml` 전체 검색-치환 |
 
-### 반영 완료된 매장 정보
-- 네이버 플레이스(예약): `https://m.place.naver.com/nailshop/1450452988/home` — `class="js-booking"`, `class="js-place"` 링크
-- 전화: 0507-1426-9612 · 인스타그램: @nailde_areum · 영업시간 월–토 10:00–20:00 (일요일 정기 휴무) · 주차 가능 · 반려동물 동반 가능
-- 위 정보를 바꾸면 `#location`, 푸터, 모바일 하단 바, FAQ, `<head>` JSON-LD(`telephone`, `openingHoursSpecification`, `sameAs`, `amenityFeature`)를 함께 수정하세요.
+> 주소·전화·영업시간은 네이버 플레이스, 인스타그램, 구글 비즈니스 프로필과 **똑같이** 맞춰 주세요.
 
-### JSON-LD에 추가할 때 예시
-
+### 위도·경도를 추가할 때 (JSON-LD)
 ```json
-"telephone": "+82-53-000-0000",
-"address": {
-  "@type": "PostalAddress",
-  "streetAddress": "도로명 주소 3층",
-  "addressLocality": "중구",
-  "addressRegion": "대구광역시",
-  "postalCode": "00000",
-  "addressCountry": "KR"
-},
-"geo": { "@type": "GeoCoordinates", "latitude": 35.0, "longitude": 128.0 },
-"openingHoursSpecification": [
-  { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday"], "opens": "10:00", "closes": "20:00" }
-],
-"sameAs": ["https://www.instagram.com/계정명/", "https://naver.me/xxxx"]
+"geo": { "@type": "GeoCoordinates", "latitude": 35.0000, "longitude": 128.0000 }
 ```
-
-> 고객 리뷰 별점(`AggregateRating`)은 자사 사이트 리뷰 리치결과 정책상 넣지 않습니다.
+네이버/구글 지도에서 확인한 실제 값만 넣으세요. 고객 리뷰 별점(`AggregateRating`)은 자사 사이트 리뷰 정책상 넣지 않습니다.
 
 ---
 
