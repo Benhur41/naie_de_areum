@@ -34,15 +34,13 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 | # | 항목 | 현재 상태 | 수정 위치 |
 |---|------|-----------|-----------|
 | 1 | **공식 도메인** | `https://nail-de-areum.pages.dev/` 사용 중 | 커스텀 도메인 연결 시 `index.html`, `robots.txt`, `sitemap.xml` 에서 전체 검색-치환 |
-| 2 | **고객 후기** | ⚠ **레이아웃 확인용 예시 문구** (실제 후기 아님) | `#reviews` 섹션 — 실제 후기/키워드로 교체 후 `.sample-notice` 문단 삭제 |
-| 3 | 리뷰 확인 기준일 · 실제 리뷰 수 | 미기재 | `#reviews` `.review-date` |
-| 4 | 정확한 도로명 주소 | 위치 설명만 표시 (대봉교역 1번 출구 앞 킹콩쥬스 건물 3층) | `#location` Address + JSON-LD `address.streetAddress`, `postalCode` |
-| 5 | 위도/경도 좌표 | 미기재 | JSON-LD `geo` (네이버/구글 지도에서 확인한 값만) |
-| 6 | 원장님 경력 · 자격 · 사용 제품 | 미기재 | `#story` 섹션 |
-| 7 | 연장 방식(젤/팁 등) · 시술 가능 길이 | 사진에 있는 쉐입(아몬드·코핀·스퀘어)만 기재 | `#extension` |
-| 8 | 웨딩네일 실제 사진 / 가격 | 사진 플레이스홀더, 가격 "상담" | `#bridal`, `#price` |
-| 9 | 이달의 아트 사진 · 가격 | 플레이스홀더 | `#monthly` (아래 3번 참고) |
-| 10 | 시술 소요 시간, 웨딩 예약 권장 시기 | 일반적인 안내 문구 | `#faq` |
+| 2 | 정확한 도로명 주소 | 위치 설명만 표시 (대봉교역 1번 출구 앞 킹콩쥬스 건물 3층) | `#location` Address + JSON-LD `address.streetAddress`, `postalCode` |
+| 3 | 위도/경도 좌표 | 미기재 | JSON-LD `geo` (네이버/구글 지도에서 확인한 값만) |
+| 4 | 원장님 경력 · 자격 · 사용 제품 | 미기재 | `#story` 섹션 |
+| 5 | 연장 방식(젤/팁 등) · 시술 가능 길이 | 사진에 있는 쉐입(아몬드·코핀·스퀘어)만 기재 | `#extension` |
+| 6 | 웨딩네일 실제 사진 / 가격 | 사진 플레이스홀더, 가격 "상담" | `#bridal`, `#price` |
+| 7 | 이달의 아트 사진 · 가격 | 플레이스홀더 | `#monthly` (아래 3번 참고) |
+| 8 | 시술 소요 시간, 웨딩 예약 권장 시기 | 일반적인 안내 문구 | `#faq` |
 
 ### 반영 완료된 매장 정보
 - 네이버 플레이스(예약): `https://m.place.naver.com/nailshop/1450452988/home` — `class="js-booking"`, `class="js-place"` 링크
@@ -110,21 +108,32 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 4. 이전 달 사진은 `#portfolio` 의 Nail Art 로 옮기면 콘텐츠가 계속 쌓여 SEO에 도움이 됩니다.
 5. `sitemap.xml` 의 `<lastmod>` 를 수정한 날짜로 바꿉니다.
 
-## 4. 가격 수정
+## 4. 리뷰 갱신 (월 1회 권장)
+
+`index.html` 의 `08 CLIENT REVIEWS` 영역을 수정합니다.
+
+1. 네이버 플레이스 리뷰 탭에서 리뷰 텍스트를 복사해 원하는 리뷰를 고릅니다(연장·웨딩·케어 등 고르게).
+2. `<li>` 하나를 복사해 본문(`<p>`), 시술명(`.review-tag`), 방문일을 바꿉니다.
+   - 작성자 닉네임은 넣지 않습니다. 원문을 발췌할 때 의미가 바뀌지 않게 `…` 로 생략합니다.
+   - 작성자가 게시 중단을 요청하면 바로 삭제하세요.
+3. 키워드 순위(`.review-keywords`)와 기준 문구(리뷰 수·기간·확인일)를 함께 갱신합니다.
+4. 별점/평점 구조화 데이터(`AggregateRating`, `Review`)는 넣지 않습니다(구글 자사 리뷰 정책).
+
+## 5. 가격 수정
 
 `#price` 섹션의 `<dd>` 숫자와 `<head>` JSON-LD의 `hasOfferCatalog` 의 `price` 를 **함께** 수정합니다.
 현재 가격은 매장 메뉴판(운영자 제공 이미지) 기준입니다.
 
 ---
 
-## 5. 로컬에서 미리보기
+## 6. 로컬에서 미리보기
 
 ```bash
 python -m http.server 8080
 ```
 브라우저에서 http://localhost:8080 접속.
 
-## 6. Cloudflare Pages 배포
+## 7. Cloudflare Pages 배포
 
 ### 방법 A — 직접 업로드 (가장 간단)
 1. Cloudflare 대시보드 → **Workers & Pages** → **Create** → **Pages** → **Upload assets**
@@ -147,10 +156,9 @@ Pages 프로젝트 → **Custom domains** → 도메인 연결.
 
 ---
 
-## 7. SEO 체크리스트 (배포 직후)
+## 8. SEO 체크리스트 (배포 직후)
 
 - [ ] 도메인을 바꿨다면 이전 주소가 남아있지 않은지 확인 (`grep -r pages.dev .`)
-- [ ] 예시 후기가 실제 후기로 교체되었는지 확인
 - [ ] https://search.google.com/test/rich-results 에서 구조화 데이터 오류 확인
 - [ ] https://pagespeed.web.dev 에서 모바일 LCP / CLS / INP 측정 (목표: 2.5s / 0.1 / 200ms — 실제 측정 필요)
 - [ ] `https://도메인/robots.txt`, `https://도메인/sitemap.xml` 접속 확인
@@ -176,7 +184,7 @@ Pages 프로젝트 → **Custom domains** → 도메인 연결.
 
 ---
 
-## 8. 기술 메모
+## 9. 기술 메모
 
 - 폰트: Cormorant Garamond(Google Fonts), Pretendard(jsDelivr 동적 서브셋) — 둘 다 SIL OFL 1.1, 상업적 사용 가능
 - 외부 JS 라이브러리 없음. 사진 확대는 네이티브 `<dialog>`, FAQ는 `<details>`

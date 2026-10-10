@@ -515,52 +515,72 @@
 
     <!-- ===================== 08 CLIENT REVIEWS ===================== -->
     <!--
-      ⚠ TODO(필수): 아래 후기와 키워드는 레이아웃 확인용 '예시 문구'입니다. 실제 고객 후기가 아닙니다.
-      공개 배포 전, 네이버 플레이스의 실제 리뷰 통계/키워드와 '게시 동의를 받은' 후기 원문으로 교체하고
-      .sample-notice 문단을 삭제하세요. 평점(AggregateRating) 구조화 데이터는 추가하지 마세요.
+      출처: 네이버 플레이스 방문자 리뷰 (운영자 제공, 2026.10.10 확인)
+      - 작성자 닉네임은 표시하지 않고 출처와 방문일만 표기합니다. 원문 일부 발췌, 이모지 생략.
+      - 작성자가 게시 중단을 요청하면 해당 <li>를 삭제하세요.
+      - 별점/평점(AggregateRating, Review) 구조화 데이터는 추가하지 마세요.
+      교체 방법: README '리뷰 갱신' 참고
     -->
     <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
       <div class="container">
         <p class="section-index">07 — Client Reviews</p>
         <h2 id="reviews-title" class="section-title">
           <span class="en">Kind Words</span>
-          <span class="ko">고객 후기</span>
+          <span class="ko">네이버 방문자 리뷰로 보는 네일드아름</span>
         </h2>
-        <p class="sample-notice">※ 현재 표시된 후기는 디자인 확인용 예시이며, 실제 네이버 플레이스 후기로 교체될 예정입니다.</p>
 
         <div class="review-keywords">
-          <h3 class="sub-title">자주 언급된 키워드</h3>
-          <ul>
+          <h3 class="sub-title">고객님들이 가장 많이 선택한 키워드</h3>
+          <ol>
             <li>“시술이 꼼꼼해요”</li>
-            <li>“디자인이 예뻐요”</li>
-            <li>“매장이 깨끗해요”</li>
-            <li>“상담이 친절해요”</li>
+            <li>“원하는 디자인을 잘해줘요”</li>
+            <li>“친절해요”</li>
             <li>“유지력이 좋아요”</li>
-          </ul>
-          <p class="review-date">리뷰 확인 기준일: <!-- TODO: 실제 확인일 --> 확인 예정</p>
+            <li>“디자인 추천을 잘해줘요”</li>
+          </ol>
+          <p class="review-date">네이버 플레이스 최근 방문자 리뷰 49건(2025.12 – 2026.10) 기준 · 2026.10.10 확인</p>
         </div>
 
         <ul class="review-list">
           <li>
-            <blockquote>
-              <p>연장을 처음 해봤는데 두께가 얇고 자연스러워서 원래 제 손톱 같아요. 쉐입도 손가락에 맞게 잡아주셔서 손이 길어 보여요.</p>
+            <blockquote cite="https://m.place.naver.com/nailshop/1450452988/review/visitor">
+              <p>지금까지 다녀봤던 네일샵들 중에서 제일 섬세하게 해주신 것 같아요. 열손 연장인데 안쪽에서 봤을 때까지 원래 손톱처럼 하나도 티 안 나서 신기했고, 처음부터 마무리까지 쭉 꼼꼼하구 예쁘게 시술해주셔서 너무너무 만족했습니다!</p>
             </blockquote>
-            <p class="review-meta">손톱연장 · 예시 후기</p>
+            <p class="review-meta"><span class="review-tag">열손 연장</span> 네이버 방문자 리뷰 · 2026.07.04 방문</p>
           </li>
           <li>
-            <blockquote>
-              <p>본식 일주일 전에 웨딩네일 받았어요. 드레스 사진 보여드렸더니 펄 톤으로 차분하게 맞춰주셔서 반지 촬영 때 정말 예쁘게 나왔어요.</p>
+            <blockquote cite="https://m.place.naver.com/nailshop/1450452988/review/visitor">
+              <p>물어뜯는 손톱에 한 연장이라 지속력이 걱정이었는데 케어를 정말 정말 꼼꼼히 해주셔서 5주동안 들뜬 곳 없이 유지가 정말 잘 되었어요!! … 쉐입도 엄청 잘 잡아주셔서 손이 예뻐보여요!!</p>
             </blockquote>
-            <p class="review-meta">웨딩네일 · 예시 후기</p>
+            <p class="review-meta"><span class="review-tag">열손 연장 리페어</span> 네이버 방문자 리뷰 · 2026.06.03 방문</p>
           </li>
           <li>
-            <blockquote>
-              <p>매장이 아이보리 톤이라 조용하고 편안해요. 이달의 아트가 매달 바뀌어서 갈 때마다 고르는 재미가 있어요.</p>
+            <blockquote cite="https://m.place.naver.com/nailshop/1450452988/review/visitor">
+              <p>덕분에 웨딩촬영 이쁘게 찍을 수 있었습니다! … 메이크업 선생님도 잘하는 곳 가서 하셨냐고 쉐입이 이쁘다고 한 네일입니다.</p>
             </blockquote>
-            <p class="review-meta">이달의 아트 · 예시 후기</p>
+            <p class="review-meta"><span class="review-tag">웨딩네일</span> 네이버 방문자 리뷰 · 2026.08.08 방문</p>
+          </li>
+          <li>
+            <blockquote cite="https://m.place.naver.com/nailshop/1450452988/review/visitor">
+              <p>인스타에 올리신 영상보고 이거 꼭 결혼식에 해야지 생각하고 바로 해버림. 왕 만족 … 웨딩네일 꼭 네일드아름에서 하세오!!</p>
+            </blockquote>
+            <p class="review-meta"><span class="review-tag">웨딩네일</span> 네이버 방문자 리뷰 · 2026.03.02 방문</p>
+          </li>
+          <li>
+            <blockquote cite="https://m.place.naver.com/nailshop/1450452988/review/visitor">
+              <p>정말 꼼꼼하게 시술해 주셔서 바로 회원권 끊었습니다. 몇년만에 네일인데 앞으로 네일드아름만 이용할것 같아요 … 절대 후회하지 않아요. 퀄리티로 이해가 되더라구요.</p>
+            </blockquote>
+            <p class="review-meta"><span class="review-tag">첫 방문</span> 네이버 방문자 리뷰 · 2026.08.05 방문</p>
+          </li>
+          <li>
+            <blockquote cite="https://m.place.naver.com/nailshop/1450452988/review/visitor">
+              <p>제가 다녀본 샵 중에서는 꼼꼼함 최강입니다. 큐티클 케어부터 컬러 마감 마무리까지 … 여러 샘들이 계셔도 부산스럽지 않고 차분한 분위기라 편안하게 케어를 받을 수 있습니다.</p>
+            </blockquote>
+            <p class="review-meta"><span class="review-tag">케어 · 매장 분위기</span> 네이버 방문자 리뷰 · 2026.03.06 방문</p>
           </li>
         </ul>
-        <a class="btn btn-line js-place" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버 플레이스에서 리뷰 보기</a>
+        <p class="review-note">리뷰는 네이버 플레이스 방문자 리뷰 원문 중 일부를 발췌했습니다.</p>
+        <a class="btn btn-line" href="https://m.place.naver.com/nailshop/1450452988/review/visitor" target="_blank" rel="noopener">네이버 플레이스에서 전체 리뷰 보기</a>
       </div>
     </section>
 

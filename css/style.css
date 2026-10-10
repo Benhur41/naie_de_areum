@@ -394,11 +394,7 @@ address { font-style: normal; }
 
 /* ---------- 08 Reviews ---------- */
 .reviews { background: var(--ivory); }
-.sample-notice {
-  font-size: 0.85rem; color: var(--taupe-text); margin: -12px 0 32px;
-  padding: 10px 14px; border: 1px dashed var(--taupe);
-}
-.review-keywords ul { display: flex; flex-wrap: wrap; gap: 8px; }
+.review-keywords ol { display: flex; flex-wrap: wrap; gap: 8px; }
 .review-keywords li { padding: 8px 16px; border: 1px solid var(--sand); background: var(--off-white); font-size: 0.9rem; }
 .review-keywords .sub-title { margin-top: 0; font-family: var(--sans); font-size: 1rem; font-weight: 600; }
 .review-date { font-size: 0.8rem; color: var(--taupe-text); margin-top: 14px; }
@@ -408,7 +404,9 @@ address { font-style: normal; }
 .review-list blockquote::before {
   content: "“"; display: block; font-family: var(--serif); font-size: 3rem; line-height: 0.6; color: var(--taupe); margin-bottom: 12px;
 }
-.review-meta { font-family: var(--serif); font-style: italic; color: var(--taupe-text); }
+.review-meta { font-size: 0.82rem; color: var(--taupe-text); line-height: 1.6; }
+.review-tag { display: block; font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--charcoal); }
+.review-note { font-size: 0.8rem; color: var(--taupe-text); margin: -24px 0 28px; }
 @media (min-width: 900px) { .review-list { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
 
 /* ---------- 09 FAQ ---------- */
