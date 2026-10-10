@@ -1,0 +1,7 @@
+# NAIL DE AREUM
+# 모든 검색 로봇의 수집을 허용합니다. (Disallow: / 를 넣으면 전체 차단되니 주의)
+User-agent: *
+Allow: /
+
+# TODO(배포 전): 공식 도메인으로 교체
+Sitemap: https://www.example.com/sitemap.xml

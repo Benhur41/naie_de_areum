@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO(배포 전): https://www.example.com/ 을 공식 도메인으로 교체. 원페이지이므로 URL은 1개입니다. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.example.com/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <image:image><image:loc>https://www.example.com/images/hero/daegu-nail-extension-almond-nude-1170.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.example.com/images/extension/daegu-nail-extension-coffin-nude-10-1170.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.example.com/images/wedding/daegu-wedding-nail-pearl-gradient-almond-1170.webp</image:loc></image:image>
+    <image:image><image:loc>https://www.example.com/images/gallery/daegu-nail-short-square-nude-onetone-1170.webp</image:loc></image:image>
+  </url>
+</urlset>
