@@ -42,6 +42,7 @@ body {
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; }
+a[href^="tel:"] { white-space: nowrap; }
 ul, ol, dl, dd, figure, blockquote { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
 h1, h2, h3, p { margin: 0; }
@@ -313,6 +314,7 @@ address { font-style: normal; }
   display: block; font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--taupe-text);
 }
 .gallery-more { margin-top: 40px; }
+.gallery-more a { color: var(--charcoal); text-underline-offset: 3px; }
 @media (min-width: 900px) {
   .gallery { grid-template-columns: repeat(4, 1fr); gap: 40px 24px; }
 }
@@ -344,6 +346,9 @@ address { font-style: normal; }
 .monthly-grid img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
 .monthly-grid h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; margin-top: 16px; }
 .price-tag { font-size: 0.9rem; color: var(--sand); }
+.monthly-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.monthly-actions .btn { flex: 1 1 240px; }
+@media (min-width: 900px) { .monthly-actions .btn { flex: 0 0 auto; } }
 .monthly .btn-line { color: var(--off-white); border-color: var(--off-white); }
 .monthly .btn-line:hover { background: var(--off-white); color: var(--charcoal); }
 .monthly :focus-visible { outline-color: var(--off-white); }
@@ -427,6 +432,8 @@ address { font-style: normal; }
 .info dl div { display: grid; grid-template-columns: 88px 1fr; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .info dt { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--taupe-text); }
 .info dd { font-size: 0.95rem; }
+.info dd small { color: var(--taupe-text); font-size: 0.85rem; }
+.info dd a { text-underline-offset: 3px; }
 .parking li { position: relative; padding: 5px 0 5px 18px; font-size: 0.92rem; color: #4a4640; }
 .parking li::before { content: ""; position: absolute; left: 0; top: 1.05em; width: 8px; height: 1px; background: var(--taupe); }
 .parking strong { color: var(--charcoal); font-weight: 600; }
@@ -479,7 +486,7 @@ address { font-style: normal; }
 /* ---------- Mobile CTA bar ---------- */
 .mobile-cta {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
-  display: grid; grid-template-columns: 1fr 2fr; gap: 8px;
+  display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 8px;
   padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
   background: rgba(250, 249, 246, 0.96); border-top: 1px solid var(--line);
   backdrop-filter: blur(8px);

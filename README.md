@@ -36,18 +36,19 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 | 1 | **공식 도메인** | `https://nail-de-areum.pages.dev/` 사용 중 | 커스텀 도메인 연결 시 `index.html`, `robots.txt`, `sitemap.xml` 에서 전체 검색-치환 |
 | 2 | **고객 후기** | ⚠ **레이아웃 확인용 예시 문구** (실제 후기 아님) | `#reviews` 섹션 — 실제 후기/키워드로 교체 후 `.sample-notice` 문단 삭제 |
 | 3 | 리뷰 확인 기준일 · 실제 리뷰 수 | 미기재 | `#reviews` `.review-date` |
-| 4 | 네이버 예약 URL | 네이버 지도 검색 링크로 임시 연결 | `class="js-booking"` 링크 href 모두 교체 |
-| 5 | 네이버 플레이스 URL | 네이버 지도 검색 링크로 임시 연결 | `class="js-place"` 링크 href 모두 교체 |
-| 6 | 정확한 도로명 주소 | 위치 설명만 표시 (대봉교역 1번 출구 앞 킹콩쥬스 건물 3층) | `#location` Address + JSON-LD `address.streetAddress`, `postalCode` |
-| 7 | 전화번호 | 미표시 (주석 처리) | `#location` Tel 주석 해제 + JSON-LD `telephone` |
-| 8 | 영업시간 · 휴무일 | "네이버 플레이스에서 확인" 안내 | `#location` Hours + JSON-LD `openingHoursSpecification` |
-| 9 | 인스타그램 계정 | 미표시 (주석 처리) | `#location` Instagram 주석 해제 + JSON-LD `sameAs` |
-| 10 | 위도/경도 좌표 | 미기재 | JSON-LD `geo` (네이버/구글 지도에서 확인한 값만) |
-| 11 | 원장님 경력 · 자격 · 사용 제품 | 미기재 | `#story` 섹션 |
-| 12 | 연장 방식(젤/팁 등) · 시술 가능 길이 | 사진에 있는 쉐입(아몬드·코핀·스퀘어)만 기재 | `#extension` |
-| 13 | 웨딩네일 실제 사진 / 가격 | 사진 플레이스홀더, 가격 "상담" | `#bridal`, `#price` |
-| 14 | 이달의 아트 사진 · 가격 | 플레이스홀더 | `#monthly` (아래 3번 참고) |
-| 15 | 시술 소요 시간, 웨딩 예약 권장 시기 | 일반적인 안내 문구 | `#faq` |
+| 4 | 정확한 도로명 주소 | 위치 설명만 표시 (대봉교역 1번 출구 앞 킹콩쥬스 건물 3층) | `#location` Address + JSON-LD `address.streetAddress`, `postalCode` |
+| 5 | 정기 휴무일 · 영업 요일 | 시간(10:00–20:00)만 표시, 휴무는 네이버 플레이스 안내 | `#location` Hours + JSON-LD `openingHoursSpecification` |
+| 6 | 위도/경도 좌표 | 미기재 | JSON-LD `geo` (네이버/구글 지도에서 확인한 값만) |
+| 7 | 원장님 경력 · 자격 · 사용 제품 | 미기재 | `#story` 섹션 |
+| 8 | 연장 방식(젤/팁 등) · 시술 가능 길이 | 사진에 있는 쉐입(아몬드·코핀·스퀘어)만 기재 | `#extension` |
+| 9 | 웨딩네일 실제 사진 / 가격 | 사진 플레이스홀더, 가격 "상담" | `#bridal`, `#price` |
+| 10 | 이달의 아트 사진 · 가격 | 플레이스홀더 | `#monthly` (아래 3번 참고) |
+| 11 | 시술 소요 시간, 웨딩 예약 권장 시기 | 일반적인 안내 문구 | `#faq` |
+
+### 반영 완료된 매장 정보
+- 네이버 플레이스(예약): `https://m.place.naver.com/nailshop/1450452988/home` — `class="js-booking"`, `class="js-place"` 링크
+- 전화: 0507-1426-9612 · 인스타그램: @nailde_areum · 영업시간 10:00–20:00 · 주차 가능 · 반려동물 동반 가능
+- 위 정보를 바꾸면 `#location`, 푸터, 모바일 하단 바, FAQ, `<head>` JSON-LD(`telephone`, `sameAs`, `amenityFeature`)를 함께 수정하세요.
 
 ### JSON-LD에 추가할 때 예시
 
