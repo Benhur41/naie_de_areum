@@ -59,7 +59,7 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- 구조화 데이터: 확인된 정보만 기재. 도로명주소·좌표·영업 요일은 확인 후 추가 (README TODO 참고) -->
+  <!-- 구조화 데이터: 확인된 정보만 기재. 도로명주소·좌표는 확인 후 추가 (README TODO 참고) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -84,6 +84,14 @@
           "addressCountry": "KR"
         },
         "telephone": "+82-507-1426-9612",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "10:00",
+            "closes": "20:00"
+          }
+        ],
         "sameAs": [
           "https://www.instagram.com/nailde_areum/",
           "https://m.place.naver.com/nailshop/1450452988/home"
@@ -600,7 +608,7 @@
           </details>
           <details>
             <summary>예약은 어떻게 하나요?</summary>
-            <div class="faq-a"><p><a class="js-booking" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버 예약</a>으로 원하는 날짜와 시술을 선택해 예약하실 수 있으며, 전화(<a href="tel:+82-507-1426-9612">0507-1426-9612</a>)로도 문의하실 수 있습니다. 영업시간은 10:00 – 20:00입니다. 웨딩네일이나 긴 길이의 연장처럼 상담이 필요한 시술은 예약 요청 사항에 원하는 디자인 사진을 함께 남겨 주세요.</p></div>
+            <div class="faq-a"><p><a class="js-booking" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버 예약</a>으로 원하는 날짜와 시술을 선택해 예약하실 수 있으며, 전화(<a href="tel:+82-507-1426-9612">0507-1426-9612</a>)로도 문의하실 수 있습니다. 영업시간은 월–토 10:00 – 20:00이며, 일요일은 정기 휴무입니다. 웨딩네일이나 긴 길이의 연장처럼 상담이 필요한 시술은 예약 요청 사항에 원하는 디자인 사진을 함께 남겨 주세요.</p></div>
           </details>
         </div>
       </div>
@@ -629,8 +637,8 @@
               </div>
               <div>
                 <dt>Hours</dt>
-                <!-- TODO: 정기 휴무일 확인 후 추가 (JSON-LD openingHoursSpecification 에도 반영) -->
-                <dd>10:00 – 20:00<br><small>휴무일은 네이버 플레이스 공지를 확인해 주세요.</small></dd>
+                <!-- 영업시간 변경 시 JSON-LD openingHoursSpecification 과 FAQ 도 함께 수정 -->
+                <dd>월–토 10:00 – 20:00<br>일요일 정기 휴무</dd>
               </div>
               <div>
                 <dt>Tel</dt>
