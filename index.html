@@ -7,6 +7,8 @@
   <meta name="description" content="대구 대봉교역 1번 출구 앞 프리미엄 네일샵 네일드아름. 손톱연장과 웨딩네일을 중심으로 원톤, 그라데이션, 프렌치, 매월 새로 공개하는 이달의 아트까지 섬세하게 시술합니다.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#FAF9F6">
+  <!-- JS가 켜져 있으면 첫 렌더링 전에 no-js 표시를 지워 레이아웃 이동(CLS)을 막습니다 -->
+  <script>document.documentElement.classList.remove('no-js');</script>
 
   <!-- TODO(배포 전 필수): 공식 도메인이 정해지면 아래 https://www.example.com/ 을 모두 실제 주소로 교체하세요.
        (index.html, robots.txt, sitemap.xml 전체 검색-치환. README 'SEO 체크리스트' 참고) -->
@@ -41,8 +43,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <!-- 폰트 CSS는 렌더링을 막지 않도록 비동기로 불러오고, JS가 꺼져 있으면 noscript로 불러옵니다 -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  </noscript>
 
   <!-- LCP 이미지 미리 로드 -->
   <link rel="preload" as="image" type="image/webp"
@@ -79,7 +86,7 @@
         "areaServed": { "@type": "City", "name": "대구광역시" },
         "priceRange": "₩25,000~",
         "currenciesAccepted": "KRW",
-        "knowsAbout": ["손톱연장", "연장네일", "웨딩네일", "네일아트", "이달의 아트", "젤네일", "풋케어"],
+        "knowsAbout": ["손톱연장", "연장네일", "웨딩네일", "네일아트", "이달의 아트", "풋케어"],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "네일드아름 시술 메뉴",
@@ -117,9 +124,10 @@
   <!-- ===================== HEADER ===================== -->
   <header class="site-header" id="top">
     <div class="header-inner">
-      <a class="logo" href="#top" aria-label="네일드아름 홈으로">
+      <a class="logo" href="#top">
         <span class="logo-small">nail de</span>
         <span class="logo-large">AREUM</span>
+        <span class="visually-hidden">네일드아름 홈으로</span>
       </a>
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -149,7 +157,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-text">
         <p class="eyebrow">Premium Nail Studio · Daegu</p>
-        <p class="hero-slogan" aria-hidden="true">Elegance<br><em>in Every</em> Detail.</p>
+        <p class="hero-slogan">Elegance<br><em>in Every</em> Detail.</p>
         <h1 id="hero-title" class="hero-title">대구 프리미엄 웨딩 · 손톱연장 전문 네일드아름</h1>
         <p class="hero-desc">
           대봉교역 1번 출구 앞, 화이트와 아이보리로 채운 조용한 공간에서
@@ -169,7 +177,7 @@
           sizes="(min-width: 900px) 50vw, 100vw"
           width="1170" height="1560"
           fetchpriority="high" decoding="async"
-          alt="네일드아름에서 시술한 아몬드 쉐입 롱 손톱연장, 투명감 있는 누드 베이지 원톤 젤네일">
+          alt="네일드아름에서 시술한 아몬드 쉐입 롱 손톱연장, 투명감 있는 누드 베이지 원톤 네일">
       </figure>
     </section>
 
@@ -194,9 +202,9 @@
           </p>
         </div>
         <ul class="pillars">
-          <li><span class="pillar-en">Precision</span><span class="pillar-ko">길이와 쉐입의 정교함</span></li>
-          <li><span class="pillar-en">Timeless</span><span class="pillar-ko">오래 봐도 질리지 않는 컬러</span></li>
-          <li><span class="pillar-en">Calm</span><span class="pillar-ko">아이보리 톤의 조용한 공간</span></li>
+          <li><span class="pillar-en">Precision</span> <span class="pillar-ko">길이와 쉐입의 정교함</span></li>
+          <li><span class="pillar-en">Timeless</span> <span class="pillar-ko">오래 봐도 질리지 않는 컬러</span></li>
+          <li><span class="pillar-en">Calm</span> <span class="pillar-ko">아이보리 톤의 조용한 공간</span></li>
         </ul>
       </div>
     </section>
@@ -210,7 +218,7 @@
             srcset="images/extension/daegu-nail-extension-coffin-nude-10-480.webp 480w,
                     images/extension/daegu-nail-extension-coffin-nude-10-800.webp 800w,
                     images/extension/daegu-nail-extension-coffin-nude-10-1170.webp 1170w"
-            sizes="(min-width: 900px) 45vw, 100vw"
+            sizes="(min-width: 1240px) 480px, (min-width: 900px) 40vw, 100vw"
             width="1170" height="1560" loading="lazy" decoding="async"
             alt="대구 네일드아름 10손 손톱연장 사례, 코핀(발레리나) 쉐입 롱 길이 누드 핑크 원톤">
           <figcaption>10손 연장 · 코핀 쉐입 · 누드 핑크</figcaption>
@@ -258,7 +266,7 @@
             srcset="images/wedding/daegu-wedding-nail-pearl-gradient-almond-480.webp 480w,
                     images/wedding/daegu-wedding-nail-pearl-gradient-almond-800.webp 800w,
                     images/wedding/daegu-wedding-nail-pearl-gradient-almond-1170.webp 1170w"
-            sizes="(min-width: 900px) 55vw, 100vw"
+            sizes="(min-width: 1240px) 620px, (min-width: 900px) 50vw, 100vw"
             width="1170" height="1560" loading="lazy" decoding="async"
             alt="아이보리 실크 위 아몬드 쉐입 연장 손톱, 누드 핑크에서 라벤더 블루로 번지는 펄 그라데이션 네일">
         </figure>
@@ -285,9 +293,9 @@
       <!-- TODO: 실제 웨딩네일 시술 사진을 받으면 아래 플레이스홀더를 <img>로 교체 (README '사진 교체' 참고) -->
       <div class="container">
         <ul class="bridal-grid">
-          <li class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></li>
-          <li class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></li>
-          <li class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></li>
+          <li><div class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></div></li>
+          <li><div class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></div></li>
+          <li><div class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></div></li>
         </ul>
       </div>
     </section>
@@ -316,50 +324,50 @@
         <ul class="gallery">
           <li data-category="extension">
             <figure>
-              <button type="button" class="gallery-open" data-full="images/hero/daegu-nail-extension-almond-nude-1170.webp">
+              <a class="gallery-open" href="images/hero/daegu-nail-extension-almond-nude-1170.webp">
                 <img src="images/hero/daegu-nail-extension-almond-nude-480.webp"
                      srcset="images/hero/daegu-nail-extension-almond-nude-480.webp 480w, images/hero/daegu-nail-extension-almond-nude-800.webp 800w"
-                     sizes="(min-width: 900px) 25vw, 50vw"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
                      width="480" height="640" loading="lazy" decoding="async"
-                     alt="아몬드 쉐입 롱 손톱연장, 투명한 누드 베이지 원톤 젤네일">
-              </button>
-              <figcaption><span class="cat">Extension</span>아몬드 쉐입 · 누드 베이지 원톤</figcaption>
+                     alt="아몬드 쉐입 롱 손톱연장, 투명한 누드 베이지 원톤 네일">
+              </a>
+              <figcaption><span class="cat">Extension</span> 아몬드 쉐입 · 누드 베이지 원톤</figcaption>
             </figure>
           </li>
           <li data-category="extension">
             <figure>
-              <button type="button" class="gallery-open" data-full="images/extension/daegu-nail-extension-coffin-nude-10-1170.webp">
+              <a class="gallery-open" href="images/extension/daegu-nail-extension-coffin-nude-10-1170.webp">
                 <img src="images/extension/daegu-nail-extension-coffin-nude-10-480.webp"
                      srcset="images/extension/daegu-nail-extension-coffin-nude-10-480.webp 480w, images/extension/daegu-nail-extension-coffin-nude-10-800.webp 800w"
-                     sizes="(min-width: 900px) 25vw, 50vw"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
                      width="480" height="640" loading="lazy" decoding="async"
                      alt="10손 손톱연장, 코핀 쉐입 롱 길이의 누드 핑크 시럽 컬러">
-              </button>
-              <figcaption><span class="cat">Extension</span>10손 연장 · 코핀 쉐입 누드 핑크</figcaption>
+              </a>
+              <figcaption><span class="cat">Extension</span> 10손 연장 · 코핀 쉐입 누드 핑크</figcaption>
             </figure>
           </li>
           <li data-category="art wedding">
             <figure>
-              <button type="button" class="gallery-open" data-full="images/wedding/daegu-wedding-nail-pearl-gradient-almond-1170.webp">
+              <a class="gallery-open" href="images/wedding/daegu-wedding-nail-pearl-gradient-almond-1170.webp">
                 <img src="images/wedding/daegu-wedding-nail-pearl-gradient-almond-480.webp"
                      srcset="images/wedding/daegu-wedding-nail-pearl-gradient-almond-480.webp 480w, images/wedding/daegu-wedding-nail-pearl-gradient-almond-800.webp 800w"
-                     sizes="(min-width: 900px) 25vw, 50vw"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
                      width="480" height="640" loading="lazy" decoding="async"
                      alt="누드 핑크에서 라벤더 블루로 번지는 펄 그라데이션 아트, 아몬드 쉐입 연장">
-              </button>
-              <figcaption><span class="cat">Nail Art</span>펄 그라데이션 · 라벤더 블루</figcaption>
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 펄 그라데이션 · 라벤더 블루</figcaption>
             </figure>
           </li>
           <li data-category="art">
             <figure>
-              <button type="button" class="gallery-open" data-full="images/gallery/daegu-nail-short-square-nude-onetone-1170.webp">
+              <a class="gallery-open" href="images/gallery/daegu-nail-short-square-nude-onetone-1170.webp">
                 <img src="images/gallery/daegu-nail-short-square-nude-onetone-480.webp"
                      srcset="images/gallery/daegu-nail-short-square-nude-onetone-480.webp 480w, images/gallery/daegu-nail-short-square-nude-onetone-800.webp 800w"
-                     sizes="(min-width: 900px) 25vw, 50vw"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
                      width="480" height="640" loading="lazy" decoding="async"
-                     alt="짧은 스퀘어 쉐입 손톱에 시럽 누드 원톤 젤네일, 데일리 네일">
-              </button>
-              <figcaption><span class="cat">One Tone</span>숏 스퀘어 · 시럽 누드 원톤</figcaption>
+                     alt="짧은 스퀘어 쉐입 손톱에 시럽 누드 원톤 네일, 데일리 네일">
+              </a>
+              <figcaption><span class="cat">One Tone</span> 숏 스퀘어 · 시럽 누드 원톤</figcaption>
             </figure>
           </li>
         </ul>
@@ -384,7 +392,7 @@
               <span class="ko">대구 이달의 아트, 매월 새로 공개하는 컬렉션</span>
             </h2>
           </div>
-          <p class="monthly-month"><span class="m-en">October</span><span class="m-num">2026 · 10</span></p>
+          <p class="monthly-month"><span class="m-en">October</span> <span class="m-num">2026 · 10</span></p>
         </div>
         <p class="monthly-intro">
           네일드아름의 이달의 아트는 매달 계절과 무드를 담아 새롭게 구성하는 디자인 컬렉션입니다.
@@ -424,7 +432,7 @@
 
         <div class="price-grid">
           <article class="price-block">
-            <h3><span class="en">Hand</span><span class="ko">핸드 · 네일아트</span></h3>
+            <h3><span class="en">Hand</span> <span class="ko">핸드 · 네일아트</span></h3>
             <dl>
               <div><dt>케어 <small>(영양제 포함)</small></dt><dd>25,000</dd></div>
               <div><dt>맨즈케어</dt><dd>30,000</dd></div>
@@ -435,7 +443,7 @@
           </article>
 
           <article class="price-block">
-            <h3><span class="en">Extension</span><span class="ko">손톱 연장 · 리페어</span></h3>
+            <h3><span class="en">Extension</span> <span class="ko">손톱 연장 · 리페어</span></h3>
             <dl>
               <div><dt>연장 <small>(1개)</small></dt><dd>10,000</dd></div>
               <div><dt>자샵 연장 리페어 <small>(1개)</small></dt><dd>1,000</dd></div>
@@ -445,7 +453,7 @@
           </article>
 
           <article class="price-block">
-            <h3><span class="en">Foot</span><span class="ko">풋</span></h3>
+            <h3><span class="en">Foot</span> <span class="ko">풋</span></h3>
             <dl>
               <div><dt>케어 <small>(영양제 포함)</small></dt><dd>30,000</dd></div>
               <div><dt>맨즈케어</dt><dd>35,000</dd></div>
@@ -454,7 +462,7 @@
           </article>
 
           <article class="price-block">
-            <h3><span class="en">Removal</span><span class="ko">제거 <small>(1개 기준)</small></span></h3>
+            <h3><span class="en">Removal</span> <span class="ko">제거 <small>(1개 기준)</small></span></h3>
             <dl>
               <div><dt>자샵 제거</dt><dd>1,000</dd></div>
               <div><dt>타샵 제거</dt><dd>1,500</dd></div>
@@ -463,18 +471,18 @@
           </article>
 
           <article class="price-block">
-            <h3><span class="en">Bridal</span><span class="ko">웨딩네일</span></h3>
+            <h3><span class="en">Bridal</span> <span class="ko">웨딩네일</span></h3>
             <p class="consult">디자인 · 연장 여부에 따라 상담 후 안내</p>
           </article>
 
           <article class="price-block">
-            <h3><span class="en">Monthly Art</span><span class="ko">이달의 아트</span></h3>
+            <h3><span class="en">Monthly Art</span> <span class="ko">이달의 아트</span></h3>
             <p class="consult">디자인별 상이 · 상담 후 안내</p>
           </article>
         </div>
 
         <aside class="membership" aria-labelledby="membership-title">
-          <h3 id="membership-title"><span class="en">Membership</span><span class="ko">멤버십 혜택</span></h3>
+          <h3 id="membership-title"><span class="en">Membership</span> <span class="ko">멤버십 혜택</span></h3>
           <ul>
             <li>이달의 아트 · 프리미엄 아트 10% 할인</li>
             <li>제거비 무료</li>
@@ -657,7 +665,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <p class="logo footer-logo"><span class="logo-small">nail de</span><span class="logo-large">AREUM</span></p>
+        <p class="logo footer-logo"><span class="logo-small">nail de</span> <span class="logo-large">AREUM</span></p>
         <p class="footer-desc">대구 대봉교역 앞 프리미엄 네일샵 · 손톱연장 · 웨딩네일 · 이달의 아트</p>
       </div>
       <ul class="footer-links">
@@ -678,7 +686,6 @@
   <!-- 포트폴리오 확대 보기 (네이티브 <dialog>) -->
   <dialog class="lightbox" aria-label="포트폴리오 사진 크게 보기">
     <button type="button" class="lightbox-close" aria-label="닫기">×</button>
-    <img class="lightbox-img" alt="">
     <p class="lightbox-caption"></p>
   </dialog>
 

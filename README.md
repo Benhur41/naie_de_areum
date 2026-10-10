@@ -17,6 +17,7 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 │   ├── gallery/          # 기타 포트폴리오
 │   ├── og-image.jpg      # 카카오톡/SNS 공유 썸네일 (1200×630)
 │   └── apple-touch-icon.png
+├── 404.html            # 없는 주소용 페이지 (Cloudflare Pages SPA 모드 방지, 삭제 금지)
 ├── favicon.ico
 ├── robots.txt
 ├── sitemap.xml
@@ -153,6 +154,8 @@ Pages 프로젝트 → **Custom domains** → 도메인 연결.
 - [ ] https://search.google.com/test/rich-results 에서 구조화 데이터 오류 확인
 - [ ] https://pagespeed.web.dev 에서 모바일 LCP / CLS / INP 측정 (목표: 2.5s / 0.1 / 200ms — 실제 측정 필요)
 - [ ] `https://도메인/robots.txt`, `https://도메인/sitemap.xml` 접속 확인
+- [ ] `https://도메인/없는주소` 접속 시 **404 상태코드**가 나오는지 확인 (200이면 `404.html` 누락)
+- [ ] 커스텀 도메인 연결 후 `프로젝트명.pages.dev` 주소를 Cloudflare **Bulk Redirects** 로 공식 도메인에 301 연결 (중복 주소 방지)
 
 ### 구글 서치콘솔
 1. https://search.google.com/search-console → 속성 추가 → **도메인**(DNS TXT, Cloudflare DNS에 추가) 또는 **URL 접두어**(HTML 태그 → `index.html` 의 `google-site-verification` 주석 해제)
@@ -178,4 +181,6 @@ Pages 프로젝트 → **Custom domains** → 도메인 연결.
 - 폰트: Cormorant Garamond(Google Fonts), Pretendard(jsDelivr 동적 서브셋) — 둘 다 SIL OFL 1.1, 상업적 사용 가능
 - 외부 JS 라이브러리 없음. 사진 확대는 네이티브 `<dialog>`, FAQ는 `<details>`
 - 지도 SDK 미사용 — 네이버 지도 링크로 연결 (페이지 무게 절감)
-- JS가 꺼져 있어도 모든 콘텐츠와 메뉴가 보입니다(`.no-js` 처리)
+- JS가 꺼져 있어도 모든 콘텐츠와 메뉴가 보입니다. `<head>`의 한 줄짜리 스크립트가 첫 렌더링 전에 `no-js` 클래스를 지워 레이아웃 이동을 막습니다(지우지 마세요)
+- 웹폰트 CSS는 비동기로 불러와 첫 화면 렌더링을 막지 않습니다
+- 포트폴리오 사진은 원본 이미지 링크(`<a href>`)라서 JS 없이도 크게 볼 수 있습니다

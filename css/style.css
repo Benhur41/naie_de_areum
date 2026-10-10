@@ -8,7 +8,7 @@
   --ivory: #F2EDE5;
   --sand: #D8C9B8;
   --taupe: #A99784;
-  --taupe-text: #7A6A59; /* 본문 위 보조 텍스트용(대비 확보) */
+  --taupe-text: #73634F; /* 보조 텍스트용. 아이보리 배경에서도 WCAG 4.5:1 이상 */
   --charcoal: #292723;
   --line: #E4DCD0;
 
@@ -151,9 +151,9 @@ address { font-style: normal; }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar::before { transform: translateY(7px) rotate(45deg); }
 .nav-toggle[aria-expanded="true"] .nav-toggle-bar::after { transform: translateY(-7px) rotate(-45deg); }
 
-/* 모바일 메뉴: JS가 없으면 항상 펼쳐진 목록으로 노출 */
+/* 모바일 메뉴: JS가 있으면 햄버거로 여닫는 전체 화면 패널 */
 .site-nav { display: none; }
-.no-js .site-nav, .site-nav.is-open {
+.site-nav.is-open {
   display: flex; flex-direction: column;
   position: fixed; inset: var(--header-h) 0 0 0;
   background: var(--off-white);
@@ -167,6 +167,17 @@ address { font-style: normal; }
   border-bottom: 1px solid var(--line);
 }
 .nav-cta { margin-top: 32px; }
+
+/* JS가 없으면(모바일) 햄버거를 숨기고 메뉴를 헤더 아래 가로 목록으로 펼쳐 둔다 */
+@media (max-width: 1079px) {
+  .no-js .site-header { position: static; }
+  .no-js .header-inner { height: auto; min-height: var(--header-h); flex-wrap: wrap; padding-top: 14px; }
+  .no-js .nav-toggle { display: none; }
+  .no-js .site-nav { display: block; width: 100%; padding: 0 0 12px; }
+  .no-js .site-nav ul { flex-direction: row; flex-wrap: wrap; gap: 0 18px; }
+  .no-js .site-nav li a { padding: 10px 0; font-size: 1.1rem; border: 0; }
+  .no-js .nav-cta { display: none; }
+}
 
 @media (min-width: 1080px) {
   .nav-toggle { display: none; }
@@ -197,7 +208,7 @@ address { font-style: normal; }
   font-size: clamp(3rem, 13vw, 6.6rem);
   line-height: 0.98; letter-spacing: -0.02em; margin-bottom: 28px;
 }
-.hero-slogan em { font-style: italic; color: var(--taupe); }
+.hero-slogan em { font-style: italic; color: #968270; } /* 큰 글씨 대비 3:1 이상 */
 .hero-title { font-size: clamp(1.05rem, 3.4vw, 1.3rem); font-weight: 600; letter-spacing: -0.01em; margin-bottom: 14px; }
 .hero-desc { color: #4a4640; max-width: 34em; margin-bottom: 32px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -475,6 +486,9 @@ address { font-style: normal; }
 }
 .mobile-cta .btn { min-height: 48px; padding: 0 12px; }
 @media (min-width: 900px) { .mobile-cta { display: none; } }
+
+/* ---------- 404 ---------- */
+.notfound { min-height: 80vh; display: flex; align-items: center; text-align: center; }
 
 /* ---------- Motion ---------- */
 @media (prefers-reduced-motion: reduce) {

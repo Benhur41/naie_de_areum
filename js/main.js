@@ -4,8 +4,6 @@
 (function () {
   'use strict';
 
-  document.documentElement.classList.remove('no-js');
-
   /* 1) Mobile nav */
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
@@ -61,19 +59,23 @@
     });
   });
 
-  /* 4) Lightbox */
+  /* 4) Lightbox — 갤러리 링크는 JS 없이도 원본 이미지로 이동하고, JS가 있으면 <dialog>로 띄운다 */
   var dialog = document.querySelector('.lightbox');
   if (dialog && typeof dialog.showModal === 'function') {
-    var dImg = dialog.querySelector('.lightbox-img');
     var dCap = dialog.querySelector('.lightbox-caption');
+    var dImg = document.createElement('img');
+    dImg.className = 'lightbox-img';
+    dImg.alt = '';
+    dialog.insertBefore(dImg, dCap);
     var lastTrigger = null;
 
     document.querySelectorAll('.gallery-open').forEach(function (btn) {
       var thumb = btn.querySelector('img');
       btn.setAttribute('aria-label', '크게 보기: ' + thumb.alt);
-      btn.addEventListener('click', function () {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
         lastTrigger = btn;
-        dImg.src = btn.dataset.full || thumb.currentSrc || thumb.src;
+        dImg.src = btn.getAttribute('href');
         dImg.alt = thumb.alt;
         var cap = btn.closest('figure').querySelector('figcaption');
         dCap.textContent = cap ? cap.innerText.trim().replace(/\s*\n\s*/g, ' · ') : '';
