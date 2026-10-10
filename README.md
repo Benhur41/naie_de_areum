@@ -17,11 +17,16 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 │   ├── gallery/          # 기타 포트폴리오
 │   ├── og-image.jpg      # 카카오톡/SNS 공유 썸네일 (1200×630)
 │   └── apple-touch-icon.png
-├── 404.html            # 없는 주소용 페이지 (Cloudflare Pages SPA 모드 방지, 삭제 금지)
+├── 404.html              # 없는 주소용 페이지 (Cloudflare Pages SPA 모드 방지, 삭제 금지)
 ├── favicon.ico
 ├── robots.txt
 ├── sitemap.xml
-└── _headers              # Cloudflare Pages 캐시 설정
+├── _headers              # Cloudflare Pages 캐시 설정
+├── tools/optimize_images.py  # 사진 → WebP 3종 변환 스크립트
+├── CHECKLIST.md          # 앞으로 준비할 자료 목록 (운영자용)
+├── TODO.md               # 개발 작업 목록 + 완료 기록
+├── ARCHITECTURE.md       # 현재 사이트 구조 (Claude 참고용)
+└── CLAUDE.md             # Claude 작업 지침
 ```
 
 ---
