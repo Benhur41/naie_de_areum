@@ -1,7 +1,7 @@
 # ARCHITECTURE — 네일드아름 홈페이지 현재 구조
 
 > **이 문서는 "지금 상태"의 스냅샷입니다.** 구조가 바뀌는 작업을 마칠 때마다 갱신합니다.
-> 마지막 갱신: 2026-10-10 · 기준 커밋: `123f463` 이후 문서화 작업
+> 마지막 갱신: 2026-10-10 · 사이트 파일 `public/` 분리 반영
 
 ---
 
@@ -13,39 +13,43 @@
 | 목적 | SEO — "대구 손톱연장 / 웨딩네일 / 네일샵" 검색과 AI 검색에서 매장을 정확히 이해시키기 |
 | 공개 주소 | https://nail-de-areum.pages.dev/ (커스텀 도메인 미정) |
 | 호스팅 | Cloudflare Pages, GitHub `Benhur41/naie_de_areum` 연동, `main` push 시 자동 배포 |
-| Pages 설정 | Framework: None · Build command: 없음 · Output directory: `/` |
+| Pages 설정 | Framework: None · Build command: 없음 · **Build output directory: `public`** |
 | 외부 의존 | Google Fonts(Cormorant Garamond), jsDelivr(Pretendard) — 둘 다 비동기 로드 |
 
 ## 2. 파일 구조
 
+**배포되는 것은 `public/` 폴더뿐.** 문서·도구는 저장소 루트에 있고 사이트에는 올라가지 않는다.
+
 ```
 /
-├── index.html            # 사이트 전체 (콘텐츠 + 메타 + JSON-LD). 약 750줄
-├── 404.html              # 없는 주소용. ⚠ 삭제 금지 (없으면 Pages가 SPA 모드로 모든 주소에 200 응답)
-├── css/style.css         # 디자인 전체. 상단 :root 토큰 → 섹션 순서대로 작성
-├── js/main.js            # 메뉴 토글 · 헤더 스크롤 · 포트폴리오 필터 · 사진 확대(<dialog>) · 연도
-├── images/
-│   ├── hero/             # 히어로 사진 (LCP 이미지)
-│   ├── extension/        # 손톱연장 섹션 사진
-│   ├── wedding/          # 웨딩 섹션 사진
-│   ├── monthly-art/      # (비어 있음 — 이달의 아트 사진 받으면 사용)
-│   ├── gallery/          # 기타 포트폴리오
-│   ├── og-image.jpg      # SNS 공유 썸네일 1200×630
-│   └── apple-touch-icon.png
-├── favicon.ico
-├── robots.txt            # 전체 허용 + Sitemap 주소. *.md, /tools/ 는 수집 제외
-├── sitemap.xml           # URL 1개 + image:image 4개
-├── _headers              # Cloudflare 캐시: images 30일, css/js 1일
+├── public/                   # ← Cloudflare Pages 출력 디렉터리 (사이트 전체)
+│   ├── index.html            # 사이트 전체 (콘텐츠 + 메타 + JSON-LD). 약 750줄
+│   ├── 404.html              # 없는 주소용. ⚠ 삭제 금지 (없으면 Pages가 SPA 모드로 모든 주소에 200 응답)
+│   ├── css/style.css         # 디자인 전체. 상단 :root 토큰 → 섹션 순서대로 작성
+│   ├── js/main.js            # 메뉴 토글 · 헤더 스크롤 · 포트폴리오 필터 · 사진 확대(<dialog>) · 연도
+│   ├── images/
+│   │   ├── hero/             # 히어로 사진 (LCP 이미지)
+│   │   ├── extension/        # 손톱연장 섹션 사진
+│   │   ├── wedding/          # 웨딩 섹션 사진
+│   │   ├── monthly-art/      # (비어 있음 — git에 없음. 이달의 아트 사진 받으면 생성)
+│   │   ├── gallery/          # 기타 포트폴리오
+│   │   ├── og-image.jpg      # SNS 공유 썸네일 1200×630
+│   │   └── apple-touch-icon.png
+│   ├── favicon.ico
+│   ├── robots.txt            # 전체 허용 + Sitemap 주소
+│   ├── sitemap.xml           # URL 1개 + image:image 4개
+│   └── _headers              # Cloudflare 캐시: images 30일, css/js 1일
 ├── tools/
-│   └── optimize_images.py  # 원본 → WebP 480/800/1170 변환 스크립트
-├── CLAUDE.md             # Claude 작업 지침 (세션 시작 시 자동 로드)
-├── ARCHITECTURE.md       # 이 문서
-├── TODO.md               # 개발 작업 목록 + 완료 로그
-├── CHECKLIST.md          # 운영자가 줄 자료 목록 + 반영 완료된 매장 정보(사실 기준)
-└── README.md             # 운영자용 사용 설명서 (사진·리뷰·가격 교체, 배포, 검색 등록)
+│   └── optimize_images.py    # 원본 → WebP 480/800/1170 변환 (출력은 public/images/...)
+├── CLAUDE.md                 # Claude 작업 지침 (세션 시작 시 자동 로드)
+├── ARCHITECTURE.md           # 이 문서
+├── TODO.md                   # 개발 작업 목록 + 완료 로그
+├── CHECKLIST.md              # 운영자가 줄 자료 목록 + 반영 완료된 매장 정보(사실 기준)
+└── README.md                 # 운영자용 사용 설명서 (사진·리뷰·가격 교체, 배포, 검색 등록)
 ```
 
 `.gitignore`: `.claude/` 만 제외 (Claude 작업 폴더·워크트리). 이미지 원본은 저장소에 넣지 않음.
+아래 3~7번의 파일 경로는 모두 `public/` 기준.
 
 ## 3. 페이지 구조 (index.html 순서)
 
@@ -93,7 +97,7 @@
   - NailSalon: name/alternateName, description, url, logo, image[3], **address**(명덕로 327 3층 · 중구 · 대구광역시 · 41953 · KR), **telephone**(+82-507-1426-9612), **openingHoursSpecification**(월–토 10:00–20:00), **sameAs**(인스타·네이버 플레이스·카카오 채널), amenityFeature(주차·반려동물), areaServed, priceRange, knowsAbout, hasOfferCatalog(가격 12항목)
   - 없음(의도적): `geo`(좌표 미확인), `AggregateRating`/`Review`(자사 리뷰 정책상 금지)
 - **sitemap.xml**: `https://nail-de-areum.pages.dev/` 1개 + 1170px 이미지 4개, lastmod 2026-10-10
-- **robots.txt**: 전체 허용, `*.md`·`/tools/` 제외, Sitemap 명시
+- **robots.txt**: 전체 허용, Sitemap 명시
 - **이미지**: 내용 설명형 파일명, 구체적 alt, width/height, srcset+sizes, 히어로 외 lazy
 - **404.html**: noindex
 
@@ -122,4 +126,4 @@
 - Claude 세션의 터미널·앱 브라우저에서 `*.pages.dev`, `m.place.naver.com` 접속 불가 → 실서버 확인은 사용자에게 요청
 - `gh` CLI 미설치 → PR 생성 불가(필요 없음: main 직접 push 방식)
 - 원격 브랜치 삭제 등 되돌리기 어려운 git 명령은 자동 권한 검사에서 차단될 수 있음
-- 로컬 미리보기: `python -m http.server 8080` (Claude 앱에서는 `.claude/launch.json`의 `site` 설정 — `.claude/`는 git 제외라 새 워크트리에선 다시 만들어야 함)
+- 로컬 미리보기: `python -m http.server 8080 -d public` (Claude 앱에서는 `.claude/launch.json`의 `site` 설정 — `.claude/`는 git 제외라 새 워크트리에선 다시 만들어야 함)

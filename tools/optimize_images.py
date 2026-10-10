@@ -4,8 +4,9 @@
     python tools/optimize_images.py <원본파일> <출력경로(확장자·크기 제외)>
 
 예:
-    python tools/optimize_images.py ~/새사진/웨딩/IMG_1234.jpg images/wedding/daegu-wedding-nail-white-pearl-french
-    → images/wedding/daegu-wedding-nail-white-pearl-french-{480,800,1170}.webp 생성
+    python tools/optimize_images.py ~/새사진/웨딩/IMG_1234.jpg public/images/wedding/daegu-wedding-nail-white-pearl-french
+    → public/images/wedding/daegu-wedding-nail-white-pearl-french-{480,800,1170}.webp 생성
+    (HTML 에서는 public/ 을 뺀 images/... 경로로 씁니다)
 
 출력의 width/height 값을 <img>의 width/height 속성에 그대로 넣으세요(레이아웃 이동 방지).
 필요: Python 3 + Pillow (pip install pillow)

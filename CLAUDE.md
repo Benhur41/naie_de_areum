@@ -3,6 +3,9 @@
 대구 중구 대봉교역 앞 프리미엄 네일샵 **네일드아름**의 공식 홈페이지.
 정적 원페이지(HTML/CSS/Vanilla JS) → Cloudflare Pages(`main` push 시 자동 배포) → https://nail-de-areum.pages.dev/
 
+> **📁 사이트 파일은 전부 `public/` 안에 있다** (Cloudflare 출력 디렉터리 = `public`). `public/` 밖의 문서(`*.md`)·`tools/` 는 GitHub에만 있고 사이트에는 배포되지 않는다.
+> 이 문서에서 `index.html`, `css/style.css` 등은 모두 `public/` 기준 경로다.
+
 ---
 
 ## 0. 세션 시작 시 반드시 할 것
@@ -79,7 +82,7 @@
 - 영문·한글 `<span>` 을 붙여 쓸 땐 **사이에 공백**을 둔다 (텍스트 추출 시 "Hand핸드"처럼 붙는 문제)
 
 ### 사진
-1. `python tools/optimize_images.py <원본> images/<폴더>/<설명형-파일명>` → WebP 480/800/1170
+1. `python tools/optimize_images.py <원본> public/images/<폴더>/<설명형-파일명>` → WebP 480/800/1170 (HTML에서는 `images/...`)
 2. 파일명: `daegu-<분야>-nail-<특징>` (영문 소문자-하이픈)
 3. alt: 쉐입·길이·컬러·아트를 구체적으로 ("아몬드 쉐입 손톱연장, 누드 핑크 펄 그라데이션")
 4. `<img>` 에 width/height, srcset, 실제 레이아웃 폭에 맞는 sizes, 히어로 외 `loading="lazy"`
@@ -102,6 +105,7 @@
 - `<head>` 의 `no-js` 제거 인라인 스크립트 — 옮기면 JS 비활성 레이아웃이 깜빡이며 CLS 발생 (실측 0.114)
 - 폰트 `preload + onload` + `<noscript>` 구조 — 되돌리면 렌더링 차단 재발
 - `robots.txt` 에 `Disallow: /` 를 넣지 말 것
+- 사이트 파일을 `public/` 밖으로 꺼내지 말 것 — 밖에 두면 배포되지 않는다. 반대로 문서·스크립트·원본 사진은 `public/` 에 넣지 말 것(공개됨)
 
 ## 5. 사용자와 일하는 방식
 
@@ -112,12 +116,12 @@
 
 ## 6. 검증 체크리스트
 
-- [ ] 로컬 미리보기: `python -m http.server 8080` (앱에서는 `.claude/launch.json` 의 `site` 설정을 만들어 사용)
+- [ ] 로컬 미리보기: `python -m http.server 8080 -d public` (앱에서는 `.claude/launch.json` 에 같은 명령으로 `site` 설정을 만들어 사용)
 - [ ] 360 / 375 / 1440px 화면 확인, `document.documentElement.scrollWidth` 로 가로 넘침 없음
 - [ ] JS 비활성 확인: `sandbox="allow-same-origin"` iframe 으로 페이지를 띄워 메뉴·콘텐츠 확인
 - [ ] JS 기능: 메뉴 열고 닫기, 필터, 확대 보기, 콘솔 오류 없음
-- [ ] JSON-LD 파싱: `python -c "import re,json;s=open('index.html',encoding='utf-8').read();json.loads(re.search(r'<script type=\"application/ld\+json\">(.*?)</script>',s,re.S).group(1))"`
-- [ ] `npx -y html-validate@8 index.html` — 알려진 무해 경고: `doctype-style`, `tel-non-breaking`, `<dialog>`의 `aria-label-misuse`
+- [ ] JSON-LD 파싱: `python -c "import re,json;s=open('public/index.html',encoding='utf-8').read();json.loads(re.search(r'<script type=\"application/ld\+json\">(.*?)</script>',s,re.S).group(1))"`
+- [ ] `npx -y html-validate@8 public/index.html` — 알려진 무해 경고: `doctype-style`, `tel-non-breaking`, `<dialog>`의 `aria-label-misuse`
 - [ ] 큰 변경 후 Lighthouse(모바일): `CHROME_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe" npx -y lighthouse@12 http://localhost:8080/ --form-factor=mobile --only-categories=performance,accessibility,best-practices,seo --chrome-flags="--headless=new"` → 결과를 ARCHITECTURE.md 8번에 기록. 압축·캐시 경고는 로컬 서버 탓(Cloudflare에서 해결)
 
 ## 7. 문서 지도

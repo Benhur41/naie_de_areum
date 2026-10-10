@@ -2,32 +2,37 @@
 
 대구 프리미엄 웨딩네일 · 손톱연장 네일샵 **네일드아름**의 정적 원페이지 웹사이트입니다.
 HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대로 배포합니다.
-핵심 콘텐츠는 모두 `index.html`에 들어 있어 검색 로봇이 JS 실행 없이 읽을 수 있습니다.
+핵심 콘텐츠는 모두 `public/index.html`에 들어 있어 검색 로봇이 JS 실행 없이 읽을 수 있습니다.
 
 ```
 /
-├── index.html            # 전체 콘텐츠 + 메타데이터 + JSON-LD
-├── css/style.css         # 디자인 (색상/폰트 토큰은 파일 상단 :root)
-├── js/main.js            # 모바일 메뉴, 포트폴리오 필터, 사진 확대 보기만 담당
-├── images/
-│   ├── hero/             # 메인 대표 사진
-│   ├── extension/        # 손톱연장 사진
-│   ├── wedding/          # 웨딩네일 사진
-│   ├── monthly-art/      # 이달의 아트 사진
-│   ├── gallery/          # 기타 포트폴리오
-│   ├── og-image.jpg      # 카카오톡/SNS 공유 썸네일 (1200×630)
-│   └── apple-touch-icon.png
-├── 404.html              # 없는 주소용 페이지 (Cloudflare Pages SPA 모드 방지, 삭제 금지)
-├── favicon.ico
-├── robots.txt
-├── sitemap.xml
-├── _headers              # Cloudflare Pages 캐시 설정
+├── public/                   # ← 홈페이지 파일 (이 폴더만 Cloudflare에 배포됨)
+│   ├── index.html            # 전체 콘텐츠 + 메타데이터 + JSON-LD
+│   ├── css/style.css         # 디자인 (색상/폰트 토큰은 파일 상단 :root)
+│   ├── js/main.js            # 모바일 메뉴, 포트폴리오 필터, 사진 확대 보기만 담당
+│   ├── images/
+│   │   ├── hero/             # 메인 대표 사진
+│   │   ├── extension/        # 손톱연장 사진
+│   │   ├── wedding/          # 웨딩네일 사진
+│   │   ├── monthly-art/      # 이달의 아트 사진
+│   │   ├── gallery/          # 기타 포트폴리오
+│   │   ├── og-image.jpg      # 카카오톡/SNS 공유 썸네일 (1200×630)
+│   │   └── apple-touch-icon.png
+│   ├── 404.html              # 없는 주소용 페이지 (Cloudflare Pages SPA 모드 방지, 삭제 금지)
+│   ├── favicon.ico
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── _headers              # Cloudflare Pages 캐시 설정
 ├── tools/optimize_images.py  # 사진 → WebP 3종 변환 스크립트
-├── CHECKLIST.md          # 앞으로 준비할 자료 목록 (운영자용)
-├── TODO.md               # 개발 작업 목록 + 완료 기록
-├── ARCHITECTURE.md       # 현재 사이트 구조 (Claude 참고용)
-└── CLAUDE.md             # Claude 작업 지침
+├── CHECKLIST.md              # 앞으로 준비할 자료 목록 (운영자용)
+├── TODO.md                   # 개발 작업 목록 + 완료 기록
+├── ARCHITECTURE.md           # 현재 사이트 구조 (Claude 참고용)
+├── CLAUDE.md                 # Claude 작업 지침
+└── README.md                 # 이 문서
 ```
+
+> 아래 설명의 `index.html`, `images/`, `sitemap.xml` 등은 모두 **`public/` 폴더 안**의 파일입니다.
+> `public/` 밖의 문서들은 GitHub에만 있고 홈페이지에는 올라가지 않습니다.
 
 ---
 
@@ -115,7 +120,7 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 ## 6. 로컬에서 미리보기
 
 ```bash
-python -m http.server 8080
+python -m http.server 8080 -d public
 ```
 브라우저에서 http://localhost:8080 접속.
 
@@ -123,17 +128,17 @@ python -m http.server 8080
 
 ### 방법 A — 직접 업로드 (가장 간단)
 1. Cloudflare 대시보드 → **Workers & Pages** → **Create** → **Pages** → **Upload assets**
-2. 프로젝트 이름 입력(예: `nail-de-areum`) 후 이 폴더 전체를 드래그 업로드
+2. 프로젝트 이름 입력(예: `nail-de-areum`) 후 **`public` 폴더**를 드래그 업로드
 3. 배포 후 `https://프로젝트명.pages.dev` 로 확인
 
 또는 CLI:
 ```bash
-npx wrangler pages deploy . --project-name nail-de-areum
+npx wrangler pages deploy public --project-name nail-de-areum
 ```
 
-### 방법 B — GitHub 연동
+### 방법 B — GitHub 연동 (현재 사용 중)
 1. **Connect to Git** → 이 저장소 선택
-2. Framework preset: **None**, Build command: *(비움)*, Build output directory: `/`
+2. Framework preset: **None**, Build command: *(비움)*, Build output directory: **`public`**
 3. `main` 브랜치에 push 할 때마다 자동으로 재배포됩니다. 사진도 저장소에 포함되어 함께 배포됩니다.
 
 ### 커스텀 도메인

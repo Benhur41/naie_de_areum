@@ -2,9 +2,6 @@
 # 모든 검색 로봇의 수집을 허용합니다. (Disallow: / 를 넣으면 전체 차단되니 주의)
 User-agent: *
 Allow: /
-# 작업 문서(.md)와 도구 폴더는 수집하지 않음 — 사이트 페이지에는 영향 없음
-Disallow: /*.md$
-Disallow: /tools/
 
 # 커스텀 도메인 연결 시 새 도메인으로 교체
 Sitemap: https://nail-de-areum.pages.dev/sitemap.xml
