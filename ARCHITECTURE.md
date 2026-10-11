@@ -1,7 +1,7 @@
 # ARCHITECTURE — 네일드아름 홈페이지 현재 구조
 
 > **이 문서는 "지금 상태"의 스냅샷입니다.** 구조가 바뀌는 작업을 마칠 때마다 갱신합니다.
-> 마지막 갱신: 2026-10-12 · 모바일 메뉴 버그 수정, CSS·JS 캐시 무효화(?v=) 도입
+> 마지막 갱신: 2026-10-12 · JSON-LD `geo`(매장 좌표) 추가
 
 ---
 
@@ -101,8 +101,8 @@
 - **메타**: title, description, canonical, robots(`max-image-preview:large`), theme-color, OG(1200×630), Twitter `summary_large_image`, favicon, `lang="ko"`
 - **검색엔진 소유확인**: `google-site-verification`(서치콘솔, URL 접두어 속성 `https://nail-de-areum.pages.dev/`) · `naver-site-verification`(서치어드바이저). 삭제 금지
 - **JSON-LD `@graph`**: `NailSalon` + `WebSite`
-  - NailSalon: name/alternateName, description, url, logo, image[3], **address**(명덕로 327 3층 · 중구 · 대구광역시 · 41953 · KR), **telephone**(+82-507-1426-9612), **openingHoursSpecification**(월–토 10:00–20:00), **sameAs**(인스타·네이버 플레이스·카카오 채널), amenityFeature(주차·반려동물), areaServed, priceRange, knowsAbout(젤 연장 포함 — 포트폴리오13 사진의 "Gel extension" 표기 근거), hasOfferCatalog(가격 12항목)
-  - 없음(의도적): `geo`(좌표 미확인), `AggregateRating`/`Review`(자사 리뷰 정책상 금지)
+  - NailSalon: name/alternateName, description, url, logo, image[3], **address**(명덕로 327 3층 · 중구 · 대구광역시 · 41953 · KR), **geo**(35.8552293, 128.6058499 — 네이버 플레이스 등록 좌표, OpenStreetMap 역지오코딩으로 명덕로·대봉1동·대봉교 약 50m 확인), **telephone**(+82-507-1426-9612), **openingHoursSpecification**(월–토 10:00–20:00), **sameAs**(인스타·네이버 플레이스·카카오 채널), amenityFeature(주차·반려동물), areaServed, priceRange, knowsAbout(젤 연장 포함 — 포트폴리오13 사진의 "Gel extension" 표기 근거), hasOfferCatalog(가격 12항목)
+  - 없음(의도적): `AggregateRating`/`Review`(자사 리뷰 정책상 금지). 구글 지도 링크(`hasMap`·`sameAs`)는 구글 비즈니스 프로필 등록 후 추가 예정
 - **sitemap.xml**: `https://nail-de-areum.pages.dev/` 1개 + 1170px 이미지 127개(웨딩·포트폴리오·전후·이달의 아트 전부), lastmod 2026-10-12
 - **robots.txt**: 전체 허용, Sitemap 명시
 - **이미지**: 내용 설명형 파일명, 구체적 alt, width/height, srcset+sizes, 히어로 외 lazy
@@ -141,6 +141,7 @@
 ## 9. 환경 제약 (Claude 작업 시)
 
 - 앱 브라우저에서는 `*.pages.dev`, `m.place.naver.com` 접속 불가. 터미널은 기본 샌드박스에서 외부 DNS 조회가 막혀 있지만, **샌드박스를 해제한 `curl`(읽기 전용 요청)로 `*.pages.dev` 응답 확인 가능** (2026-10-12 확인)
+  - 같은 방법으로 `m.place.naver.com/nailshop/1450452988/home` 도 받아진다(모바일 UA). 페이지 안 JSON에 매장 `"coordinate":{"x":경도,"y":위도}`, `roadAddress`, 네이버 예약 디자이너 이름 등이 들어 있음
 - `gh` CLI 미설치 → PR 생성 불가(필요 없음: main 직접 push 방식)
 - 원격 브랜치 삭제 등 되돌리기 어려운 git 명령은 자동 권한 검사에서 차단될 수 있음
 - 로컬 미리보기: `python -m http.server 8080 -d public` (Claude 앱에서는 `.claude/launch.json`의 `site` 설정 — `.claude/`는 git 제외라 새 워크트리에선 다시 만들어야 함)
