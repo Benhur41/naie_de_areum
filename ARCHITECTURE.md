@@ -1,7 +1,7 @@
 # ARCHITECTURE — 네일드아름 홈페이지 현재 구조
 
 > **이 문서는 "지금 상태"의 스냅샷입니다.** 구조가 바뀌는 작업을 마칠 때마다 갱신합니다.
-> 마지막 갱신: 2026-10-12 · GitHub 저장소 이름 변경(`naie_de_areum` → `nail_de_areum`) 반영
+> 마지막 갱신: 2026-10-12 · Pages 프로젝트 `nail-de-areum` 재생성, 배포 사이트 점검 결과 기록
 
 ---
 
@@ -14,6 +14,7 @@
 | 공개 주소 | https://nail-de-areum.pages.dev/ (커스텀 도메인 미정) |
 | 호스팅 | Cloudflare Pages, GitHub `Benhur41/nail_de_areum` 연동, `main` push 시 자동 배포 |
 | 로컬 폴더 | `C:/Users/user/naie_de_areum` — 저장소 이름 변경 전 이름 그대로. **폴더 이름 변경 금지** (Claude 앱 프로젝트·워크트리·메모리 경로가 묶여 있음) |
+| Pages 프로젝트 | **`nail-de-areum`** (2026-10-12 재생성. 처음 만든 `naie-de-areum` 프로젝트는 삭제됨 — Pages 프로젝트 이름은 변경 불가) |
 | Pages 설정 | Framework: None · Build command: 없음 · **Build output directory: `public`** |
 | 외부 의존 | Google Fonts(Cormorant Garamond), jsDelivr(Pretendard) — 둘 다 비동기 로드 |
 
@@ -123,9 +124,11 @@
 
 배포 사이트(PageSpeed Insights) 측정은 아직 안 함.
 
+**배포 사이트 응답 점검 (2026-10-12, curl)**: 홈·sitemap·robots·이미지·CSS·JS 200, 없는 주소 404, `/CLAUDE.md` 404(문서 비공개 확인), canonical·og:url·소유확인 메타 정상. HTML·CSS는 Brotli 압축, 캐시는 이미지 30일·CSS/JS 1일·HTML 매번 재검증 → 로컬 Lighthouse의 압축·캐시 경고는 배포 환경에서 해결됨
+
 ## 9. 환경 제약 (Claude 작업 시)
 
-- Claude 세션의 터미널·앱 브라우저에서 `*.pages.dev`, `m.place.naver.com` 접속 불가 → 실서버 확인은 사용자에게 요청
+- 앱 브라우저에서는 `*.pages.dev`, `m.place.naver.com` 접속 불가. 터미널은 기본 샌드박스에서 외부 DNS 조회가 막혀 있지만, **샌드박스를 해제한 `curl`(읽기 전용 요청)로 `*.pages.dev` 응답 확인 가능** (2026-10-12 확인)
 - `gh` CLI 미설치 → PR 생성 불가(필요 없음: main 직접 push 방식)
 - 원격 브랜치 삭제 등 되돌리기 어려운 git 명령은 자동 권한 검사에서 차단될 수 있음
 - 로컬 미리보기: `python -m http.server 8080 -d public` (Claude 앱에서는 `.claude/launch.json`의 `site` 설정 — `.claude/`는 git 제외라 새 워크트리에선 다시 만들어야 함)
