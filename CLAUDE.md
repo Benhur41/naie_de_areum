@@ -23,7 +23,8 @@
 3. **ARCHITECTURE.md 갱신** — 파일·섹션·JSON-LD·이미지·측정값 중 바뀐 부분 반영, "마지막 갱신" 날짜 수정
 4. **CHECKLIST.md 갱신** — 받은 자료는 ✅ 반영 완료로 옮기기
 5. **README.md 갱신** — 운영자 절차(사진·리뷰·가격 교체 방법 등)가 바뀐 경우만
-6. **커밋 → `main` 에 바로 push** (브랜치·PR 사용 안 함 — 사용자 요청)
+6. **CSS·JS 를 고쳤다면 `?v=` 버전 올리기** — `public/index.html` 의 `css/style.css?v=…`, `js/main.js?v=…` 와 `public/404.html` 의 CSS 를 같은 새 값(예: `20261013a`)으로. 안 바꾸면 방문자 브라우저가 옛 파일을 계속 쓸 수 있다
+7. **커밋 → `main` 에 바로 push** (브랜치·PR 사용 안 함 — 사용자 요청)
    - `git fetch origin && git merge-base --is-ancestor origin/main HEAD && git push origin HEAD:main`
    - 커밋 메시지는 영어 요약 + 본문 목록, 끝에 Co-Authored-By 줄
 
@@ -112,6 +113,7 @@
 - 폰트 `preload + onload` + `<noscript>` 구조 — 되돌리면 렌더링 차단 재발
 - HTML 의 초기 상태 클래스(`.gallery.is-collapsed`, `.art-month.is-active` 등)와 `html:not(.no-js)` CSS 규칙 — JS 가 아니라 CSS 로 첫 화면을 정해야 레이아웃 이동이 없다
 - `js/main.js` 의 스크롤 첫 측정은 `requestAnimationFrame` 안에서 — 로드 중 바로 읽으면 강제 리플로우(실측 113ms)
+- `.site-header` 자체에 `backdrop-filter`·`transform`·`filter` 를 넣지 말 것 — 안의 `position: fixed` 모바일 메뉴가 헤더 기준으로 잡혀 햄버거 메뉴가 안 보인다(2026-10-12 실제 버그). 블러는 `.site-header::before` 에 있다
 - `robots.txt` 에 `Disallow: /` 를 넣지 말 것
 - 사이트 파일을 `public/` 밖으로 꺼내지 말 것 — 밖에 두면 배포되지 않는다. 반대로 문서·스크립트·원본 사진은 `public/` 에 넣지 말 것(공개됨)
 
@@ -127,7 +129,8 @@
 - [ ] 로컬 미리보기: `python -m http.server 8080 -d public` (앱에서는 `.claude/launch.json` 에 같은 명령으로 `site` 설정을 만들어 사용)
 - [ ] 360 / 375 / 1440px 화면 확인, `document.documentElement.scrollWidth` 로 가로 넘침 없음
 - [ ] JS 비활성 확인: `sandbox="allow-same-origin"` iframe 으로 페이지를 띄워 메뉴·콘텐츠 확인
-- [ ] JS 기능: 메뉴 열고 닫기, 필터, 확대 보기, 콘솔 오류 없음
+- [ ] JS 기능: **모바일 메뉴가 실제로 화면에 펼쳐지는지(`#site-nav` 높이 확인, 열림 클래스만 보지 말 것)**, 필터·더 보기, 이달의 아트 연도·월, 확대 보기, 콘솔 오류 없음
+- [ ] 로컬 브라우저도 옛 CSS 를 캐시할 수 있다 — 테스트 전 `?v=` 를 올렸는지, 적용된 스타일시트 주소가 새 버전인지 확인
 - [ ] JSON-LD 파싱: `python -c "import re,json;s=open('public/index.html',encoding='utf-8').read();json.loads(re.search(r'<script type=\"application/ld\+json\">(.*?)</script>',s,re.S).group(1))"`
 - [ ] `npx -y html-validate@8 public/index.html` — 알려진 무해 경고: `doctype-style`, `tel-non-breaking`, `<dialog>`의 `aria-label-misuse`
 - [ ] 큰 변경 후 Lighthouse(모바일): `CHROME_PATH="C:/Program Files/Google/Chrome/Application/chrome.exe" npx -y lighthouse@12 http://localhost:8080/ --form-factor=mobile --only-categories=performance,accessibility,best-practices,seo --chrome-flags="--headless=new"` → 결과를 ARCHITECTURE.md 8번에 기록. 압축·캐시 경고는 로컬 서버 탓(Cloudflare에서 해결)

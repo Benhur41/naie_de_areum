@@ -119,10 +119,15 @@ address { font-style: normal; }
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(250, 249, 246, 0.94);
-  backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
   transition: border-color .3s ease;
+}
+/* 반투명 블러 배경은 가상 요소에 둔다. 헤더 자체에 backdrop-filter 를 주면
+   그 안의 position: fixed 모바일 메뉴가 화면이 아닌 헤더(64px) 기준으로 잡혀 메뉴가 보이지 않는다 */
+.site-header::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: rgba(250, 249, 246, 0.94);
+  backdrop-filter: blur(8px);
 }
 .site-header.is-scrolled { border-bottom-color: var(--line); }
 .header-inner {
@@ -171,7 +176,7 @@ address { font-style: normal; }
 
 /* JS가 없으면(모바일) 햄버거를 숨기고 메뉴를 헤더 아래 가로 목록으로 펼쳐 둔다 */
 @media (max-width: 1079px) {
-  .no-js .site-header { position: static; }
+  .no-js .site-header { position: relative; }
   .no-js .header-inner { height: auto; min-height: var(--header-h); flex-wrap: wrap; padding-top: 14px; }
   .no-js .nav-toggle { display: none; }
   .no-js .site-nav { display: block; width: 100%; padding: 0 0 12px; }

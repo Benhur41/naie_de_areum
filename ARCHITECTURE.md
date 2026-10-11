@@ -1,7 +1,7 @@
 # ARCHITECTURE — 네일드아름 홈페이지 현재 구조
 
 > **이 문서는 "지금 상태"의 스냅샷입니다.** 구조가 바뀌는 작업을 마칠 때마다 갱신합니다.
-> 마지막 갱신: 2026-10-12 · 사진 123장 반영(이달의 아트 아카이브·전후 사진·웨딩 추천·포트폴리오 33장), 상담 버튼 카카오톡 연결
+> 마지막 갱신: 2026-10-12 · 모바일 메뉴 버그 수정, CSS·JS 캐시 무효화(?v=) 도입
 
 ---
 
@@ -42,7 +42,7 @@
 │   ├── favicon.ico
 │   ├── robots.txt            # 전체 허용 + Sitemap 주소
 │   ├── sitemap.xml           # URL 1개 + image:image 127개
-│   └── _headers              # Cloudflare 캐시: images 30일, css/js 1일
+│   └── _headers              # Cloudflare 캐시: images 30일, css/js 매번 재검증(max-age=0, must-revalidate)
 ├── tools/
 │   └── optimize_images.py    # 원본 → WebP 480/800/1170 변환 (출력은 public/images/...)
 ├── CLAUDE.md                 # Claude 작업 지침 (세션 시작 시 자동 로드)
@@ -91,6 +91,7 @@
 |---|---|
 | `<head>` 인라인 1줄 | `no-js` 클래스를 첫 렌더 전에 제거 → JS 비활성 레이아웃과 CLS 방지. **위치 이동·삭제 금지** |
 | `<head>` 폰트 `<link rel=preload onload>` | 폰트 CSS 비동기 로드 + `<noscript>` 대체 |
+| CSS·JS 주소 `?v=YYYYMMDDx` | 캐시 무효화 버전. CSS·JS 수정 시 index.html(2곳)·404.html(1곳) 함께 올림 |
 | `js/main.js` (defer) | ① 모바일 메뉴(aria-expanded, Esc, 1080px↑ 자동 닫힘) ② 헤더 `.is-scrolled`(첫 측정은 rAF — 강제 리플로우 방지) ③ 포트폴리오 필터(`hidden`, aria-pressed) + 더 보기(`is-collapsed`) ④ 라이트박스(링크 기본동작 막고 `<dialog>`, 닫으면 포커스 복귀) ⑤ 이달의 아트 연도 버튼→그 해 최신 달, 월 링크→해당 달만 표시·라벨 갱신·`history.replaceState('#art-YYYY-MM')`, 주소 해시로 진입 시 해당 달 열기 ⑥ 푸터 연도 |
 
 콘텐츠는 JS로 만들지 않음. JS가 꺼져도 모든 텍스트·메뉴·사진 링크가 동작.
@@ -131,6 +132,7 @@
 | 2026-10-10 | 로컬, Lighthouse 12 모바일, 감사 전 | 72 | 92 | 100 | 100 | 4.6s | 0.002 |
 | 2026-10-10 | 로컬, 감사 수정 후 5회 | 94–98 | 100 | 100 | 100 | 2.0–2.6s | 0.001 |
 | 2026-10-12 | 로컬, 사진 123장 반영 후 3회 (HTML 180KB 비압축) | 90–95 | 100 | 100 | 100 | 2.5–3.0s | 0.001 |
+| 2026-10-12 | **배포 사이트**(Brotli), Lighthouse 12 모바일 3회 | 95–99 (1회 68 — 네트워크 이상치, LCP 5.1s) | 100 | 100 | 100 | 1.9–2.5s | ≤0.001 |
 
 배포 사이트(PageSpeed Insights) 측정은 아직 안 함.
 

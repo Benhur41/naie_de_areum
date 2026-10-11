@@ -1,7 +1,9 @@
 # Cloudflare Pages 캐시 설정
 /images/*
   Cache-Control: public, max-age=2592000
+# CSS·JS 는 매번 변경 여부를 확인(바뀌지 않았으면 304 로 짧게 응답).
+# 예전엔 1일 캐시라 수정 후에도 방문자에게 옛 디자인이 보이는 문제가 있었음 (2026-10-12)
 /css/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
 /js/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
