@@ -1,7 +1,7 @@
 # ARCHITECTURE — 네일드아름 홈페이지 현재 구조
 
 > **이 문서는 "지금 상태"의 스냅샷입니다.** 구조가 바뀌는 작업을 마칠 때마다 갱신합니다.
-> 마지막 갱신: 2026-10-12 · 검색엔진 소유확인 메타태그 추가
+> 마지막 갱신: 2026-10-12 · GitHub 저장소 이름 변경(`naie_de_areum` → `nail_de_areum`) 반영
 
 ---
 
@@ -12,7 +12,8 @@
 | 형태 | 정적 원페이지 (HTML5 + CSS3 + Vanilla JS), 빌드 과정 없음 |
 | 목적 | SEO — "대구 손톱연장 / 웨딩네일 / 네일샵" 검색과 AI 검색에서 매장을 정확히 이해시키기 |
 | 공개 주소 | https://nail-de-areum.pages.dev/ (커스텀 도메인 미정) |
-| 호스팅 | Cloudflare Pages, GitHub `Benhur41/naie_de_areum` 연동, `main` push 시 자동 배포 |
+| 호스팅 | Cloudflare Pages, GitHub `Benhur41/nail_de_areum` 연동, `main` push 시 자동 배포 |
+| 로컬 폴더 | `C:/Users/user/naie_de_areum` — 저장소 이름 변경 전 이름 그대로. **폴더 이름 변경 금지** (Claude 앱 프로젝트·워크트리·메모리 경로가 묶여 있음) |
 | Pages 설정 | Framework: None · Build command: 없음 · **Build output directory: `public`** |
 | 외부 의존 | Google Fonts(Cormorant Garamond), jsDelivr(Pretendard) — 둘 다 비동기 로드 |
 
