@@ -52,6 +52,7 @@
 - JS가 꺼져도 모든 텍스트·메뉴·링크가 동작해야 한다
 - **원페이지 유지.** 새 페이지가 꼭 필요하면 사용자와 상의 → sitemap.xml 추가
 - 무거운 외부 SDK(지도 SDK 등) 대신 링크·정적 이미지
+- **상담 버튼(연장·웨딩·디자인 문의·모바일 "카톡 상담")은 모두 카카오톡 채널**(`class="js-kakao"`, https://pf.kakao.com/_Zdihn) — 사용자 요청(상담은 보통 카톡으로 함). 네이버는 "네이버 예약" 버튼에만
 
 ### 디자인 톤을 지킨다
 - Quiet Luxury · Bridal Elegance · Editorial · Minimal. 고급 웨딩 브랜드와 럭셔리 뷰티 브랜드의 중간
@@ -82,21 +83,25 @@
 - 영문·한글 `<span>` 을 붙여 쓸 땐 **사이에 공백**을 둔다 (텍스트 추출 시 "Hand핸드"처럼 붙는 문제)
 
 ### 사진
-1. `python tools/optimize_images.py <원본> public/images/<폴더>/<설명형-파일명>` → WebP 480/800/1170 (HTML에서는 `images/...`)
-2. 파일명: `daegu-<분야>-nail-<특징>` (영문 소문자-하이픈)
-3. alt: 쉐입·길이·컬러·아트를 구체적으로 ("아몬드 쉐입 손톱연장, 누드 핑크 펄 그라데이션")
-4. `<img>` 에 width/height, srcset, 실제 레이아웃 폭에 맞는 sizes, 히어로 외 `loading="lazy"`
-5. 포트폴리오는 `<li data-category="extension|wedding|art">` (복수는 공백 구분), 썸네일은 1170 원본으로 가는 `<a class="gallery-open">`
-6. sitemap.xml 에 대표 이미지 `<image:image>` 추가
-7. 플레이스홀더 교체 시 `.ph`(role="img"는 `<li>`가 아닌 내부 `<div>`에) 를 `<img>` 로 바꾼다
-8. 원본 사진은 저장소에 넣지 않는다 (프로젝트 폴더에 받으면 `.gitignore` 에 추가)
+- 원본은 사용자가 `C:/Users/user/naie_de_areum/네일사진/` 에 넣는다 (`.gitignore` 로 제외 — 원본은 저장소에 넣지 않는다)
+- 먼저 **전부 직접 본다**: 번호 붙인 접촉 시트(contact sheet)로 훑고, 애매한 건 크게 본다. 중복은 이미지 지문(dHash)으로 확인
+1. `python tools/optimize_images.py <원본> public/images/<폴더>/<설명형-파일명>` → WebP -480/-800/-1170 (원본이 좁으면 -1170 은 원본 폭, srcset 에 실제 폭)
+   - 폴더: `portfolio/` · `before-after/` · `monthly-art/YYYY-MM/`(파일명 `daegu-monthly-art-YYYY-MM-NN`)
+2. 파일명: `daegu-nail-<쉐입>-<컬러>-<특징>` (영문 소문자-하이픈)
+3. alt: 쉐입·길이·컬러·아트를 구체적으로 ("아몬드 쉐입 롱 손톱연장, 화이트 펄 글리터 그라데이션")
+4. `<img>` 에 width/height, srcset, 실제 레이아웃 폭에 맞는 sizes, 히어로 외 `loading="lazy"`. 썸네일은 1170 원본으로 가는 `<a class="gallery-open">` 로 감싼다(라이트박스)
+5. 분류: 포트폴리오 `<li data-category="extension|wedding|art">`. **연장 여부·웨딩 시술 여부는 사진으로 단정 못 함** — 길이·C커브가 명확한 롱 네일만 extension, wedding 은 "웨딩네일 추천 디자인" 으로 표현하고, 분류 결과를 사용자에게 보고해 확인받는다
+6. `public/sitemap.xml` 에 1170 이미지 `<image:image>` 추가, `<lastmod>` 갱신
+7. 이달의 아트 새 달 추가 절차는 README.md 3번 (월 링크 + section + is-active 이동 + 라벨)
+8. 사진이 많아도 첫 화면 성능을 지키는 구조: 포트폴리오는 앞 12장만(`.is-collapsed`), 이달의 아트는 최신 1개월만(`.is-active`) 표시. 숨긴 사진은 lazy 라 로드되지 않는다
 
 ### 함께 고쳐야 하는 곳 (이중 관리)
 | 바꾸는 것 | 같이 바꿀 곳 |
 |---|---|
 | 가격 | `#price` + JSON-LD `hasOfferCatalog` (+ 연장 가격은 `#extension`·FAQ) |
 | 주소·전화·영업시간 | `#location`, FAQ, 푸터 `.footer-address`, 모바일 바(전화), JSON-LD |
-| 외부 링크(네이버·인스타·카톡) | `.js-booking`·`.js-place` 전체, `#location`, 푸터, FAQ, JSON-LD `sameAs` |
+| 외부 링크(네이버·인스타·카톡) | `.js-booking`·`.js-place`·`.js-kakao` 전체, `#location`, 푸터, FAQ, JSON-LD `sameAs` |
+| 이달의 아트 새 달 | `.archive-nav` 월 링크, `.archive` section, `is-active` 4곳, `.monthly-month` 라벨, sitemap |
 | 사이트 주소(도메인) | `index.html`(canonical·OG·JSON-LD), `robots.txt`, `sitemap.xml` |
 | 섹션 추가·삭제 | 내비, `.section-index` 번호, ARCHITECTURE.md 3번 표 |
 
@@ -105,6 +110,8 @@
 - `404.html` — 없으면 Cloudflare Pages가 모든 없는 주소에 홈을 200으로 응답 (soft 404)
 - `<head>` 의 `no-js` 제거 인라인 스크립트 — 옮기면 JS 비활성 레이아웃이 깜빡이며 CLS 발생 (실측 0.114)
 - 폰트 `preload + onload` + `<noscript>` 구조 — 되돌리면 렌더링 차단 재발
+- HTML 의 초기 상태 클래스(`.gallery.is-collapsed`, `.art-month.is-active` 등)와 `html:not(.no-js)` CSS 규칙 — JS 가 아니라 CSS 로 첫 화면을 정해야 레이아웃 이동이 없다
+- `js/main.js` 의 스크롤 첫 측정은 `requestAnimationFrame` 안에서 — 로드 중 바로 읽으면 강제 리플로우(실측 113ms)
 - `robots.txt` 에 `Disallow: /` 를 넣지 말 것
 - 사이트 파일을 `public/` 밖으로 꺼내지 말 것 — 밖에 두면 배포되지 않는다. 반대로 문서·스크립트·원본 사진은 `public/` 에 넣지 말 것(공개됨)
 

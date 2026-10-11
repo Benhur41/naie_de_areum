@@ -63,41 +63,47 @@ HTML5 + CSS3 + Vanilla JS로 만들었고, 빌드 과정이 없어 파일 그대
 
 ## 2. 사진 교체 / 추가
 
-1. 사진은 **WebP**, 세로 3:4 비율 권장. 가로 480 / 800 / 1170px 세 가지로 저장합니다.
-   (예: [squoosh.app](https://squoosh.app) 에서 변환)
-2. 파일명은 내용을 설명하는 영문 소문자-하이픈 형식:
-   `daegu-wedding-nail-white-pearl-french-800.webp`
-3. 해당 폴더에 넣고, `index.html`의 `<img>` 에서 `src`, `srcset`, `alt` 를 바꿉니다.
-4. **alt 텍스트**는 사진을 못 보는 사람에게 설명하듯 구체적으로:
-   `"화이트 펄 프렌치 웨딩네일, 아몬드 쉐입 손톱연장"` ✅ / `"네일"` ❌
-5. `width`/`height` 속성은 원본 비율과 맞게 유지합니다(레이아웃 흔들림 방지).
-6. 첫 화면(Hero) 사진만 `loading="lazy"` 없이, 나머지는 `loading="lazy"` 를 유지합니다.
+> 원본 사진은 프로젝트 폴더의 `네일사진/` 에 넣으면 됩니다(Git 제외). 변환본만 `public/images/` 에 올라갑니다.
+> 사진을 Claude에게 주면 분류·변환·설명 작성·배치를 모두 처리합니다. 아래는 직접 할 때의 방법입니다.
 
-### 포트폴리오 추가
-`#portfolio` 의 `<li data-category="...">` 하나를 복사해 수정합니다.
-`data-category` 값: `extension` / `wedding` / `art` (여러 개면 공백 구분)
+1. 변환: `python tools/optimize_images.py <원본> public/images/<폴더>/<설명형-파일명>` → WebP 3종(-480/-800/-1170)
+   - 폴더: `portfolio/`(포트폴리오·웨딩), `before-after/`(전후), `monthly-art/YYYY-MM/`(이달의 아트)
+   - 파일명 예: `daegu-nail-almond-white-glitter-long`
+2. 출력된 width/height 를 `<img>` 에 넣고, srcset 에는 **실제 폭**(원본이 좁으면 1125w 등)을 씁니다.
+3. **alt 텍스트**는 사진을 못 보는 사람에게 설명하듯 구체적으로:
+   `"아몬드 쉐입 롱 손톱연장, 화이트 펄 글리터 그라데이션"` ✅ / `"네일"` ❌
+4. 첫 화면(Hero) 사진만 `loading="lazy"` 없이, 나머지는 모두 `loading="lazy"`
+5. `public/sitemap.xml` 에 1170 이미지 주소를 `<image:image>` 로 추가
 
-### 웨딩 사진 플레이스홀더 교체
-`#bridal` 의 `<li class="ph" ...>` 를 아래처럼 바꿉니다.
-```html
-<li><img src="images/wedding/파일명-800.webp" width="800" height="1067" loading="lazy" alt="구체적인 설명"></li>
-```
+### 포트폴리오 추가 (`#portfolio`)
+`<li data-category="...">` 하나를 복사해 수정합니다.
+- `data-category`: `extension` / `wedding` / `art` (여러 개면 공백 구분)
+- 처음엔 **앞 12장만** 보이고 나머지는 "포트폴리오 더 보기" 버튼으로 펼쳐집니다. 보여주고 싶은 사진을 앞에 두세요.
+
+### 웨딩 추천 사진 (`#bridal .bridal-grid`)
+포트폴리오 중 웨딩 무드 사진 6장을 골라 둔 곳입니다. `<li>` 를 복사해 바꾸면 됩니다(포트폴리오와 같은 이미지 파일 사용).
+
+### 손톱연장 전후 사진 (`#before-after`)
+`.ba-case` 블록 하나가 사례 1개입니다. 각 사진의 `<span class="ba-step ba-before|ba-process|ba-after">` 로 Before / Process / After 표시가 붙습니다.
 
 ---
 
-## 3. 이달의 아트 교체 (매월)
+## 3. 이달의 아트 추가 (매월)
 
-`index.html` 에서 `▼ 이달의 아트 교체 영역 ▼` 을 찾습니다.
+이달의 아트는 **연도 → 월** 을 골라 보는 아카이브입니다(2024년 9월~). JS가 꺼져 있으면 모든 달이 최신순으로 펼쳐집니다.
 
-1. 월 표기 수정: `<span class="m-en">October</span><span class="m-num">2026 · 10</span>`
-2. 사진 교체: 각 `<li>` 의 `<div class="ph" ...>...</div>` 를 아래로 교체
-   ```html
-   <img src="images/monthly-art/2026-11-design-01-800.webp" width="800" height="1067" loading="lazy"
-        alt="2026년 11월 이달의 아트, 버건디 자석젤 포인트 아트">
-   ```
-3. 디자인명(`<h3>`)과 가격(`<p class="price-tag">`)을 수정 — 확정 가격이 없으면 "가격 상담" 유지
-4. 이전 달 사진은 `#portfolio` 의 Nail Art 로 옮기면 콘텐츠가 계속 쌓여 SEO에 도움이 됩니다.
-5. `sitemap.xml` 의 `<lastmod>` 를 수정한 날짜로 바꿉니다.
+1. 사진 변환: `public/images/monthly-art/YYYY-MM/daegu-monthly-art-YYYY-MM-NN-{480,800,1170}.webp`
+2. `public/index.html` 의 `06 MONTHLY ART` 주석을 찾습니다.
+3. **월 버튼 추가**: `.archive-nav` 에서 해당 연도 `<ul class="archive-months">` 끝에
+   `<li><a href="#art-YYYY-MM" data-month="YYYY-MM">M월</a></li>` 추가
+   - 새 연도면 연도 버튼(`.archive-year`)과 `.archive-month-group` 블록도 추가
+4. **사진 블록 추가**: `.archive` 맨 위에 기존 `<section class="art-month" ...>` 하나를 복사해
+   id·data-month·data-label-en(영문 월)·제목·사진을 바꿉니다.
+5. **최신 달 표시**: `is-active` 를 새 달로 옮깁니다 — 월 링크(+`aria-current="true"`), 연도 버튼(+`aria-pressed="true"`), 월 그룹, section 네 곳.
+   위쪽 `.monthly-month` 의 영문 월·숫자도 바꿉니다.
+6. `public/sitemap.xml` 에 이미지 추가, `<lastmod>` 갱신
+
+디자인별 가격은 확정되면 각 사진 설명(`figcaption`)에 적을 수 있습니다. 지금은 "카카오톡 문의" 안내로 되어 있습니다.
 
 ## 4. 리뷰 갱신 (월 1회 권장)
 

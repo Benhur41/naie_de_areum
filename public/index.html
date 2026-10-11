@@ -105,7 +105,7 @@
         "areaServed": { "@type": "City", "name": "대구광역시" },
         "priceRange": "₩25,000~",
         "currenciesAccepted": "KRW",
-        "knowsAbout": ["손톱연장", "연장네일", "웨딩네일", "네일아트", "이달의 아트", "풋케어"],
+        "knowsAbout": ["손톱연장", "젤 연장", "연장네일", "웨딩네일", "네일아트", "이달의 아트", "풋케어"],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "네일드아름 시술 메뉴",
@@ -164,7 +164,8 @@
           <li><a href="#price">Price</a></li>
           <li><a href="#location">Location</a></li>
         </ul>
-        <!-- 네이버 플레이스(예약 포함) 주소가 바뀌면 class="js-booking" / "js-place" 링크의 href 를 모두 교체 -->
+        <!-- 네이버 플레이스(예약) 주소가 바뀌면 class="js-booking" / "js-place" 링크, 카카오톡 채널은 class="js-kakao" 링크의 href 를 모두 교체.
+             상담 버튼(연장·웨딩·디자인 문의)은 모두 카카오톡 채널(js-kakao)로 연결 — 사용자 요청 -->
         <a class="btn btn-dark nav-cta js-booking" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버 예약</a>
       </nav>
     </div>
@@ -271,7 +272,113 @@
           </ol>
 
           <p class="note">연장은 1개당 10,000원이 디자인 비용에 추가됩니다. 정확한 금액은 상담 시 안내드립니다.</p>
-          <a class="btn btn-dark js-booking" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">손톱연장 예약 · 상담</a>
+          <a class="btn btn-dark js-kakao" href="https://pf.kakao.com/_Zdihn" target="_blank" rel="noopener">카카오톡으로 연장 상담하기</a>
+        </div>
+      </div>
+
+      <!-- 손톱연장 전후 사진. 사례 추가: .ba-case 블록 복사 (README '사진 교체' 참고) -->
+      <div class="container ba" id="before-after">
+        <div class="ba-head">
+          <h3 class="ba-title"><span class="en">Before &amp; After</span> <span class="ko">손톱연장 전후 사진</span></h3>
+          <p>짧거나 손상된 손톱도 연장으로 길이와 쉐입을 새로 만들 수 있습니다. 네일드아름에서 실제로 시술한 전후 사진입니다.</p>
+        </div>
+          <div class="ba-case">
+            <p class="ba-case-label">Case 01 · 손상된 손톱 → 코핀 화이트 그라데이션 롱 연장</p>
+            <ul class="ba-grid ba-grid-5">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/before-after/daegu-nail-extension-case1-before-1-1170.webp">
+                    <img src="images/before-after/daegu-nail-extension-case1-before-1-480.webp"
+                         srcset="images/before-after/daegu-nail-extension-case1-before-1-480.webp 480w, images/before-after/daegu-nail-extension-case1-before-1-800.webp 800w"
+                         sizes="(min-width: 1240px) 220px, (min-width: 900px) 18vw, 50vw"
+                         width="480" height="853" loading="lazy" decoding="async"
+                         alt="네일드아름 손톱연장 전후 사진 1번 사례, 시술 전 — 손상되고 길이가 고르지 않은 손톱">
+                  </a>
+                  <figcaption><span class="ba-step ba-before">Before</span> 시술 전 — 손상되고 길이가 고르지 않은 손톱</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/before-after/daegu-nail-extension-case1-before-2-1170.webp">
+                    <img src="images/before-after/daegu-nail-extension-case1-before-2-480.webp"
+                         srcset="images/before-after/daegu-nail-extension-case1-before-2-480.webp 480w, images/before-after/daegu-nail-extension-case1-before-2-800.webp 800w"
+                         sizes="(min-width: 1240px) 220px, (min-width: 900px) 18vw, 50vw"
+                         width="480" height="853" loading="lazy" decoding="async"
+                         alt="네일드아름 손톱연장 전후 사진 1번 사례, 시술 전 — 짧고 끝이 고르지 않은 손톱">
+                  </a>
+                  <figcaption><span class="ba-step ba-before">Before</span> 시술 전 — 짧고 끝이 고르지 않은 손톱</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/before-after/daegu-nail-extension-case1-process-1170.webp">
+                    <img src="images/before-after/daegu-nail-extension-case1-process-480.webp"
+                         srcset="images/before-after/daegu-nail-extension-case1-process-480.webp 480w, images/before-after/daegu-nail-extension-case1-process-800.webp 800w"
+                         sizes="(min-width: 1240px) 220px, (min-width: 900px) 18vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="네일드아름 손톱연장 전후 사진 1번 사례, 시술 중 — 길이와 코핀 쉐입을 잡는 단계">
+                  </a>
+                  <figcaption><span class="ba-step ba-process">Process</span> 시술 중 — 길이와 코핀 쉐입을 잡는 단계</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/before-after/daegu-nail-extension-case1-after-1-1170.webp">
+                    <img src="images/before-after/daegu-nail-extension-case1-after-1-480.webp"
+                         srcset="images/before-after/daegu-nail-extension-case1-after-1-480.webp 480w, images/before-after/daegu-nail-extension-case1-after-1-800.webp 800w"
+                         sizes="(min-width: 1240px) 220px, (min-width: 900px) 18vw, 50vw"
+                         width="480" height="853" loading="lazy" decoding="async"
+                         alt="네일드아름 손톱연장 전후 사진 1번 사례, 시술 후 — 코핀 쉐입 화이트 그라데이션 롱 연장">
+                  </a>
+                  <figcaption><span class="ba-step ba-after">After</span> 시술 후 — 코핀 쉐입 화이트 그라데이션 롱 연장</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/before-after/daegu-nail-extension-case1-after-2-1170.webp">
+                    <img src="images/before-after/daegu-nail-extension-case1-after-2-480.webp"
+                         srcset="images/before-after/daegu-nail-extension-case1-after-2-480.webp 480w, images/before-after/daegu-nail-extension-case1-after-2-800.webp 800w"
+                         sizes="(min-width: 1240px) 220px, (min-width: 900px) 18vw, 50vw"
+                         width="480" height="853" loading="lazy" decoding="async"
+                         alt="네일드아름 손톱연장 전후 사진 1번 사례, 시술 후 — 코핀 쉐입 화이트 그라데이션 롱 연장">
+                  </a>
+                  <figcaption><span class="ba-step ba-after">After</span> 시술 후 — 코핀 쉐입 화이트 그라데이션 롱 연장</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+          <div class="ba-case">
+            <p class="ba-case-label">Case 02 · 짧은 손톱 → 코핀 누드 그라데이션 롱 연장</p>
+            <ul class="ba-grid ba-grid-2">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/before-after/daegu-nail-extension-case2-before-1170.webp">
+                    <img src="images/before-after/daegu-nail-extension-case2-before-480.webp"
+                         srcset="images/before-after/daegu-nail-extension-case2-before-480.webp 480w, images/before-after/daegu-nail-extension-case2-before-800.webp 800w, images/before-after/daegu-nail-extension-case2-before-1170.webp 1170w"
+                         sizes="(min-width: 1240px) 470px, (min-width: 900px) 38vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="네일드아름 손톱연장 전후 사진 2번 사례, 시술 전 — 짧은 손톱">
+                  </a>
+                  <figcaption><span class="ba-step ba-before">Before</span> 시술 전 — 짧은 손톱</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/before-after/daegu-nail-extension-case2-after-1170.webp">
+                    <img src="images/before-after/daegu-nail-extension-case2-after-480.webp"
+                         srcset="images/before-after/daegu-nail-extension-case2-after-480.webp 480w, images/before-after/daegu-nail-extension-case2-after-800.webp 800w, images/before-after/daegu-nail-extension-case2-after-1170.webp 1170w"
+                         sizes="(min-width: 1240px) 470px, (min-width: 900px) 38vw, 50vw"
+                         width="480" height="853" loading="lazy" decoding="async"
+                         alt="네일드아름 손톱연장 전후 사진 2번 사례, 시술 후 — 코핀 쉐입 누드 그라데이션 롱 연장">
+                  </a>
+                  <figcaption><span class="ba-step ba-after">After</span> 시술 후 — 코핀 쉐입 누드 그라데이션 롱 연장</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+        <div class="ba-actions">
+          <a class="btn btn-dark js-kakao" href="https://pf.kakao.com/_Zdihn" target="_blank" rel="noopener">카카오톡으로 내 손톱 상담하기</a>
+          <p class="note">지금 손톱 사진을 카카오톡 채널로 보내주시면 연장 길이와 쉐입을 상담해 드립니다.</p>
         </div>
       </div>
     </section>
@@ -306,15 +413,85 @@
             <li><h3>Pearl</h3><p>빛에 따라 은은하게 반짝이는 펄 · 오로라 포인트</p></li>
           </ul>
           <p class="note">웨딩네일 가격은 디자인과 연장 여부에 따라 달라 상담 후 안내드립니다.</p>
-          <a class="btn btn-dark js-booking" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">웨딩네일 상담 예약</a>
+          <a class="btn btn-dark js-kakao" href="https://pf.kakao.com/_Zdihn" target="_blank" rel="noopener">카카오톡으로 웨딩네일 상담하기</a>
         </div>
       </div>
-      <!-- TODO: 실제 웨딩네일 시술 사진을 받으면 아래 플레이스홀더를 <img>로 교체 (README '사진 교체' 참고) -->
-      <div class="container">
+      <!-- 웨딩 섹션 사진: 실제 시술 사진 중 웨딩 무드로 추천하는 디자인 (포트폴리오와 같은 이미지) -->
+      <div class="container bridal-picks">
+        <h3 class="bridal-picks-title"><span class="en">Bridal Picks</span> <span class="ko">신부님께 추천하는 웨딩네일 디자인</span></h3>
         <ul class="bridal-grid">
-          <li><div class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></div></li>
-          <li><div class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></div></li>
-          <li><div class="ph" role="img" aria-label="웨딩네일 사진 준비 중"><span>Bridal Photo<br><small>준비 중</small></span></div></li>
+          <li>
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-nude-silver-line-french-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-nude-silver-line-french-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-nude-silver-line-french-480.webp 480w, images/portfolio/daegu-nail-almond-nude-silver-line-french-800.webp 800w"
+                     sizes="(min-width: 1240px) 370px, (min-width: 700px) 31vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 누드 베이스에 얇은 실버 라인 프렌치, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption>아몬드 롱 · 실버 라인 프렌치</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-pearl-white-glitter-french-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-pearl-white-glitter-french-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-pearl-white-glitter-french-480.webp 480w, images/portfolio/daegu-nail-coffin-pearl-white-glitter-french-800.webp 800w"
+                     sizes="(min-width: 1240px) 370px, (min-width: 700px) 31vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 펄 화이트 네일에 실버 글리터 프렌치, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption>코핀 · 펄 화이트 글리터 프렌치</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-white-glitter-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-white-glitter-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-white-glitter-long-480.webp 480w, images/portfolio/daegu-nail-almond-white-glitter-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 370px, (min-width: 700px) 31vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 화이트 펄 글리터 그라데이션, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption>아몬드 롱 · 화이트 펄 글리터</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-nude-pearl-chrome-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-nude-pearl-chrome-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-nude-pearl-chrome-long-480.webp 480w, images/portfolio/daegu-nail-almond-nude-pearl-chrome-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 370px, (min-width: 700px) 31vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 누드 베이스에 오로라 펄 크롬 라인, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption>아몬드 롱 · 오로라 펄 크롬</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-white-ombre-long-2-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-white-ombre-long-2-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-white-ombre-long-2-480.webp 480w, images/portfolio/daegu-nail-coffin-white-ombre-long-2-800.webp 800w"
+                     sizes="(min-width: 1240px) 370px, (min-width: 700px) 31vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 롱 손톱연장, 화이트 그라데이션 팁, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption>코핀 롱 · 화이트 그라데이션</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-pink-aurora-glitter-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-pink-aurora-glitter-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-pink-aurora-glitter-480.webp 480w, images/portfolio/daegu-nail-almond-pink-aurora-glitter-800.webp 800w"
+                     sizes="(min-width: 1240px) 370px, (min-width: 700px) 31vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 투명한 핑크에 오로라 글리터 포인트, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption>아몬드 롱 · 핑크 오로라 글리터</figcaption>
+            </figure>
+          </li>
         </ul>
       </div>
     </section>
@@ -339,8 +516,9 @@
         <!--
           포트폴리오 추가 방법: 아래 <li> 하나를 복사해 src/srcset/alt/figcaption/data-category 만 바꾸세요.
           data-category 값: extension / wedding / art (여러 개면 공백으로 구분)
+          처음에는 앞 12장만 보이고(.is-collapsed), 나머지는 "더 보기" 버튼으로 펼쳐집니다. 보여줄 순서대로 배치하세요.
         -->
-        <ul class="gallery">
+        <ul class="gallery is-collapsed" id="gallery">
           <li data-category="extension">
             <figure>
               <a class="gallery-open" href="images/hero/daegu-nail-extension-almond-nude-1170.webp">
@@ -348,9 +526,33 @@
                      srcset="images/hero/daegu-nail-extension-almond-nude-480.webp 480w, images/hero/daegu-nail-extension-almond-nude-800.webp 800w"
                      sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
                      width="480" height="640" loading="lazy" decoding="async"
-                     alt="아몬드 쉐입 롱 손톱연장, 투명한 누드 베이지 원톤 네일">
+                     alt="아몬드 쉐입 롱 손톱연장, 투명한 누드 베이지 원톤">
               </a>
-              <figcaption><span class="cat">Extension</span> 아몬드 쉐입 · 누드 베이지 원톤</figcaption>
+              <figcaption><span class="cat">Extension</span> 아몬드 롱 · 누드 베이지 원톤</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-stiletto-burgundy-gel-extension-1170.webp">
+                <img src="images/portfolio/daegu-nail-stiletto-burgundy-gel-extension-480.webp"
+                     srcset="images/portfolio/daegu-nail-stiletto-burgundy-gel-extension-480.webp 480w, images/portfolio/daegu-nail-stiletto-burgundy-gel-extension-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="640" loading="lazy" decoding="async"
+                     alt="스틸레토 쉐입 젤 연장(Gel extension), 버건디 레드 원톤 롱 네일">
+              </a>
+              <figcaption><span class="cat">Extension</span> 스틸레토 롱 · 버건디 젤 연장</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-nude-pearl-chrome-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-nude-pearl-chrome-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-nude-pearl-chrome-long-480.webp 480w, images/portfolio/daegu-nail-almond-nude-pearl-chrome-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 누드 베이스에 오로라 펄 크롬 라인, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption><span class="cat">Extension</span> 아몬드 롱 · 오로라 펄 크롬</figcaption>
             </figure>
           </li>
           <li data-category="extension">
@@ -362,7 +564,43 @@
                      width="480" height="640" loading="lazy" decoding="async"
                      alt="10손 손톱연장, 코핀 쉐입 롱 길이의 누드 핑크 시럽 컬러">
               </a>
-              <figcaption><span class="cat">Extension</span> 10손 연장 · 코핀 쉐입 누드 핑크</figcaption>
+              <figcaption><span class="cat">Extension</span> 10손 연장 · 코핀 누드 핑크</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-glass-bead-magnet-gradient-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-glass-bead-magnet-gradient-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-glass-bead-magnet-gradient-480.webp 480w, images/portfolio/daegu-nail-coffin-glass-bead-magnet-gradient-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="843" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 롱 손톱연장, 화이트에서 스모키 톤으로 번지는 그라데이션 유리구슬 자석 네일">
+              </a>
+              <figcaption><span class="cat">Extension</span> 코핀 롱 · 그라데이션 유리구슬 자석</figcaption>
+            </figure>
+          </li>
+          <li data-category="wedding art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-pearl-white-glitter-french-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-pearl-white-glitter-french-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-pearl-white-glitter-french-480.webp 480w, images/portfolio/daegu-nail-coffin-pearl-white-glitter-french-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 펄 화이트 네일에 실버 글리터 프렌치, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption><span class="cat">Wedding</span> 코핀 · 펄 화이트 글리터 프렌치</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-short-black-white-doodle-art-1170.webp">
+                <img src="images/portfolio/daegu-nail-short-black-white-doodle-art-480.webp"
+                     srcset="images/portfolio/daegu-nail-short-black-white-doodle-art-480.webp 480w, images/portfolio/daegu-nail-short-black-white-doodle-art-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="640" loading="lazy" decoding="async"
+                     alt="짧은 손톱에 블랙·화이트 스트라이프, 도트, 별 드로잉 네일아트">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 숏 · 블랙 화이트 드로잉 아트</figcaption>
             </figure>
           </li>
           <li data-category="art wedding">
@@ -377,6 +615,210 @@
               <figcaption><span class="cat">Nail Art</span> 펄 그라데이션 · 라벤더 블루</figcaption>
             </figure>
           </li>
+          <li data-category="extension wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-white-ombre-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-white-ombre-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-white-ombre-long-480.webp 480w, images/portfolio/daegu-nail-coffin-white-ombre-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="640" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 롱 손톱연장, 누드에서 화이트로 번지는 그라데이션 네일">
+              </a>
+              <figcaption><span class="cat">Extension</span> 코핀 롱 · 화이트 그라데이션</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-black-french-cross-leopard-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-black-french-cross-leopard-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-black-french-cross-leopard-480.webp 480w, images/portfolio/daegu-nail-coffin-black-french-cross-leopard-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="640" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 누드 네일에 블랙 프렌치, 레오파드 포인트, 크리스탈 크로스 아트">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 코핀 · 블랙 프렌치 크로스 아트</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-stiletto-clear-silver-3d-1170.webp">
+                <img src="images/portfolio/daegu-nail-stiletto-clear-silver-3d-480.webp"
+                     srcset="images/portfolio/daegu-nail-stiletto-clear-silver-3d-480.webp 480w, images/portfolio/daegu-nail-stiletto-clear-silver-3d-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="스틸레토 쉐입 롱 손톱연장, 투명 클리어 팁에 실버 3D 크롬 아트">
+              </a>
+              <figcaption><span class="cat">Extension</span> 스틸레토 롱 · 클리어 실버 3D</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-white-glitter-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-white-glitter-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-white-glitter-long-480.webp 480w, images/portfolio/daegu-nail-almond-white-glitter-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 화이트 펄 글리터 그라데이션, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption><span class="cat">Extension</span> 아몬드 롱 · 화이트 펄 글리터</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-nude-pink-silver-line-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-nude-pink-silver-line-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-nude-pink-silver-line-480.webp 480w, images/portfolio/daegu-nail-almond-nude-pink-silver-line-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아이보리 실크 위 아몬드 쉐입 롱 손톱연장, 누드 핑크에 가는 실버 라인 아트">
+              </a>
+              <figcaption><span class="cat">Extension</span> 아몬드 롱 · 누드 핑크 실버 라인</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-pink-aurora-glitter-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-pink-aurora-glitter-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-pink-aurora-glitter-480.webp 480w, images/portfolio/daegu-nail-almond-pink-aurora-glitter-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 투명한 핑크에 오로라 글리터 포인트, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption><span class="cat">Extension</span> 아몬드 롱 · 핑크 오로라 글리터</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-nude-silver-line-french-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-nude-silver-line-french-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-nude-silver-line-french-480.webp 480w, images/portfolio/daegu-nail-almond-nude-silver-line-french-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 누드 베이스에 얇은 실버 라인 프렌치, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption><span class="cat">Extension</span> 아몬드 롱 · 실버 라인 프렌치</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-stiletto-nude-pink-rhinestone-1170.webp">
+                <img src="images/portfolio/daegu-nail-stiletto-nude-pink-rhinestone-480.webp"
+                     srcset="images/portfolio/daegu-nail-stiletto-nude-pink-rhinestone-480.webp 480w, images/portfolio/daegu-nail-stiletto-nude-pink-rhinestone-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="스틸레토 쉐입 롱 손톱연장, 누드 핑크에 크리스탈 스톤 포인트">
+              </a>
+              <figcaption><span class="cat">Extension</span> 스틸레토 롱 · 누드 핑크 스톤</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-nude-onetone-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-nude-onetone-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-nude-onetone-long-480.webp 480w, images/portfolio/daegu-nail-coffin-nude-onetone-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 롱 손톱연장, 투명감 있는 누드 원톤">
+              </a>
+              <figcaption><span class="cat">Extension</span> 코핀 롱 · 누드 원톤</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-nude-onetone-long-2-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-nude-onetone-long-2-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-nude-onetone-long-2-480.webp 480w, images/portfolio/daegu-nail-coffin-nude-onetone-long-2-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 롱 손톱연장, 손가락이 길어 보이는 누드 원톤">
+              </a>
+              <figcaption><span class="cat">Extension</span> 코핀 롱 · 누드 원톤</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-square-nude-syrup-line-art-1170.webp">
+                <img src="images/portfolio/daegu-nail-square-nude-syrup-line-art-480.webp"
+                     srcset="images/portfolio/daegu-nail-square-nude-syrup-line-art-480.webp 480w, images/portfolio/daegu-nail-square-nude-syrup-line-art-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="스퀘어 쉐입 누드 시럽 네일에 화이트 V 라인 아트">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 스퀘어 · 누드 시럽 라인 아트</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-square-burgundy-syrup-line-art-1170.webp">
+                <img src="images/portfolio/daegu-nail-square-burgundy-syrup-line-art-480.webp"
+                     srcset="images/portfolio/daegu-nail-square-burgundy-syrup-line-art-480.webp 480w, images/portfolio/daegu-nail-square-burgundy-syrup-line-art-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="짧은 스퀘어 쉐입 버건디 시럽 네일, 화이트 V 라인 포인트">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 숏 스퀘어 · 버건디 시럽 라인 아트</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-square-black-line-french-1170.webp">
+                <img src="images/portfolio/daegu-nail-square-black-line-french-480.webp"
+                     srcset="images/portfolio/daegu-nail-square-black-line-french-480.webp 480w, images/portfolio/daegu-nail-square-black-line-french-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="640" loading="lazy" decoding="async"
+                     alt="짧은 스퀘어 쉐입 누드 핑크 네일에 블랙 라인 프렌치">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 숏 스퀘어 · 블랙 라인 프렌치</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-pink-3d-ribbon-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-pink-3d-ribbon-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-pink-3d-ribbon-480.webp 480w, images/portfolio/daegu-nail-coffin-pink-3d-ribbon-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 핑크 시럽 네일에 화이트 3D 리본 파츠 포인트">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 코핀 · 핑크 3D 리본</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-nude-onetone-long-3-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-nude-onetone-long-3-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-nude-onetone-long-3-480.webp 480w, images/portfolio/daegu-nail-coffin-nude-onetone-long-3-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 롱 손톱연장, 맑은 누드 핑크 원톤">
+              </a>
+              <figcaption><span class="cat">Extension</span> 코핀 롱 · 누드 원톤</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-white-ombre-long-2-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-white-ombre-long-2-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-white-ombre-long-2-480.webp 480w, images/portfolio/daegu-nail-coffin-white-ombre-long-2-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 롱 손톱연장, 화이트 그라데이션 팁, 웨딩네일 추천 디자인">
+              </a>
+              <figcaption><span class="cat">Extension</span> 코핀 롱 · 화이트 그라데이션</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-short-square-nude-onetone-2-1170.webp">
+                <img src="images/portfolio/daegu-nail-short-square-nude-onetone-2-480.webp"
+                     srcset="images/portfolio/daegu-nail-short-square-nude-onetone-2-480.webp 480w, images/portfolio/daegu-nail-short-square-nude-onetone-2-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="639" loading="lazy" decoding="async"
+                     alt="짧은 스퀘어 쉐입 시럽 누드 원톤 데일리 네일">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 숏 스퀘어 · 시럽 누드 원톤</figcaption>
+            </figure>
+          </li>
           <li data-category="art">
             <figure>
               <a class="gallery-open" href="images/gallery/daegu-nail-short-square-nude-onetone-1170.webp">
@@ -384,22 +826,110 @@
                      srcset="images/gallery/daegu-nail-short-square-nude-onetone-480.webp 480w, images/gallery/daegu-nail-short-square-nude-onetone-800.webp 800w"
                      sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
                      width="480" height="640" loading="lazy" decoding="async"
-                     alt="짧은 스퀘어 쉐입 손톱에 시럽 누드 원톤 네일, 데일리 네일">
+                     alt="짧은 스퀘어 쉐입 손톱에 시럽 누드 원톤, 데일리 네일">
               </a>
-              <figcaption><span class="cat">One Tone</span> 숏 스퀘어 · 시럽 누드 원톤</figcaption>
+              <figcaption><span class="cat">Nail Art</span> 숏 스퀘어 · 시럽 누드 원톤</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-short-almond-pink-silver-chrome-1170.webp">
+                <img src="images/portfolio/daegu-nail-short-almond-pink-silver-chrome-480.webp"
+                     srcset="images/portfolio/daegu-nail-short-almond-pink-silver-chrome-480.webp 480w, images/portfolio/daegu-nail-short-almond-pink-silver-chrome-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="640" loading="lazy" decoding="async"
+                     alt="짧은 아몬드 쉐입 누드 핑크 네일에 실버 크롬 글리터 포인트">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 숏 아몬드 · 핑크 실버 크롬</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-coffin-nude-gold-glitter-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-coffin-nude-gold-glitter-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-coffin-nude-gold-glitter-long-480.webp 480w, images/portfolio/daegu-nail-coffin-nude-gold-glitter-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="640" loading="lazy" decoding="async"
+                     alt="코핀 쉐입 롱 손톱연장, 누드 베이스에 골드 글리터 그라데이션">
+              </a>
+              <figcaption><span class="cat">Extension</span> 코핀 롱 · 누드 골드 글리터</figcaption>
+            </figure>
+          </li>
+          <li data-category="art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-short-round-nude-pearl-chrome-1170.webp">
+                <img src="images/portfolio/daegu-nail-short-round-nude-pearl-chrome-480.webp"
+                     srcset="images/portfolio/daegu-nail-short-round-nude-pearl-chrome-480.webp 480w, images/portfolio/daegu-nail-short-round-nude-pearl-chrome-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="480" loading="lazy" decoding="async"
+                     alt="짧은 라운드 쉐입 누드 네일에 은은한 펄 크롬">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 숏 라운드 · 누드 펄 크롬</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-nude-ombre-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-nude-ombre-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-nude-ombre-long-480.webp 480w, images/portfolio/daegu-nail-almond-nude-ombre-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 누드에서 투명으로 번지는 그라데이션">
+              </a>
+              <figcaption><span class="cat">Extension</span> 아몬드 롱 · 누드 그라데이션</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-silver-glitter-tip-long-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-silver-glitter-tip-long-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-silver-glitter-tip-long-480.webp 480w, images/portfolio/daegu-nail-almond-silver-glitter-tip-long-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 롱 손톱연장, 누드에 화이트 실버 글리터 팁">
+              </a>
+              <figcaption><span class="cat">Extension</span> 아몬드 롱 · 실버 글리터 팁</figcaption>
+            </figure>
+          </li>
+          <li data-category="extension art">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-stiletto-clear-silver-chrome-1170.webp">
+                <img src="images/portfolio/daegu-nail-stiletto-clear-silver-chrome-480.webp"
+                     srcset="images/portfolio/daegu-nail-stiletto-clear-silver-chrome-480.webp 480w, images/portfolio/daegu-nail-stiletto-clear-silver-chrome-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="스틸레토 쉐입 롱 손톱연장, 클리어 베이스에 실버 크롬 장식">
+              </a>
+              <figcaption><span class="cat">Extension</span> 스틸레토 롱 · 클리어 실버 크롬</figcaption>
+            </figure>
+          </li>
+          <li data-category="art wedding">
+            <figure>
+              <a class="gallery-open" href="images/portfolio/daegu-nail-almond-pink-white-french-1170.webp">
+                <img src="images/portfolio/daegu-nail-almond-pink-white-french-480.webp"
+                     srcset="images/portfolio/daegu-nail-almond-pink-white-french-480.webp 480w, images/portfolio/daegu-nail-almond-pink-white-french-800.webp 800w"
+                     sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, 50vw"
+                     width="480" height="853" loading="lazy" decoding="async"
+                     alt="아몬드 쉐입 핑크 베이스에 화이트 프렌치 팁">
+              </a>
+              <figcaption><span class="cat">Nail Art</span> 아몬드 · 핑크 화이트 프렌치</figcaption>
             </figure>
           </li>
         </ul>
+        <div class="gallery-toggle-wrap">
+          <button type="button" class="btn btn-line gallery-toggle" aria-controls="gallery" aria-expanded="false">포트폴리오 더 보기</button>
+        </div>
         <p class="gallery-more">더 많은 시술 사례는 <a href="https://www.instagram.com/nailde_areum/" target="_blank" rel="noopener">인스타그램 @nailde_areum</a>과 <a class="js-place" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버 플레이스</a>에서 보실 수 있습니다.</p>
       </div>
     </section>
 
     <!-- ===================== 06 MONTHLY ART ===================== -->
     <!--
-      ▼ 이달의 아트 교체 영역 ▼
-      1) 아래 .monthly-month 의 월 표기를 바꾸고
-      2) 각 <li> 의 플레이스홀더(.ph)를 <img>로 교체한 뒤 디자인명/가격을 수정하세요.
-      자세한 방법: README.md '이달의 아트 교체' 참고
+      이달의 아트 아카이브 (연도 → 월 선택).
+      새 달 추가: README.md '이달의 아트 교체' 참고
+       1) .archive-nav 의 해당 연도 목록에 <li><a href="#art-YYYY-MM" data-month="YYYY-MM">M월</a></li> 추가
+       2) .archive 맨 위에 <section class="art-month" id="art-YYYY-MM" ...> 블록 추가
+       3) 가장 최근 달에만 is-active (nav 링크·연도 버튼·월 그룹·section 모두), .monthly-month 표기 갱신
     -->
     <section class="section monthly" id="monthly" aria-labelledby="monthly-title">
       <div class="container">
@@ -411,36 +941,1238 @@
               <span class="ko">대구 이달의 아트, 매월 새로 공개하는 컬렉션</span>
             </h2>
           </div>
-          <p class="monthly-month"><span class="m-en">October</span> <span class="m-num">2026 · 10</span></p>
+          <p class="monthly-month" aria-live="polite"><span class="m-en">September</span> <span class="m-num">2026 · 09</span></p>
         </div>
         <p class="monthly-intro">
           네일드아름의 이달의 아트는 매달 계절과 무드를 담아 새롭게 구성하는 디자인 컬렉션입니다.
+          연도와 월을 골라 지난 컬렉션까지 모두 보실 수 있어요. 최신 소식은 <a href="https://www.instagram.com/nailde_areum/" target="_blank" rel="noopener">인스타그램 @nailde_areum</a>에서 가장 먼저 공개됩니다.
           멤버십 고객님께는 이달의 아트 · 프리미엄 아트 10% 할인 혜택이 적용됩니다.
         </p>
-        <ul class="monthly-grid">
-          <li>
-            <div class="ph" role="img" aria-label="이달의 아트 디자인 사진 준비 중"><span>No. 01<br><small>사진 준비 중</small></span></div>
-            <h3>Design No. 01</h3>
-            <p class="price-tag">가격 상담</p>
-          </li>
-          <li>
-            <div class="ph" role="img" aria-label="이달의 아트 디자인 사진 준비 중"><span>No. 02<br><small>사진 준비 중</small></span></div>
-            <h3>Design No. 02</h3>
-            <p class="price-tag">가격 상담</p>
-          </li>
-          <li>
-            <div class="ph" role="img" aria-label="이달의 아트 디자인 사진 준비 중"><span>No. 03<br><small>사진 준비 중</small></span></div>
-            <h3>Design No. 03</h3>
-            <p class="price-tag">가격 상담</p>
-          </li>
-        </ul>
+        <nav class="archive-nav" aria-label="이달의 아트 연도·월 선택">
+          <div class="archive-years" role="group" aria-label="연도 선택">
+            <button type="button" class="archive-year is-active" data-year="2026" aria-pressed="true">2026</button>
+            <button type="button" class="archive-year" data-year="2025" aria-pressed="false">2025</button>
+            <button type="button" class="archive-year" data-year="2024" aria-pressed="false">2024</button>
+          </div>
+          <div class="archive-month-group is-active" data-year="2026">
+            <p class="archive-year-label">2026</p>
+            <ul class="archive-months">
+              <li><a href="#art-2026-01" data-month="2026-01">1월</a></li>
+              <li><a href="#art-2026-02" data-month="2026-02">2월</a></li>
+              <li><a href="#art-2026-03" data-month="2026-03">3월</a></li>
+              <li><a href="#art-2026-04" data-month="2026-04">4월</a></li>
+              <li><a href="#art-2026-05" data-month="2026-05">5월</a></li>
+              <li><a href="#art-2026-06" data-month="2026-06">6월</a></li>
+              <li><a href="#art-2026-07" data-month="2026-07">7월</a></li>
+              <li><a href="#art-2026-08" data-month="2026-08">8월</a></li>
+              <li><a href="#art-2026-09" data-month="2026-09" class="is-active" aria-current="true">9월</a></li>
+            </ul>
+          </div>
+          <div class="archive-month-group" data-year="2025">
+            <p class="archive-year-label">2025</p>
+            <ul class="archive-months">
+              <li><a href="#art-2025-01" data-month="2025-01">1월</a></li>
+              <li><a href="#art-2025-02" data-month="2025-02">2월</a></li>
+              <li><a href="#art-2025-03" data-month="2025-03">3월</a></li>
+              <li><a href="#art-2025-04" data-month="2025-04">4월</a></li>
+              <li><a href="#art-2025-05" data-month="2025-05">5월</a></li>
+              <li><a href="#art-2025-06" data-month="2025-06">6월</a></li>
+              <li><a href="#art-2025-07" data-month="2025-07">7월</a></li>
+              <li><a href="#art-2025-08" data-month="2025-08">8월</a></li>
+              <li><a href="#art-2025-09" data-month="2025-09">9월</a></li>
+              <li><a href="#art-2025-10" data-month="2025-10">10월</a></li>
+              <li><a href="#art-2025-11" data-month="2025-11">11월</a></li>
+              <li><a href="#art-2025-12" data-month="2025-12">12월</a></li>
+            </ul>
+          </div>
+          <div class="archive-month-group" data-year="2024">
+            <p class="archive-year-label">2024</p>
+            <ul class="archive-months">
+              <li><a href="#art-2024-09" data-month="2024-09">9월</a></li>
+              <li><a href="#art-2024-10" data-month="2024-10">10월</a></li>
+              <li><a href="#art-2024-11" data-month="2024-11">11월</a></li>
+              <li><a href="#art-2024-12" data-month="2024-12">12월</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="archive">
+          <section class="art-month is-active" id="art-2026-09" data-month="2026-09" data-label-en="September" aria-labelledby="art-2026-09-title">
+            <h3 id="art-2026-09-title" class="art-month-title"><span class="en">September 2026</span> <span class="ko">2026년 9월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-09/daegu-monthly-art-2026-09-01-1170.webp">
+                    <img src="images/monthly-art/2026-09/daegu-monthly-art-2026-09-01-480.webp"
+                         srcset="images/monthly-art/2026-09/daegu-monthly-art-2026-09-01-480.webp 480w, images/monthly-art/2026-09/daegu-monthly-art-2026-09-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2026년 9월 네일드아름 이달의 아트 1번 샘플 — 베이지 · 브라운 시럽 코핀, 실버 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 베이지 · 브라운 시럽 코핀, 실버 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-09/daegu-monthly-art-2026-09-02-1170.webp">
+                    <img src="images/monthly-art/2026-09/daegu-monthly-art-2026-09-02-480.webp"
+                         srcset="images/monthly-art/2026-09/daegu-monthly-art-2026-09-02-480.webp 480w, images/monthly-art/2026-09/daegu-monthly-art-2026-09-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2026년 9월 네일드아름 이달의 아트 2번 샘플 — 베이지 · 브라운 시럽, 별 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 베이지 · 브라운 시럽, 별 스톤 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-09/daegu-monthly-art-2026-09-03-1170.webp">
+                    <img src="images/monthly-art/2026-09/daegu-monthly-art-2026-09-03-480.webp"
+                         srcset="images/monthly-art/2026-09/daegu-monthly-art-2026-09-03-480.webp 480w, images/monthly-art/2026-09/daegu-monthly-art-2026-09-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2026년 9월 네일드아름 이달의 아트 3번 샘플 — 블루 그레이 · 누드 · 레드 그라데이션">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 블루 그레이 · 누드 · 레드 그라데이션</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-09/daegu-monthly-art-2026-09-04-1170.webp">
+                    <img src="images/monthly-art/2026-09/daegu-monthly-art-2026-09-04-480.webp"
+                         srcset="images/monthly-art/2026-09/daegu-monthly-art-2026-09-04-480.webp 480w, images/monthly-art/2026-09/daegu-monthly-art-2026-09-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2026년 9월 네일드아름 이달의 아트 4번 샘플 — 블루 그레이 · 레드 그라데이션, 실버 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 블루 그레이 · 레드 그라데이션, 실버 글리터</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2026-08" data-month="2026-08" data-label-en="August" aria-labelledby="art-2026-08-title">
+            <h3 id="art-2026-08-title" class="art-month-title"><span class="en">August 2026</span> <span class="ko">2026년 8월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-08/daegu-monthly-art-2026-08-01-1170.webp">
+                    <img src="images/monthly-art/2026-08/daegu-monthly-art-2026-08-01-480.webp"
+                         srcset="images/monthly-art/2026-08/daegu-monthly-art-2026-08-01-480.webp 480w, images/monthly-art/2026-08/daegu-monthly-art-2026-08-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="480" loading="lazy" decoding="async"
+                         alt="2026년 8월 네일드아름 이달의 아트 1번 샘플 — 피치 · 민트 그라데이션, 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 피치 · 민트 그라데이션, 스톤 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-08/daegu-monthly-art-2026-08-02-1170.webp">
+                    <img src="images/monthly-art/2026-08/daegu-monthly-art-2026-08-02-480.webp"
+                         srcset="images/monthly-art/2026-08/daegu-monthly-art-2026-08-02-480.webp 480w, images/monthly-art/2026-08/daegu-monthly-art-2026-08-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="480" loading="lazy" decoding="async"
+                         alt="2026년 8월 네일드아름 이달의 아트 2번 샘플 — 피치 · 민트 그라데이션 · 실버 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 피치 · 민트 그라데이션 · 실버 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-08/daegu-monthly-art-2026-08-03-1170.webp">
+                    <img src="images/monthly-art/2026-08/daegu-monthly-art-2026-08-03-480.webp"
+                         srcset="images/monthly-art/2026-08/daegu-monthly-art-2026-08-03-480.webp 480w, images/monthly-art/2026-08/daegu-monthly-art-2026-08-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="480" loading="lazy" decoding="async"
+                         alt="2026년 8월 네일드아름 이달의 아트 3번 샘플 — 피치 코랄 · 블루 그라데이션, 리본 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 피치 코랄 · 블루 그라데이션, 리본 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-08/daegu-monthly-art-2026-08-04-1170.webp">
+                    <img src="images/monthly-art/2026-08/daegu-monthly-art-2026-08-04-480.webp"
+                         srcset="images/monthly-art/2026-08/daegu-monthly-art-2026-08-04-480.webp 480w, images/monthly-art/2026-08/daegu-monthly-art-2026-08-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="480" loading="lazy" decoding="async"
+                         alt="2026년 8월 네일드아름 이달의 아트 4번 샘플 — 피치 코랄 그라데이션 · 리본 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 피치 코랄 그라데이션 · 리본 스톤</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2026-07" data-month="2026-07" data-label-en="July" aria-labelledby="art-2026-07-title">
+            <h3 id="art-2026-07-title" class="art-month-title"><span class="en">July 2026</span> <span class="ko">2026년 7월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-07/daegu-monthly-art-2026-07-01-1170.webp">
+                    <img src="images/monthly-art/2026-07/daegu-monthly-art-2026-07-01-480.webp"
+                         srcset="images/monthly-art/2026-07/daegu-monthly-art-2026-07-01-480.webp 480w, images/monthly-art/2026-07/daegu-monthly-art-2026-07-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="747" loading="lazy" decoding="async"
+                         alt="2026년 7월 네일드아름 이달의 아트 1번 샘플 — 블루 플라워 파츠 · 핑크 · 민트">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 블루 플라워 파츠 · 핑크 · 민트</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-07/daegu-monthly-art-2026-07-02-1170.webp">
+                    <img src="images/monthly-art/2026-07/daegu-monthly-art-2026-07-02-480.webp"
+                         srcset="images/monthly-art/2026-07/daegu-monthly-art-2026-07-02-480.webp 480w, images/monthly-art/2026-07/daegu-monthly-art-2026-07-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="800" loading="lazy" decoding="async"
+                         alt="2026년 7월 네일드아름 이달의 아트 2번 샘플 — 블루 플라워 파츠 · 화이트 마블">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 블루 플라워 파츠 · 화이트 마블</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-07/daegu-monthly-art-2026-07-03-1170.webp">
+                    <img src="images/monthly-art/2026-07/daegu-monthly-art-2026-07-03-480.webp"
+                         srcset="images/monthly-art/2026-07/daegu-monthly-art-2026-07-03-480.webp 480w, images/monthly-art/2026-07/daegu-monthly-art-2026-07-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="788" loading="lazy" decoding="async"
+                         alt="2026년 7월 네일드아름 이달의 아트 3번 샘플 — 화이트 마블 · 핑크 민트 오로라">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 화이트 마블 · 핑크 민트 오로라</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-07/daegu-monthly-art-2026-07-04-1170.webp">
+                    <img src="images/monthly-art/2026-07/daegu-monthly-art-2026-07-04-480.webp"
+                         srcset="images/monthly-art/2026-07/daegu-monthly-art-2026-07-04-480.webp 480w, images/monthly-art/2026-07/daegu-monthly-art-2026-07-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="827" loading="lazy" decoding="async"
+                         alt="2026년 7월 네일드아름 이달의 아트 4번 샘플 — 핑크 민트 오로라 · 실버 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 핑크 민트 오로라 · 실버 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-07/daegu-monthly-art-2026-07-05-1170.webp">
+                    <img src="images/monthly-art/2026-07/daegu-monthly-art-2026-07-05-480.webp"
+                         srcset="images/monthly-art/2026-07/daegu-monthly-art-2026-07-05-480.webp 480w, images/monthly-art/2026-07/daegu-monthly-art-2026-07-05-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="797" loading="lazy" decoding="async"
+                         alt="2026년 7월 네일드아름 이달의 아트 5번 샘플 — 핑크 블러셔 · 진주 리본 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 05</span> 핑크 블러셔 · 진주 리본 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-07/daegu-monthly-art-2026-07-06-1170.webp">
+                    <img src="images/monthly-art/2026-07/daegu-monthly-art-2026-07-06-480.webp"
+                         srcset="images/monthly-art/2026-07/daegu-monthly-art-2026-07-06-480.webp 480w, images/monthly-art/2026-07/daegu-monthly-art-2026-07-06-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="910" loading="lazy" decoding="async"
+                         alt="2026년 7월 네일드아름 이달의 아트 6번 샘플 — 핑크 오로라 · 블루 자석">
+                  </a>
+                  <figcaption><span class="cat">No. 06</span> 핑크 오로라 · 블루 자석</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2026-06" data-month="2026-06" data-label-en="June" aria-labelledby="art-2026-06-title">
+            <h3 id="art-2026-06-title" class="art-month-title"><span class="en">June 2026</span> <span class="ko">2026년 6월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-06/daegu-monthly-art-2026-06-01-1170.webp">
+                    <img src="images/monthly-art/2026-06/daegu-monthly-art-2026-06-01-480.webp"
+                         srcset="images/monthly-art/2026-06/daegu-monthly-art-2026-06-01-480.webp 480w, images/monthly-art/2026-06/daegu-monthly-art-2026-06-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="827" loading="lazy" decoding="async"
+                         alt="2026년 6월 네일드아름 이달의 아트 1번 샘플 — 핑크 레드 그라데이션 · 블루, 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 핑크 레드 그라데이션 · 블루, 스톤 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-06/daegu-monthly-art-2026-06-02-1170.webp">
+                    <img src="images/monthly-art/2026-06/daegu-monthly-art-2026-06-02-480.webp"
+                         srcset="images/monthly-art/2026-06/daegu-monthly-art-2026-06-02-480.webp 480w, images/monthly-art/2026-06/daegu-monthly-art-2026-06-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="851" loading="lazy" decoding="async"
+                         alt="2026년 6월 네일드아름 이달의 아트 2번 샘플 — 핑크 레드 그라데이션 · 오로라 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 레드 그라데이션 · 오로라 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-06/daegu-monthly-art-2026-06-03-1170.webp">
+                    <img src="images/monthly-art/2026-06/daegu-monthly-art-2026-06-03-480.webp"
+                         srcset="images/monthly-art/2026-06/daegu-monthly-art-2026-06-03-480.webp 480w, images/monthly-art/2026-06/daegu-monthly-art-2026-06-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="929" loading="lazy" decoding="async"
+                         alt="2026년 6월 네일드아름 이달의 아트 3번 샘플 — 누드 핑크 · 오로라 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 누드 핑크 · 오로라 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-06/daegu-monthly-art-2026-06-04-1170.webp">
+                    <img src="images/monthly-art/2026-06/daegu-monthly-art-2026-06-04-480.webp"
+                         srcset="images/monthly-art/2026-06/daegu-monthly-art-2026-06-04-480.webp 480w, images/monthly-art/2026-06/daegu-monthly-art-2026-06-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="933" loading="lazy" decoding="async"
+                         alt="2026년 6월 네일드아름 이달의 아트 4번 샘플 — 핑크 레드 그라데이션 · 오로라 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 핑크 레드 그라데이션 · 오로라 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-06/daegu-monthly-art-2026-06-05-1170.webp">
+                    <img src="images/monthly-art/2026-06/daegu-monthly-art-2026-06-05-480.webp"
+                         srcset="images/monthly-art/2026-06/daegu-monthly-art-2026-06-05-480.webp 480w, images/monthly-art/2026-06/daegu-monthly-art-2026-06-05-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="934" loading="lazy" decoding="async"
+                         alt="2026년 6월 네일드아름 이달의 아트 5번 샘플 — 핑크 레드 프렌치 그라데이션">
+                  </a>
+                  <figcaption><span class="cat">No. 05</span> 핑크 레드 프렌치 그라데이션</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-06/daegu-monthly-art-2026-06-06-1170.webp">
+                    <img src="images/monthly-art/2026-06/daegu-monthly-art-2026-06-06-480.webp"
+                         srcset="images/monthly-art/2026-06/daegu-monthly-art-2026-06-06-480.webp 480w, images/monthly-art/2026-06/daegu-monthly-art-2026-06-06-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="881" loading="lazy" decoding="async"
+                         alt="2026년 6월 네일드아름 이달의 아트 6번 샘플 — 실버 글리터 · 블루 그레이 · 누드">
+                  </a>
+                  <figcaption><span class="cat">No. 06</span> 실버 글리터 · 블루 그레이 · 누드</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2026-05" data-month="2026-05" data-label-en="May" aria-labelledby="art-2026-05-title">
+            <h3 id="art-2026-05-title" class="art-month-title"><span class="en">May 2026</span> <span class="ko">2026년 5월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-05/daegu-monthly-art-2026-05-01-1170.webp">
+                    <img src="images/monthly-art/2026-05/daegu-monthly-art-2026-05-01-480.webp"
+                         srcset="images/monthly-art/2026-05/daegu-monthly-art-2026-05-01-480.webp 480w, images/monthly-art/2026-05/daegu-monthly-art-2026-05-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2026년 5월 네일드아름 이달의 아트 1번 샘플 — 누드 핑크 · 블루 그레이, 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 누드 핑크 · 블루 그레이, 스톤 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-05/daegu-monthly-art-2026-05-02-1170.webp">
+                    <img src="images/monthly-art/2026-05/daegu-monthly-art-2026-05-02-480.webp"
+                         srcset="images/monthly-art/2026-05/daegu-monthly-art-2026-05-02-480.webp 480w, images/monthly-art/2026-05/daegu-monthly-art-2026-05-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2026년 5월 네일드아름 이달의 아트 2번 샘플 — 누드 핑크 시럽, 스톤 포인트">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 누드 핑크 시럽, 스톤 포인트</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-05/daegu-monthly-art-2026-05-03-1170.webp">
+                    <img src="images/monthly-art/2026-05/daegu-monthly-art-2026-05-03-480.webp"
+                         srcset="images/monthly-art/2026-05/daegu-monthly-art-2026-05-03-480.webp 480w, images/monthly-art/2026-05/daegu-monthly-art-2026-05-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2026년 5월 네일드아름 이달의 아트 3번 샘플 — 핑크 그라데이션 · 블루 그레이 자석">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 핑크 그라데이션 · 블루 그레이 자석</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2026-04" data-month="2026-04" data-label-en="April" aria-labelledby="art-2026-04-title">
+            <h3 id="art-2026-04-title" class="art-month-title"><span class="en">April 2026</span> <span class="ko">2026년 4월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-04/daegu-monthly-art-2026-04-01-1170.webp">
+                    <img src="images/monthly-art/2026-04/daegu-monthly-art-2026-04-01-480.webp"
+                         srcset="images/monthly-art/2026-04/daegu-monthly-art-2026-04-01-480.webp 480w, images/monthly-art/2026-04/daegu-monthly-art-2026-04-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="575" loading="lazy" decoding="async"
+                         alt="2026년 4월 네일드아름 이달의 아트 1번 샘플 — 핑크 시럽 · 블루 자석 · 옐로우">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 핑크 시럽 · 블루 자석 · 옐로우</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-04/daegu-monthly-art-2026-04-02-1170.webp">
+                    <img src="images/monthly-art/2026-04/daegu-monthly-art-2026-04-02-480.webp"
+                         srcset="images/monthly-art/2026-04/daegu-monthly-art-2026-04-02-480.webp 480w, images/monthly-art/2026-04/daegu-monthly-art-2026-04-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="573" loading="lazy" decoding="async"
+                         alt="2026년 4월 네일드아름 이달의 아트 2번 샘플 — 핑크 블러셔 · 실버 블루 자석">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 블러셔 · 실버 블루 자석</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-04/daegu-monthly-art-2026-04-03-1170.webp">
+                    <img src="images/monthly-art/2026-04/daegu-monthly-art-2026-04-03-480.webp"
+                         srcset="images/monthly-art/2026-04/daegu-monthly-art-2026-04-03-480.webp 480w, images/monthly-art/2026-04/daegu-monthly-art-2026-04-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="583" loading="lazy" decoding="async"
+                         alt="2026년 4월 네일드아름 이달의 아트 3번 샘플 — 핑크 · 옐로우 그라데이션 · 블루 크롬">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 핑크 · 옐로우 그라데이션 · 블루 크롬</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-04/daegu-monthly-art-2026-04-04-1170.webp">
+                    <img src="images/monthly-art/2026-04/daegu-monthly-art-2026-04-04-480.webp"
+                         srcset="images/monthly-art/2026-04/daegu-monthly-art-2026-04-04-480.webp 480w, images/monthly-art/2026-04/daegu-monthly-art-2026-04-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="600" loading="lazy" decoding="async"
+                         alt="2026년 4월 네일드아름 이달의 아트 4번 샘플 — 핑크 · 레몬 옐로우 봄 아트">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 핑크 · 레몬 옐로우 봄 아트</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2026-03" data-month="2026-03" data-label-en="March" aria-labelledby="art-2026-03-title">
+            <h3 id="art-2026-03-title" class="art-month-title"><span class="en">March 2026</span> <span class="ko">2026년 3월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-03/daegu-monthly-art-2026-03-01-1170.webp">
+                    <img src="images/monthly-art/2026-03/daegu-monthly-art-2026-03-01-480.webp"
+                         srcset="images/monthly-art/2026-03/daegu-monthly-art-2026-03-01-480.webp 480w, images/monthly-art/2026-03/daegu-monthly-art-2026-03-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="859" loading="lazy" decoding="async"
+                         alt="2026년 3월 네일드아름 이달의 아트 1번 샘플 — 핑크 시럽 · 실버 크롬">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 핑크 시럽 · 실버 크롬</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-03/daegu-monthly-art-2026-03-02-1170.webp">
+                    <img src="images/monthly-art/2026-03/daegu-monthly-art-2026-03-02-480.webp"
+                         srcset="images/monthly-art/2026-03/daegu-monthly-art-2026-03-02-480.webp 480w, images/monthly-art/2026-03/daegu-monthly-art-2026-03-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="850" loading="lazy" decoding="async"
+                         alt="2026년 3월 네일드아름 이달의 아트 2번 샘플 — 핑크 레드 그라데이션, 크리스탈 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 레드 그라데이션, 크리스탈 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-03/daegu-monthly-art-2026-03-03-1170.webp">
+                    <img src="images/monthly-art/2026-03/daegu-monthly-art-2026-03-03-480.webp"
+                         srcset="images/monthly-art/2026-03/daegu-monthly-art-2026-03-03-480.webp 480w, images/monthly-art/2026-03/daegu-monthly-art-2026-03-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="843" loading="lazy" decoding="async"
+                         alt="2026년 3월 네일드아름 이달의 아트 3번 샘플 — 누드 핑크 · 실버 체인">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 누드 핑크 · 실버 체인</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-03/daegu-monthly-art-2026-03-04-1170.webp">
+                    <img src="images/monthly-art/2026-03/daegu-monthly-art-2026-03-04-480.webp"
+                         srcset="images/monthly-art/2026-03/daegu-monthly-art-2026-03-04-480.webp 480w, images/monthly-art/2026-03/daegu-monthly-art-2026-03-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="849" loading="lazy" decoding="async"
+                         alt="2026년 3월 네일드아름 이달의 아트 4번 샘플 — 라벤더 오로라 · 실버 그레이 · 핑크">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 라벤더 오로라 · 실버 그레이 · 핑크</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2026-02" data-month="2026-02" data-label-en="February" aria-labelledby="art-2026-02-title">
+            <h3 id="art-2026-02-title" class="art-month-title"><span class="en">February 2026</span> <span class="ko">2026년 2월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-02/daegu-monthly-art-2026-02-01-1170.webp">
+                    <img src="images/monthly-art/2026-02/daegu-monthly-art-2026-02-01-480.webp"
+                         srcset="images/monthly-art/2026-02/daegu-monthly-art-2026-02-01-480.webp 480w, images/monthly-art/2026-02/daegu-monthly-art-2026-02-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="779" loading="lazy" decoding="async"
+                         alt="2026년 2월 네일드아름 이달의 아트 1번 샘플 — 코랄 핑크 · 누드, 실버 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 코랄 핑크 · 누드, 실버 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-02/daegu-monthly-art-2026-02-02-1170.webp">
+                    <img src="images/monthly-art/2026-02/daegu-monthly-art-2026-02-02-480.webp"
+                         srcset="images/monthly-art/2026-02/daegu-monthly-art-2026-02-02-480.webp 480w, images/monthly-art/2026-02/daegu-monthly-art-2026-02-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="771" loading="lazy" decoding="async"
+                         alt="2026년 2월 네일드아름 이달의 아트 2번 샘플 — 로즈 핑크 · 라벤더, 크리스탈 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 로즈 핑크 · 라벤더, 크리스탈 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-02/daegu-monthly-art-2026-02-03-1170.webp">
+                    <img src="images/monthly-art/2026-02/daegu-monthly-art-2026-02-03-480.webp"
+                         srcset="images/monthly-art/2026-02/daegu-monthly-art-2026-02-03-480.webp 480w, images/monthly-art/2026-02/daegu-monthly-art-2026-02-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="908" loading="lazy" decoding="async"
+                         alt="2026년 2월 네일드아름 이달의 아트 3번 샘플 — 핑크 레드 자석 · 골드 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 핑크 레드 자석 · 골드 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-02/daegu-monthly-art-2026-02-04-1170.webp">
+                    <img src="images/monthly-art/2026-02/daegu-monthly-art-2026-02-04-480.webp"
+                         srcset="images/monthly-art/2026-02/daegu-monthly-art-2026-02-04-480.webp 480w, images/monthly-art/2026-02/daegu-monthly-art-2026-02-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="943" loading="lazy" decoding="async"
+                         alt="2026년 2월 네일드아름 이달의 아트 4번 샘플 — 핑크 레드 그라데이션 · 골드 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 핑크 레드 그라데이션 · 골드 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-02/daegu-monthly-art-2026-02-05-1170.webp">
+                    <img src="images/monthly-art/2026-02/daegu-monthly-art-2026-02-05-480.webp"
+                         srcset="images/monthly-art/2026-02/daegu-monthly-art-2026-02-05-480.webp 480w, images/monthly-art/2026-02/daegu-monthly-art-2026-02-05-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="874" loading="lazy" decoding="async"
+                         alt="2026년 2월 네일드아름 이달의 아트 5번 샘플 — 핑크 레드 그라데이션, 리본 · 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 05</span> 핑크 레드 그라데이션, 리본 · 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-02/daegu-monthly-art-2026-02-06-1170.webp">
+                    <img src="images/monthly-art/2026-02/daegu-monthly-art-2026-02-06-480.webp"
+                         srcset="images/monthly-art/2026-02/daegu-monthly-art-2026-02-06-480.webp 480w, images/monthly-art/2026-02/daegu-monthly-art-2026-02-06-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="897" loading="lazy" decoding="async"
+                         alt="2026년 2월 네일드아름 이달의 아트 6번 샘플 — 피치 누드 · 화이트 오로라 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 06</span> 피치 누드 · 화이트 오로라 스톤</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2026-01" data-month="2026-01" data-label-en="January" aria-labelledby="art-2026-01-title">
+            <h3 id="art-2026-01-title" class="art-month-title"><span class="en">January 2026</span> <span class="ko">2026년 1월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-01/daegu-monthly-art-2026-01-01-1170.webp">
+                    <img src="images/monthly-art/2026-01/daegu-monthly-art-2026-01-01-480.webp"
+                         srcset="images/monthly-art/2026-01/daegu-monthly-art-2026-01-01-480.webp 480w, images/monthly-art/2026-01/daegu-monthly-art-2026-01-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="839" loading="lazy" decoding="async"
+                         alt="2026년 1월 네일드아름 이달의 아트 1번 샘플 — 화이트 크롬 · 핑크 자석 · 레드 프렌치">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 화이트 크롬 · 핑크 자석 · 레드 프렌치</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-01/daegu-monthly-art-2026-01-02-1170.webp">
+                    <img src="images/monthly-art/2026-01/daegu-monthly-art-2026-01-02-480.webp"
+                         srcset="images/monthly-art/2026-01/daegu-monthly-art-2026-01-02-480.webp 480w, images/monthly-art/2026-01/daegu-monthly-art-2026-01-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="792" loading="lazy" decoding="async"
+                         alt="2026년 1월 네일드아름 이달의 아트 2번 샘플 — 누드 핑크 그라데이션 · 레드 프렌치 팁">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 누드 핑크 그라데이션 · 레드 프렌치 팁</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-01/daegu-monthly-art-2026-01-03-1170.webp">
+                    <img src="images/monthly-art/2026-01/daegu-monthly-art-2026-01-03-480.webp"
+                         srcset="images/monthly-art/2026-01/daegu-monthly-art-2026-01-03-480.webp 480w, images/monthly-art/2026-01/daegu-monthly-art-2026-01-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="802" loading="lazy" decoding="async"
+                         alt="2026년 1월 네일드아름 이달의 아트 3번 샘플 — 레드 프렌치 팁 · 실버 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 레드 프렌치 팁 · 실버 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-01/daegu-monthly-art-2026-01-04-1170.webp">
+                    <img src="images/monthly-art/2026-01/daegu-monthly-art-2026-01-04-480.webp"
+                         srcset="images/monthly-art/2026-01/daegu-monthly-art-2026-01-04-480.webp 480w, images/monthly-art/2026-01/daegu-monthly-art-2026-01-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="749" loading="lazy" decoding="async"
+                         alt="2026년 1월 네일드아름 이달의 아트 4번 샘플 — 레드 프렌치 그라데이션 · 실버 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 레드 프렌치 그라데이션 · 실버 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-01/daegu-monthly-art-2026-01-05-1170.webp">
+                    <img src="images/monthly-art/2026-01/daegu-monthly-art-2026-01-05-480.webp"
+                         srcset="images/monthly-art/2026-01/daegu-monthly-art-2026-01-05-480.webp 480w, images/monthly-art/2026-01/daegu-monthly-art-2026-01-05-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="814" loading="lazy" decoding="async"
+                         alt="2026년 1월 네일드아름 이달의 아트 5번 샘플 — 실버 글리터 · 핑크 자석 · 레드 그라데이션">
+                  </a>
+                  <figcaption><span class="cat">No. 05</span> 실버 글리터 · 핑크 자석 · 레드 그라데이션</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2026-01/daegu-monthly-art-2026-01-06-1170.webp">
+                    <img src="images/monthly-art/2026-01/daegu-monthly-art-2026-01-06-480.webp"
+                         srcset="images/monthly-art/2026-01/daegu-monthly-art-2026-01-06-480.webp 480w, images/monthly-art/2026-01/daegu-monthly-art-2026-01-06-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="663" loading="lazy" decoding="async"
+                         alt="2026년 1월 네일드아름 이달의 아트 6번 샘플 — 오로라 실버 글리터 · 핑크 자석">
+                  </a>
+                  <figcaption><span class="cat">No. 06</span> 오로라 실버 글리터 · 핑크 자석</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-12" data-month="2025-12" data-label-en="December" aria-labelledby="art-2025-12-title">
+            <h3 id="art-2025-12-title" class="art-month-title"><span class="en">December 2025</span> <span class="ko">2025년 12월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-12/daegu-monthly-art-2025-12-01-1170.webp">
+                    <img src="images/monthly-art/2025-12/daegu-monthly-art-2025-12-01-480.webp"
+                         srcset="images/monthly-art/2025-12/daegu-monthly-art-2025-12-01-480.webp 480w, images/monthly-art/2025-12/daegu-monthly-art-2025-12-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="934" loading="lazy" decoding="async"
+                         alt="2025년 12월 네일드아름 이달의 아트 1번 샘플 — 모카 브라운 자석 · 버건디, 실버 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 모카 브라운 자석 · 버건디, 실버 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-12/daegu-monthly-art-2025-12-02-1170.webp">
+                    <img src="images/monthly-art/2025-12/daegu-monthly-art-2025-12-02-480.webp"
+                         srcset="images/monthly-art/2025-12/daegu-monthly-art-2025-12-02-480.webp 480w, images/monthly-art/2025-12/daegu-monthly-art-2025-12-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="934" loading="lazy" decoding="async"
+                         alt="2025년 12월 네일드아름 이달의 아트 2번 샘플 — 핑크 그라데이션 · 버건디, 실버 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 그라데이션 · 버건디, 실버 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-12/daegu-monthly-art-2025-12-03-1170.webp">
+                    <img src="images/monthly-art/2025-12/daegu-monthly-art-2025-12-03-480.webp"
+                         srcset="images/monthly-art/2025-12/daegu-monthly-art-2025-12-03-480.webp 480w, images/monthly-art/2025-12/daegu-monthly-art-2025-12-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="854" loading="lazy" decoding="async"
+                         alt="2025년 12월 네일드아름 이달의 아트 3번 샘플 — 화이트 진주 · 핑크 그라데이션, 실버 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 화이트 진주 · 핑크 그라데이션, 실버 스톤</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-11" data-month="2025-11" data-label-en="November" aria-labelledby="art-2025-11-title">
+            <h3 id="art-2025-11-title" class="art-month-title"><span class="en">November 2025</span> <span class="ko">2025년 11월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-11/daegu-monthly-art-2025-11-01-1170.webp">
+                    <img src="images/monthly-art/2025-11/daegu-monthly-art-2025-11-01-480.webp"
+                         srcset="images/monthly-art/2025-11/daegu-monthly-art-2025-11-01-480.webp 480w, images/monthly-art/2025-11/daegu-monthly-art-2025-11-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="527" loading="lazy" decoding="async"
+                         alt="2025년 11월 네일드아름 이달의 아트 1번 샘플 — 핑크 · 누드 · 그레이 자석, 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 핑크 · 누드 · 그레이 자석, 스톤 파츠</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-10" data-month="2025-10" data-label-en="October" aria-labelledby="art-2025-10-title">
+            <h3 id="art-2025-10-title" class="art-month-title"><span class="en">October 2025</span> <span class="ko">2025년 10월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-10/daegu-monthly-art-2025-10-01-1170.webp">
+                    <img src="images/monthly-art/2025-10/daegu-monthly-art-2025-10-01-480.webp"
+                         srcset="images/monthly-art/2025-10/daegu-monthly-art-2025-10-01-480.webp 480w, images/monthly-art/2025-10/daegu-monthly-art-2025-10-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2025년 10월 네일드아름 이달의 아트 1번 샘플 — 로즈 브라운 그라데이션 · 토토이즈">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 로즈 브라운 그라데이션 · 토토이즈</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-10/daegu-monthly-art-2025-10-02-1170.webp">
+                    <img src="images/monthly-art/2025-10/daegu-monthly-art-2025-10-02-480.webp"
+                         srcset="images/monthly-art/2025-10/daegu-monthly-art-2025-10-02-480.webp 480w, images/monthly-art/2025-10/daegu-monthly-art-2025-10-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2025년 10월 네일드아름 이달의 아트 2번 샘플 — 누드 베이지 · 브라운 토토이즈 · 블랙 그라데이션">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 누드 베이지 · 브라운 토토이즈 · 블랙 그라데이션</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-10/daegu-monthly-art-2025-10-03-1170.webp">
+                    <img src="images/monthly-art/2025-10/daegu-monthly-art-2025-10-03-480.webp"
+                         srcset="images/monthly-art/2025-10/daegu-monthly-art-2025-10-03-480.webp 480w, images/monthly-art/2025-10/daegu-monthly-art-2025-10-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2025년 10월 네일드아름 이달의 아트 3번 샘플 — 누드 핑크 · 블랙 브라운 토토이즈">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 누드 핑크 · 블랙 브라운 토토이즈</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-09" data-month="2025-09" data-label-en="September" aria-labelledby="art-2025-09-title">
+            <h3 id="art-2025-09-title" class="art-month-title"><span class="en">September 2025</span> <span class="ko">2025년 9월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-09/daegu-monthly-art-2025-09-01-1170.webp">
+                    <img src="images/monthly-art/2025-09/daegu-monthly-art-2025-09-01-480.webp"
+                         srcset="images/monthly-art/2025-09/daegu-monthly-art-2025-09-01-480.webp 480w, images/monthly-art/2025-09/daegu-monthly-art-2025-09-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="852" loading="lazy" decoding="async"
+                         alt="2025년 9월 네일드아름 이달의 아트 1번 샘플 — 클리어 글리터 · 핑크 레드 그라데이션">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 클리어 글리터 · 핑크 레드 그라데이션</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-09/daegu-monthly-art-2025-09-02-1170.webp">
+                    <img src="images/monthly-art/2025-09/daegu-monthly-art-2025-09-02-480.webp"
+                         srcset="images/monthly-art/2025-09/daegu-monthly-art-2025-09-02-480.webp 480w, images/monthly-art/2025-09/daegu-monthly-art-2025-09-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="839" loading="lazy" decoding="async"
+                         alt="2025년 9월 네일드아름 이달의 아트 2번 샘플 — 와인 그라데이션 팁 · 클리어 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 와인 그라데이션 팁 · 클리어 글리터</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-08" data-month="2025-08" data-label-en="August" aria-labelledby="art-2025-08-title">
+            <h3 id="art-2025-08-title" class="art-month-title"><span class="en">August 2025</span> <span class="ko">2025년 8월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-08/daegu-monthly-art-2025-08-01-1170.webp">
+                    <img src="images/monthly-art/2025-08/daegu-monthly-art-2025-08-01-480.webp"
+                         srcset="images/monthly-art/2025-08/daegu-monthly-art-2025-08-01-480.webp 480w, images/monthly-art/2025-08/daegu-monthly-art-2025-08-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="588" loading="lazy" decoding="async"
+                         alt="2025년 8월 네일드아름 이달의 아트 1번 샘플 — 누드 베이지, 셸 · 진주 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 누드 베이지, 셸 · 진주 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-08/daegu-monthly-art-2025-08-02-1170.webp">
+                    <img src="images/monthly-art/2025-08/daegu-monthly-art-2025-08-02-480.webp"
+                         srcset="images/monthly-art/2025-08/daegu-monthly-art-2025-08-02-480.webp 480w, images/monthly-art/2025-08/daegu-monthly-art-2025-08-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2025년 8월 네일드아름 이달의 아트 2번 샘플 — 핑크 · 레드 그라데이션, 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 · 레드 그라데이션, 스톤 파츠</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-07" data-month="2025-07" data-label-en="July" aria-labelledby="art-2025-07-title">
+            <h3 id="art-2025-07-title" class="art-month-title"><span class="en">July 2025</span> <span class="ko">2025년 7월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-07/daegu-monthly-art-2025-07-01-1170.webp">
+                    <img src="images/monthly-art/2025-07/daegu-monthly-art-2025-07-01-480.webp"
+                         srcset="images/monthly-art/2025-07/daegu-monthly-art-2025-07-01-480.webp 480w, images/monthly-art/2025-07/daegu-monthly-art-2025-07-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="834" loading="lazy" decoding="async"
+                         alt="2025년 7월 네일드아름 이달의 아트 1번 샘플 — 핑크 레드 그라데이션 자석">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 핑크 레드 그라데이션 자석</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-07/daegu-monthly-art-2025-07-02-1170.webp">
+                    <img src="images/monthly-art/2025-07/daegu-monthly-art-2025-07-02-480.webp"
+                         srcset="images/monthly-art/2025-07/daegu-monthly-art-2025-07-02-480.webp 480w, images/monthly-art/2025-07/daegu-monthly-art-2025-07-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="845" loading="lazy" decoding="async"
+                         alt="2025년 7월 네일드아름 이달의 아트 2번 샘플 — 핑크 그라데이션 · 블루 마블">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 그라데이션 · 블루 마블</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-07/daegu-monthly-art-2025-07-03-1170.webp">
+                    <img src="images/monthly-art/2025-07/daegu-monthly-art-2025-07-03-480.webp"
+                         srcset="images/monthly-art/2025-07/daegu-monthly-art-2025-07-03-480.webp 480w, images/monthly-art/2025-07/daegu-monthly-art-2025-07-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="831" loading="lazy" decoding="async"
+                         alt="2025년 7월 네일드아름 이달의 아트 3번 샘플 — 라벤더 진주 체인 · 코퍼 브라운 그라데이션">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 라벤더 진주 체인 · 코퍼 브라운 그라데이션</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-07/daegu-monthly-art-2025-07-04-1170.webp">
+                    <img src="images/monthly-art/2025-07/daegu-monthly-art-2025-07-04-480.webp"
+                         srcset="images/monthly-art/2025-07/daegu-monthly-art-2025-07-04-480.webp 480w, images/monthly-art/2025-07/daegu-monthly-art-2025-07-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="841" loading="lazy" decoding="async"
+                         alt="2025년 7월 네일드아름 이달의 아트 4번 샘플 — 코퍼 크롬 팁 · 그레이 그라데이션">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 코퍼 크롬 팁 · 그레이 그라데이션</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-06" data-month="2025-06" data-label-en="June" aria-labelledby="art-2025-06-title">
+            <h3 id="art-2025-06-title" class="art-month-title"><span class="en">June 2025</span> <span class="ko">2025년 6월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-06/daegu-monthly-art-2025-06-01-1170.webp">
+                    <img src="images/monthly-art/2025-06/daegu-monthly-art-2025-06-01-480.webp"
+                         srcset="images/monthly-art/2025-06/daegu-monthly-art-2025-06-01-480.webp 480w, images/monthly-art/2025-06/daegu-monthly-art-2025-06-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="812" loading="lazy" decoding="async"
+                         alt="2025년 6월 네일드아름 이달의 아트 1번 샘플 — 실버 그레이 · 블루 그라데이션 · 누드 브라운">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 실버 그레이 · 블루 그라데이션 · 누드 브라운</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-06/daegu-monthly-art-2025-06-02-1170.webp">
+                    <img src="images/monthly-art/2025-06/daegu-monthly-art-2025-06-02-480.webp"
+                         srcset="images/monthly-art/2025-06/daegu-monthly-art-2025-06-02-480.webp 480w, images/monthly-art/2025-06/daegu-monthly-art-2025-06-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="668" loading="lazy" decoding="async"
+                         alt="2025년 6월 네일드아름 이달의 아트 2번 샘플 — 누드 핑크 오로라 라인">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 누드 핑크 오로라 라인</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-06/daegu-monthly-art-2025-06-03-1170.webp">
+                    <img src="images/monthly-art/2025-06/daegu-monthly-art-2025-06-03-480.webp"
+                         srcset="images/monthly-art/2025-06/daegu-monthly-art-2025-06-03-480.webp 480w, images/monthly-art/2025-06/daegu-monthly-art-2025-06-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="614" loading="lazy" decoding="async"
+                         alt="2025년 6월 네일드아름 이달의 아트 3번 샘플 — 그린 · 라벤더 오로라, 홀로그램 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 그린 · 라벤더 오로라, 홀로그램 파츠</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-05" data-month="2025-05" data-label-en="May" aria-labelledby="art-2025-05-title">
+            <h3 id="art-2025-05-title" class="art-month-title"><span class="en">May 2025</span> <span class="ko">2025년 5월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-05/daegu-monthly-art-2025-05-01-1170.webp">
+                    <img src="images/monthly-art/2025-05/daegu-monthly-art-2025-05-01-480.webp"
+                         srcset="images/monthly-art/2025-05/daegu-monthly-art-2025-05-01-480.webp 480w, images/monthly-art/2025-05/daegu-monthly-art-2025-05-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="609" loading="lazy" decoding="async"
+                         alt="2025년 5월 네일드아름 이달의 아트 1번 샘플 — 그레이 · 블루 자석, 화이트 마블">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 그레이 · 블루 자석, 화이트 마블</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-05/daegu-monthly-art-2025-05-02-1170.webp">
+                    <img src="images/monthly-art/2025-05/daegu-monthly-art-2025-05-02-480.webp"
+                         srcset="images/monthly-art/2025-05/daegu-monthly-art-2025-05-02-480.webp 480w, images/monthly-art/2025-05/daegu-monthly-art-2025-05-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="709" loading="lazy" decoding="async"
+                         alt="2025년 5월 네일드아름 이달의 아트 2번 샘플 — 누드 핑크 · 레드 옐로우 플라워 아트">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 누드 핑크 · 레드 옐로우 플라워 아트</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-04" data-month="2025-04" data-label-en="April" aria-labelledby="art-2025-04-title">
+            <h3 id="art-2025-04-title" class="art-month-title"><span class="en">April 2025</span> <span class="ko">2025년 4월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-04/daegu-monthly-art-2025-04-01-1170.webp">
+                    <img src="images/monthly-art/2025-04/daegu-monthly-art-2025-04-01-480.webp"
+                         srcset="images/monthly-art/2025-04/daegu-monthly-art-2025-04-01-480.webp 480w, images/monthly-art/2025-04/daegu-monthly-art-2025-04-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="838" loading="lazy" decoding="async"
+                         alt="2025년 4월 네일드아름 이달의 아트 1번 샘플 — 핑크 시럽 · 클리어, 실버 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 핑크 시럽 · 클리어, 실버 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-04/daegu-monthly-art-2025-04-02-1170.webp">
+                    <img src="images/monthly-art/2025-04/daegu-monthly-art-2025-04-02-480.webp"
+                         srcset="images/monthly-art/2025-04/daegu-monthly-art-2025-04-02-480.webp 480w, images/monthly-art/2025-04/daegu-monthly-art-2025-04-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="845" loading="lazy" decoding="async"
+                         alt="2025년 4월 네일드아름 이달의 아트 2번 샘플 — 화이트 오로라 · 핑크 레드 그라데이션">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 화이트 오로라 · 핑크 레드 그라데이션</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-03" data-month="2025-03" data-label-en="March" aria-labelledby="art-2025-03-title">
+            <h3 id="art-2025-03-title" class="art-month-title"><span class="en">March 2025</span> <span class="ko">2025년 3월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-03/daegu-monthly-art-2025-03-01-1170.webp">
+                    <img src="images/monthly-art/2025-03/daegu-monthly-art-2025-03-01-480.webp"
+                         srcset="images/monthly-art/2025-03/daegu-monthly-art-2025-03-01-480.webp 480w, images/monthly-art/2025-03/daegu-monthly-art-2025-03-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="931" loading="lazy" decoding="async"
+                         alt="2025년 3월 네일드아름 이달의 아트 1번 샘플 — 핑크 시럽 스퀘어, 실버 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 핑크 시럽 스퀘어, 실버 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-03/daegu-monthly-art-2025-03-02-1170.webp">
+                    <img src="images/monthly-art/2025-03/daegu-monthly-art-2025-03-02-480.webp"
+                         srcset="images/monthly-art/2025-03/daegu-monthly-art-2025-03-02-480.webp 480w, images/monthly-art/2025-03/daegu-monthly-art-2025-03-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="922" loading="lazy" decoding="async"
+                         alt="2025년 3월 네일드아름 이달의 아트 2번 샘플 — 핑크 · 라벤더 · 블루 그레이, 화이트 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 · 라벤더 · 블루 그레이, 화이트 글리터</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-02" data-month="2025-02" data-label-en="February" aria-labelledby="art-2025-02-title">
+            <h3 id="art-2025-02-title" class="art-month-title"><span class="en">February 2025</span> <span class="ko">2025년 2월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-02/daegu-monthly-art-2025-02-01-1170.webp">
+                    <img src="images/monthly-art/2025-02/daegu-monthly-art-2025-02-01-480.webp"
+                         srcset="images/monthly-art/2025-02/daegu-monthly-art-2025-02-01-480.webp 480w, images/monthly-art/2025-02/daegu-monthly-art-2025-02-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="791" loading="lazy" decoding="async"
+                         alt="2025년 2월 네일드아름 이달의 아트 1번 샘플 — 누드 핑크 · 베이지 자석, 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 누드 핑크 · 베이지 자석, 스톤 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-02/daegu-monthly-art-2025-02-02-1170.webp">
+                    <img src="images/monthly-art/2025-02/daegu-monthly-art-2025-02-02-480.webp"
+                         srcset="images/monthly-art/2025-02/daegu-monthly-art-2025-02-02-480.webp 480w, images/monthly-art/2025-02/daegu-monthly-art-2025-02-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="825" loading="lazy" decoding="async"
+                         alt="2025년 2월 네일드아름 이달의 아트 2번 샘플 — 핑크 시럽 · 레드 그라데이션, 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 시럽 · 레드 그라데이션, 스톤 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-02/daegu-monthly-art-2025-02-03-1170.webp">
+                    <img src="images/monthly-art/2025-02/daegu-monthly-art-2025-02-03-480.webp"
+                         srcset="images/monthly-art/2025-02/daegu-monthly-art-2025-02-03-480.webp 480w, images/monthly-art/2025-02/daegu-monthly-art-2025-02-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="750" loading="lazy" decoding="async"
+                         alt="2025년 2월 네일드아름 이달의 아트 3번 샘플 — 핑크 시럽 · 그레이 자석, 실버 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 핑크 시럽 · 그레이 자석, 실버 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-02/daegu-monthly-art-2025-02-04-1170.webp">
+                    <img src="images/monthly-art/2025-02/daegu-monthly-art-2025-02-04-480.webp"
+                         srcset="images/monthly-art/2025-02/daegu-monthly-art-2025-02-04-480.webp 480w, images/monthly-art/2025-02/daegu-monthly-art-2025-02-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="781" loading="lazy" decoding="async"
+                         alt="2025년 2월 네일드아름 이달의 아트 4번 샘플 — 라벤더 그라데이션 · 로즈 브라운, 진주 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 라벤더 그라데이션 · 로즈 브라운, 진주 파츠</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2025-01" data-month="2025-01" data-label-en="January" aria-labelledby="art-2025-01-title">
+            <h3 id="art-2025-01-title" class="art-month-title"><span class="en">January 2025</span> <span class="ko">2025년 1월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-01/daegu-monthly-art-2025-01-01-1170.webp">
+                    <img src="images/monthly-art/2025-01/daegu-monthly-art-2025-01-01-480.webp"
+                         srcset="images/monthly-art/2025-01/daegu-monthly-art-2025-01-01-480.webp 480w, images/monthly-art/2025-01/daegu-monthly-art-2025-01-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="714" loading="lazy" decoding="async"
+                         alt="2025년 1월 네일드아름 이달의 아트 1번 샘플 — 버건디 하트 · 핑크 시럽, 실버 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 버건디 하트 · 핑크 시럽, 실버 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2025-01/daegu-monthly-art-2025-01-02-1170.webp">
+                    <img src="images/monthly-art/2025-01/daegu-monthly-art-2025-01-02-480.webp"
+                         srcset="images/monthly-art/2025-01/daegu-monthly-art-2025-01-02-480.webp 480w, images/monthly-art/2025-01/daegu-monthly-art-2025-01-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="679" loading="lazy" decoding="async"
+                         alt="2025년 1월 네일드아름 이달의 아트 2번 샘플 — 라벤더 · 화이트 진주, 실버 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 라벤더 · 화이트 진주, 실버 글리터</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2024-12" data-month="2024-12" data-label-en="December" aria-labelledby="art-2024-12-title">
+            <h3 id="art-2024-12-title" class="art-month-title"><span class="en">December 2024</span> <span class="ko">2024년 12월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-12/daegu-monthly-art-2024-12-01-1170.webp">
+                    <img src="images/monthly-art/2024-12/daegu-monthly-art-2024-12-01-480.webp"
+                         srcset="images/monthly-art/2024-12/daegu-monthly-art-2024-12-01-480.webp 480w, images/monthly-art/2024-12/daegu-monthly-art-2024-12-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="839" loading="lazy" decoding="async"
+                         alt="2024년 12월 네일드아름 이달의 아트 1번 샘플 — 화이트 마블 · 레드 포인트, 실버 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 화이트 마블 · 레드 포인트, 실버 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-12/daegu-monthly-art-2024-12-02-1170.webp">
+                    <img src="images/monthly-art/2024-12/daegu-monthly-art-2024-12-02-480.webp"
+                         srcset="images/monthly-art/2024-12/daegu-monthly-art-2024-12-02-480.webp 480w, images/monthly-art/2024-12/daegu-monthly-art-2024-12-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="806" loading="lazy" decoding="async"
+                         alt="2024년 12월 네일드아름 이달의 아트 2번 샘플 — 라벤더 그라데이션 · 화이트 글리터, 블랙 리본">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 라벤더 그라데이션 · 화이트 글리터, 블랙 리본</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2024-11" data-month="2024-11" data-label-en="November" aria-labelledby="art-2024-11-title">
+            <h3 id="art-2024-11-title" class="art-month-title"><span class="en">November 2024</span> <span class="ko">2024년 11월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-11/daegu-monthly-art-2024-11-01-1170.webp">
+                    <img src="images/monthly-art/2024-11/daegu-monthly-art-2024-11-01-480.webp"
+                         srcset="images/monthly-art/2024-11/daegu-monthly-art-2024-11-01-480.webp 480w, images/monthly-art/2024-11/daegu-monthly-art-2024-11-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="640" loading="lazy" decoding="async"
+                         alt="2024년 11월 네일드아름 이달의 아트 1번 샘플 — 누드 · 화이트 프렌치, 진주 · 스톤 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 누드 · 화이트 프렌치, 진주 · 스톤 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-11/daegu-monthly-art-2024-11-02-1170.webp">
+                    <img src="images/monthly-art/2024-11/daegu-monthly-art-2024-11-02-480.webp"
+                         srcset="images/monthly-art/2024-11/daegu-monthly-art-2024-11-02-480.webp 480w, images/monthly-art/2024-11/daegu-monthly-art-2024-11-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="854" loading="lazy" decoding="async"
+                         alt="2024년 11월 네일드아름 이달의 아트 2번 샘플 — 핑크 오로라, 크리스탈 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 핑크 오로라, 크리스탈 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-11/daegu-monthly-art-2024-11-03-1170.webp">
+                    <img src="images/monthly-art/2024-11/daegu-monthly-art-2024-11-03-480.webp"
+                         srcset="images/monthly-art/2024-11/daegu-monthly-art-2024-11-03-480.webp 480w, images/monthly-art/2024-11/daegu-monthly-art-2024-11-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="854" loading="lazy" decoding="async"
+                         alt="2024년 11월 네일드아름 이달의 아트 3번 샘플 — 로즈 핑크 시럽, 크리스탈 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 로즈 핑크 시럽, 크리스탈 스톤</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-11/daegu-monthly-art-2024-11-04-1170.webp">
+                    <img src="images/monthly-art/2024-11/daegu-monthly-art-2024-11-04-480.webp"
+                         srcset="images/monthly-art/2024-11/daegu-monthly-art-2024-11-04-480.webp 480w, images/monthly-art/2024-11/daegu-monthly-art-2024-11-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="854" loading="lazy" decoding="async"
+                         alt="2024년 11월 네일드아름 이달의 아트 4번 샘플 — 누드 베이지 · 핑크, 실버 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 누드 베이지 · 핑크, 실버 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-11/daegu-monthly-art-2024-11-05-1170.webp">
+                    <img src="images/monthly-art/2024-11/daegu-monthly-art-2024-11-05-480.webp"
+                         srcset="images/monthly-art/2024-11/daegu-monthly-art-2024-11-05-480.webp 480w, images/monthly-art/2024-11/daegu-monthly-art-2024-11-05-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="854" loading="lazy" decoding="async"
+                         alt="2024년 11월 네일드아름 이달의 아트 5번 샘플 — 블루 그라데이션 · 누드, 크리스탈 스톤">
+                  </a>
+                  <figcaption><span class="cat">No. 05</span> 블루 그라데이션 · 누드, 크리스탈 스톤</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2024-10" data-month="2024-10" data-label-en="October" aria-labelledby="art-2024-10-title">
+            <h3 id="art-2024-10-title" class="art-month-title"><span class="en">October 2024</span> <span class="ko">2024년 10월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-10/daegu-monthly-art-2024-10-01-1170.webp">
+                    <img src="images/monthly-art/2024-10/daegu-monthly-art-2024-10-01-480.webp"
+                         srcset="images/monthly-art/2024-10/daegu-monthly-art-2024-10-01-480.webp 480w, images/monthly-art/2024-10/daegu-monthly-art-2024-10-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="925" loading="lazy" decoding="async"
+                         alt="2024년 10월 네일드아름 이달의 아트 1번 샘플 — 핑크 · 세이지 그린 · 브라운 마블, 실버 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 핑크 · 세이지 그린 · 브라운 마블, 실버 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-10/daegu-monthly-art-2024-10-02-1170.webp">
+                    <img src="images/monthly-art/2024-10/daegu-monthly-art-2024-10-02-480.webp"
+                         srcset="images/monthly-art/2024-10/daegu-monthly-art-2024-10-02-480.webp 480w, images/monthly-art/2024-10/daegu-monthly-art-2024-10-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="933" loading="lazy" decoding="async"
+                         alt="2024년 10월 네일드아름 이달의 아트 2번 샘플 — 누드 브라운 롱 착용샷 · 실버 글리터">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 누드 브라운 롱 착용샷 · 실버 글리터</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-10/daegu-monthly-art-2024-10-03-1170.webp">
+                    <img src="images/monthly-art/2024-10/daegu-monthly-art-2024-10-03-480.webp"
+                         srcset="images/monthly-art/2024-10/daegu-monthly-art-2024-10-03-480.webp 480w, images/monthly-art/2024-10/daegu-monthly-art-2024-10-03-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="931" loading="lazy" decoding="async"
+                         alt="2024년 10월 네일드아름 이달의 아트 3번 샘플 — 누드 롱 착용샷 · 블랙 라인 팁">
+                  </a>
+                  <figcaption><span class="cat">No. 03</span> 누드 롱 착용샷 · 블랙 라인 팁</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-10/daegu-monthly-art-2024-10-04-1170.webp">
+                    <img src="images/monthly-art/2024-10/daegu-monthly-art-2024-10-04-480.webp"
+                         srcset="images/monthly-art/2024-10/daegu-monthly-art-2024-10-04-480.webp 480w, images/monthly-art/2024-10/daegu-monthly-art-2024-10-04-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="934" loading="lazy" decoding="async"
+                         alt="2024년 10월 네일드아름 이달의 아트 4번 샘플 — 핑크 스틸레토 착용샷 · 실버 마블 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 04</span> 핑크 스틸레토 착용샷 · 실버 마블 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-10/daegu-monthly-art-2024-10-05-1170.webp">
+                    <img src="images/monthly-art/2024-10/daegu-monthly-art-2024-10-05-480.webp"
+                         srcset="images/monthly-art/2024-10/daegu-monthly-art-2024-10-05-480.webp 480w, images/monthly-art/2024-10/daegu-monthly-art-2024-10-05-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="918" loading="lazy" decoding="async"
+                         alt="2024년 10월 네일드아름 이달의 아트 5번 샘플 — 핑크 스틸레토 착용샷 · 화이트 라인 아트">
+                  </a>
+                  <figcaption><span class="cat">No. 05</span> 핑크 스틸레토 착용샷 · 화이트 라인 아트</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+          <section class="art-month" id="art-2024-09" data-month="2024-09" data-label-en="September" aria-labelledby="art-2024-09-title">
+            <h3 id="art-2024-09-title" class="art-month-title"><span class="en">September 2024</span> <span class="ko">2024년 9월 이달의 아트</span></h3>
+            <ul class="art-grid">
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-09/daegu-monthly-art-2024-09-01-1170.webp">
+                    <img src="images/monthly-art/2024-09/daegu-monthly-art-2024-09-01-480.webp"
+                         srcset="images/monthly-art/2024-09/daegu-monthly-art-2024-09-01-480.webp 480w, images/monthly-art/2024-09/daegu-monthly-art-2024-09-01-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="757" loading="lazy" decoding="async"
+                         alt="2024년 9월 네일드아름 이달의 아트 1번 샘플 — 피치 시럽 · 클리어, 실버 파츠">
+                  </a>
+                  <figcaption><span class="cat">No. 01</span> 피치 시럽 · 클리어, 실버 파츠</figcaption>
+                </figure>
+              </li>
+              <li>
+                <figure>
+                  <a class="gallery-open" href="images/monthly-art/2024-09/daegu-monthly-art-2024-09-02-1170.webp">
+                    <img src="images/monthly-art/2024-09/daegu-monthly-art-2024-09-02-480.webp"
+                         srcset="images/monthly-art/2024-09/daegu-monthly-art-2024-09-02-480.webp 480w, images/monthly-art/2024-09/daegu-monthly-art-2024-09-02-800.webp 800w"
+                         sizes="(min-width: 1240px) 270px, (min-width: 900px) 22vw, (min-width: 700px) 31vw, 50vw"
+                         width="480" height="656" loading="lazy" decoding="async"
+                         alt="2024년 9월 네일드아름 이달의 아트 2번 샘플 — 그레이 마블 · 오로라 · 레드 와인">
+                  </a>
+                  <figcaption><span class="cat">No. 02</span> 그레이 마블 · 오로라 · 레드 와인</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <p class="monthly-note">디자인별 가격은 카카오톡 채널로 문의해 주세요.</p>
         <div class="monthly-actions">
-          <a class="btn btn-line" href="https://www.instagram.com/nailde_areum/" target="_blank" rel="noopener">인스타그램에서 이달의 아트 보기</a>
+          <a class="btn btn-line js-kakao" href="https://pf.kakao.com/_Zdihn" target="_blank" rel="noopener">카카오톡으로 디자인 문의하기</a>
           <a class="btn btn-line js-booking" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버로 예약하기</a>
         </div>
       </div>
     </section>
-    <!-- ▲ 이달의 아트 교체 영역 끝 ▲ -->
 
     <!-- ===================== 07 SERVICES & PRICE ===================== -->
     <!-- 가격 출처: 매장 메뉴판(운영자 제공). 변경 시 이 영역과 <head>의 JSON-LD hasOfferCatalog 를 함께 수정하세요. -->
@@ -606,7 +2338,7 @@
           </details>
           <details>
             <summary>짧은 손톱도 연장이 가능한가요?</summary>
-            <div class="faq-a"><p>짧거나 물어뜯어 모양이 고르지 않은 손톱도 연장으로 길이와 쉐입을 보완할 수 있는 경우가 많습니다. 다만 손톱과 주변 피부 상태에 따라 가능한 길이가 달라질 수 있어, 예약 시 현재 손톱 사진을 함께 보내주시면 더 정확히 상담해 드립니다.</p></div>
+            <div class="faq-a"><p>짧거나 물어뜯어 모양이 고르지 않은 손톱도 연장으로 길이와 쉐입을 보완할 수 있는 경우가 많습니다. 다만 손톱과 주변 피부 상태에 따라 가능한 길이가 달라질 수 있어, 현재 손톱 사진을 <a href="https://pf.kakao.com/_Zdihn" target="_blank" rel="noopener">카카오톡 채널</a>로 보내주시면 더 정확히 상담해 드립니다. 실제 사례는 <a href="#before-after">손톱연장 전후 사진</a>에서 보실 수 있습니다.</p></div>
           </details>
           <details>
             <summary>손톱연장 시술에는 시간이 얼마나 걸리나요?</summary>
@@ -614,11 +2346,11 @@
           </details>
           <details>
             <summary>웨딩네일은 언제 예약하는 것이 좋나요?</summary>
-            <div class="faq-a"><p>웨딩네일은 본식과 촬영 일정, 원하는 길이에 맞춰 미리 상담하시는 것을 권해 드립니다. 드레스 · 부케 · 반지 사진을 함께 보여주시면 전체 스타일에 어울리는 화이트 · 누드 · 펄 디자인을 제안해 드립니다.</p></div>
+            <div class="faq-a"><p>웨딩네일은 본식과 촬영 일정, 원하는 길이에 맞춰 미리 상담하시는 것을 권해 드립니다. 드레스 · 부케 · 반지 사진을 <a href="https://pf.kakao.com/_Zdihn" target="_blank" rel="noopener">카카오톡 채널</a>로 보내주시면 전체 스타일에 어울리는 화이트 · 누드 · 펄 디자인을 제안해 드립니다. <a href="#bridal">웨딩네일 추천 디자인</a>도 참고해 보세요.</p></div>
           </details>
           <details>
             <summary>이달의 아트는 어디서 볼 수 있나요?</summary>
-            <div class="faq-a"><p>이 페이지의 <a href="#monthly">이달의 아트</a> 섹션과 <a href="https://www.instagram.com/nailde_areum/" target="_blank" rel="noopener">인스타그램 @nailde_areum</a>에서 매달 새로 공개되는 디자인을 확인하실 수 있습니다. 멤버십 고객님은 이달의 아트 10% 할인 혜택을 받으실 수 있습니다.</p></div>
+            <div class="faq-a"><p>이 페이지의 <a href="#monthly">이달의 아트</a> 섹션(2024년 9월부터 연도·월별로 정리)과 <a href="https://www.instagram.com/nailde_areum/" target="_blank" rel="noopener">인스타그램 @nailde_areum</a>에서 매달 새로 공개되는 디자인을 확인하실 수 있습니다. 멤버십 고객님은 이달의 아트 10% 할인 혜택을 받으실 수 있습니다.</p></div>
           </details>
           <details>
             <summary>네일드아름은 어디에 위치하나요? 주차는 되나요?</summary>
@@ -733,7 +2465,7 @@
   <!-- 모바일 하단 고정 예약 바 -->
   <div class="mobile-cta">
     <a class="btn btn-line" href="tel:+82-507-1426-9612">전화</a>
-    <a class="btn btn-line" href="#location">길찾기</a>
+    <a class="btn btn-line js-kakao" href="https://pf.kakao.com/_Zdihn" target="_blank" rel="noopener">카톡 상담</a>
     <a class="btn btn-dark js-booking" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버 예약</a>
   </div>
 

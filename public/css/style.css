@@ -264,6 +264,37 @@ address { font-style: normal; }
 .process span { font-family: var(--serif); color: var(--taupe-text); font-size: 1.05rem; min-width: 24px; }
 .extension .note { margin: 32px 0 20px; }
 
+/* Before & After (손톱연장 섹션 안) */
+.ba { margin-top: 96px; padding-top: 64px; border-top: 1px solid var(--line); }
+.ba-head { max-width: 40em; margin-bottom: 40px; }
+.ba-head p { color: #3d3a35; }
+.ba-title, .bridal-picks-title { font-weight: 400; margin-bottom: 14px; }
+.ba-title .en, .bridal-picks-title .en {
+  display: block; font-family: var(--serif); font-style: italic; font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.1;
+}
+.ba-title .ko, .bridal-picks-title .ko { display: block; margin-top: 8px; font-size: 1rem; font-weight: 500; color: var(--taupe-text); }
+.ba-case + .ba-case { margin-top: 48px; }
+.ba-case-label {
+  font-family: var(--serif); font-size: 1.15rem; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line);
+}
+.ba-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 10px; }
+.ba-grid figure { position: relative; }
+.ba-grid figcaption { margin-top: 10px; font-size: 0.82rem; color: #4a4640; line-height: 1.5; }
+.ba-step {
+  position: absolute; top: 10px; left: 10px; z-index: 1; padding: 2px 10px;
+  background: rgba(250, 249, 246, 0.94); color: var(--charcoal);
+  font-family: var(--serif); font-style: italic; font-size: 0.95rem;
+}
+.ba-step.ba-process { background: var(--sand); }
+.ba-step.ba-after { background: var(--charcoal); color: var(--off-white); }
+.ba-actions { margin-top: 40px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.ba-actions .note { margin: 0; }
+@media (min-width: 900px) {
+  .ba { margin-top: 140px; padding-top: 96px; }
+  .ba-grid-5 { grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .ba-grid-2 { gap: 24px; max-width: 980px; }
+}
+
 /* ---------- 04 Bridal ---------- */
 .bridal { background: var(--ivory); padding-top: 0; }
 .bridal-hero { display: grid; }
@@ -275,7 +306,11 @@ address { font-style: normal; }
 .bridal-styles h3 { font-family: var(--serif); font-weight: 400; font-style: italic; font-size: 1.5rem; }
 .bridal-styles p { font-size: 0.93rem; color: #4a4640; }
 .bridal-text .note { margin-bottom: 20px; }
-.bridal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 64px; }
+.bridal-picks { margin-top: 64px; }
+.bridal-picks-title { margin-bottom: 24px; }
+.bridal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 10px; }
+.bridal-grid figcaption { margin-top: 10px; font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--taupe-text); line-height: 1.4; }
+@media (min-width: 700px) { .bridal-grid { grid-template-columns: repeat(3, 1fr); gap: 36px 20px; } }
 @media (min-width: 900px) {
   .bridal { padding-top: var(--section-y); }
   .bridal-hero {
@@ -283,16 +318,8 @@ address { font-style: normal; }
     grid-template-columns: 7fr 5fr; gap: 88px; align-items: center;
   }
   .bridal-text { padding: 0; }
-  .bridal-grid { gap: 24px; margin-top: 96px; }
+  .bridal-picks { margin-top: 112px; }
 }
-
-/* 사진 플레이스홀더 (실제 사진으로 교체 전용) */
-.ph {
-  aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; text-align: center;
-  background: var(--off-white); border: 1px solid var(--sand);
-  font-family: var(--serif); font-size: clamp(0.95rem, 2.5vw, 1.3rem); font-style: italic; color: var(--taupe-text); line-height: 1.3;
-}
-.ph small { font-family: var(--sans); font-style: normal; font-size: 0.72rem; letter-spacing: 0.04em; }
 
 /* ---------- 05 Portfolio ---------- */
 .filters { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-bottom: 32px; }
@@ -313,6 +340,10 @@ address { font-style: normal; }
 .gallery .cat {
   display: block; font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--taupe-text);
 }
+/* 처음엔 12장만 (JS 있을 때). JS가 없으면 전부 보임 */
+html:not(.no-js) .gallery.is-collapsed > li:nth-child(n+13) { display: none; }
+.gallery-toggle-wrap { margin-top: 40px; text-align: center; }
+.no-js .gallery-toggle-wrap, .gallery-toggle-wrap[hidden] { display: none; }
 .gallery-more { margin-top: 40px; }
 .gallery-more a { color: var(--charcoal); text-underline-offset: 3px; }
 @media (min-width: 900px) {
@@ -341,11 +372,38 @@ address { font-style: normal; }
 .m-en { font-family: var(--serif); font-style: italic; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1; }
 .m-num { font-family: var(--serif); letter-spacing: 0.2em; color: var(--sand); margin-top: 6px; }
 .monthly-intro { color: #d9d3ca; max-width: 40em; margin-bottom: 48px; }
-.monthly-grid { display: grid; gap: 40px; margin-bottom: 48px; }
-.monthly-grid .ph { background: #34312c; border-color: #4a4640; color: var(--sand); }
-.monthly-grid img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
-.monthly-grid h3 { font-family: var(--serif); font-weight: 400; font-size: 1.4rem; margin-top: 16px; }
-.price-tag { font-size: 0.9rem; color: var(--sand); }
+.monthly-intro a { color: var(--off-white); text-underline-offset: 3px; }
+
+/* 연도 · 월 선택 (JS 있으면 한 달씩, 없으면 전체가 위에서부터 최신 순) */
+.archive-nav { margin-bottom: 40px; padding: 12px 0 18px; border-top: 1px solid #4a4640; border-bottom: 1px solid #4a4640; }
+.archive-years { display: flex; flex-wrap: wrap; gap: 4px 28px; margin-bottom: 10px; }
+.no-js .archive-years { display: none; }
+.archive-year {
+  min-height: 44px; padding: 0 2px; border-bottom: 1px solid transparent;
+  font-family: var(--serif); font-size: 1.6rem; color: #a69e93;
+}
+.archive-year.is-active, .archive-year:hover { color: var(--off-white); border-bottom-color: var(--off-white); }
+html:not(.no-js) .archive-month-group:not(.is-active) { display: none; }
+html:not(.no-js) .archive-year-label { display: none; }
+.archive-year-label { margin: 10px 0 8px; font-family: var(--serif); font-size: 1.3rem; color: var(--sand); }
+.archive-months { display: flex; flex-wrap: wrap; gap: 6px; }
+.archive-months a {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 52px; min-height: 44px; padding: 0 12px;
+  border: 1px solid #4a4640; color: #d9d3ca; font-size: 0.9rem; text-decoration: none;
+}
+.archive-months a:hover { border-color: var(--sand); color: var(--off-white); }
+.archive-months a.is-active { background: var(--off-white); border-color: var(--off-white); color: var(--charcoal); }
+
+html:not(.no-js) .art-month:not(.is-active) { display: none; }
+.no-js .art-month + .art-month { margin-top: 64px; }
+.art-month-title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin-bottom: 20px; font-weight: 400; }
+.art-month-title .en { font-family: var(--serif); font-style: italic; font-size: 1.6rem; }
+.art-month-title .ko { font-size: 0.9rem; color: var(--sand); }
+.art-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 10px; }
+.art-grid .gallery-open { background: #34312c; }
+.art-grid figcaption { margin-top: 10px; font-size: 0.82rem; color: #d9d3ca; line-height: 1.5; }
+.art-grid .cat { display: block; font-family: var(--serif); font-style: italic; font-size: 0.95rem; color: var(--sand); }
+.monthly-note { margin: 40px 0 20px; font-size: 0.875rem; color: #d9d3ca; }
 .monthly-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .monthly-actions .btn { flex: 1 1 240px; }
 @media (min-width: 900px) { .monthly-actions .btn { flex: 0 0 auto; } }
@@ -353,11 +411,12 @@ address { font-style: normal; }
 .monthly .btn-line:hover { background: var(--off-white); color: var(--charcoal); }
 .monthly :focus-visible { outline-color: var(--off-white); }
 @media (min-width: 700px) {
-  .monthly-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .art-grid { grid-template-columns: repeat(3, 1fr); gap: 32px 16px; }
 }
 @media (min-width: 900px) {
   .monthly-head { flex-direction: row; justify-content: space-between; align-items: flex-end; }
   .monthly-month { text-align: right; margin-bottom: 36px; }
+  .art-grid { grid-template-columns: repeat(4, 1fr); gap: 40px 24px; }
 }
 
 /* ---------- 07 Price ---------- */
@@ -485,12 +544,12 @@ address { font-style: normal; }
 /* ---------- Mobile CTA bar ---------- */
 .mobile-cta {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
-  display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 8px;
+  display: grid; grid-template-columns: 1fr 1.25fr 1.75fr; gap: 8px;
   padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
   background: rgba(250, 249, 246, 0.96); border-top: 1px solid var(--line);
   backdrop-filter: blur(8px);
 }
-.mobile-cta .btn { min-height: 48px; padding: 0 12px; }
+.mobile-cta .btn { min-height: 48px; padding: 0 8px; white-space: nowrap; }
 @media (min-width: 900px) { .mobile-cta { display: none; } }
 
 /* ---------- 404 ---------- */
