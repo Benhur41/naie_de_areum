@@ -101,6 +101,7 @@
 | 섹션 추가·삭제 | 내비, `.section-index` 번호, ARCHITECTURE.md 3번 표 |
 
 ### 건드리면 안 되는 것
+- `<head>` 의 `google-site-verification` · `naver-site-verification` 메타태그 — 지우면 서치콘솔·서치어드바이저 소유권 인증이 풀린다
 - `404.html` — 없으면 Cloudflare Pages가 모든 없는 주소에 홈을 200으로 응답 (soft 404)
 - `<head>` 의 `no-js` 제거 인라인 스크립트 — 옮기면 JS 비활성 레이아웃이 깜빡이며 CLS 발생 (실측 0.114)
 - 폰트 `preload + onload` + `<noscript>` 구조 — 되돌리면 렌더링 차단 재발
