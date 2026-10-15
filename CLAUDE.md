@@ -101,7 +101,7 @@
 |---|---|
 | 가격 | `#price` + JSON-LD `hasOfferCatalog` (+ 연장 가격은 `#extension`·FAQ) |
 | 주소·전화·영업시간 | `#location`, FAQ, 푸터 `.footer-address`, 모바일 바(전화), JSON-LD |
-| 외부 링크(네이버·인스타·카톡) | `.js-booking`·`.js-place`·`.js-kakao` 전체, `#location`, 푸터, FAQ, JSON-LD `sameAs` |
+| 외부 링크(네이버·인스타·카톡·구글 지도) | `.js-booking`·`.js-place`·`.js-kakao`·`.js-gmap` 전체, `#location`, 푸터, FAQ, JSON-LD `sameAs`(구글 지도는 `hasMap` 도) |
 | 이달의 아트 새 달 | `.archive-nav` 월 링크, `.archive` section, `is-active` 4곳, `.monthly-month` 라벨, sitemap |
 | 사이트 주소(도메인) | `index.html`(canonical·OG·JSON-LD), `robots.txt`, `sitemap.xml` |
 | 섹션 추가·삭제 | 내비, `.section-index` 번호, ARCHITECTURE.md 3번 표 |

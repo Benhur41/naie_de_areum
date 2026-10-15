@@ -59,7 +59,7 @@
   <!-- CSS·JS 를 고치면 ?v= 값을 바꿔야 방문자 브라우저가 새 파일을 받는다 (CLAUDE.md 참고) -->
   <link rel="stylesheet" href="css/style.css?v=20261012b">
 
-  <!-- 구조화 데이터: 확인된 정보만 기재. 위도/경도(geo)는 확인 후 추가 (CHECKLIST.md 참고) -->
+  <!-- 구조화 데이터: 확인된 정보만 기재 (CHECKLIST.md 참고). hasMap 은 구글 비즈니스 프로필의 지도 주소(cid) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -90,6 +90,7 @@
           "latitude": 35.8552293,
           "longitude": 128.6058499
         },
+        "hasMap": "https://maps.google.com/?cid=16868830461172683848",
         "telephone": "+82-507-1426-9612",
         "openingHoursSpecification": [
           {
@@ -102,7 +103,8 @@
         "sameAs": [
           "https://www.instagram.com/nailde_areum/",
           "https://m.place.naver.com/nailshop/1450452988/home",
-          "https://pf.kakao.com/_Zdihn"
+          "https://pf.kakao.com/_Zdihn",
+          "https://maps.google.com/?cid=16868830461172683848"
         ],
         "amenityFeature": [
           { "@type": "LocationFeatureSpecification", "name": "주차 가능", "value": true },
@@ -2396,6 +2398,11 @@
                 <dd>대구 중구 명덕로 327, 3층 <small>(우 41953)</small><br><small>대봉교역 1번 출구 계단 바로 앞 · 킹콩쥬스 건물 3층</small></dd>
               </div>
               <div>
+                <dt>Map</dt>
+                <!-- 구글 지도 주소 변경 시 JSON-LD hasMap·sameAs, 푸터도 함께 수정 -->
+                <dd><a class="js-gmap" href="https://maps.google.com/?cid=16868830461172683848" target="_blank" rel="noopener">구글 지도에서 보기</a> <small>Google Maps</small></dd>
+              </div>
+              <div>
                 <dt>Hours</dt>
                 <!-- 영업시간 변경 시 JSON-LD openingHoursSpecification 과 FAQ 도 함께 수정 -->
                 <dd>월–토 10:00 – 20:00<br>일요일 정기 휴무</dd>
@@ -2459,6 +2466,7 @@
       <ul class="footer-links">
         <li><a class="js-booking" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버 예약</a></li>
         <li><a class="js-place" href="https://m.place.naver.com/nailshop/1450452988/home" target="_blank" rel="noopener">네이버 플레이스</a></li>
+        <li><a class="js-gmap" href="https://maps.google.com/?cid=16868830461172683848" target="_blank" rel="noopener">구글 지도</a></li>
         <li><a href="https://www.instagram.com/nailde_areum/" target="_blank" rel="noopener">인스타그램</a></li>
         <li><a href="https://pf.kakao.com/_Zdihn" target="_blank" rel="noopener">카카오톡 채널</a></li>
         <li><a href="tel:+82-507-1426-9612">0507-1426-9612</a></li>
