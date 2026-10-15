@@ -1,7 +1,7 @@
 # ARCHITECTURE — 네일드아름 홈페이지 현재 구조
 
 > **이 문서는 "지금 상태"의 스냅샷입니다.** 구조가 바뀌는 작업을 마칠 때마다 갱신합니다.
-> 마지막 갱신: 2026-10-15 · 구글 지도 링크(JSON-LD `hasMap`·`sameAs`, Location `Map` 행, 푸터), 틱톡(`sameAs`·푸터) 추가
+> 마지막 갱신: 2026-10-15 · 구글 지도 링크(JSON-LD `hasMap`·`sameAs`, Location `Map` 행, 푸터), 틱톡(`sameAs`·푸터), 개업일(`foundingDate`·Brand Story) 추가
 
 ---
 
@@ -61,7 +61,7 @@
 |---|---|---|---|---|
 | — | `<header>` | `top` | 텍스트 로고, 내비 7개, 네이버 예약 버튼 | 모바일: 햄버거 → 전체화면 패널. JS 없으면 가로 목록 |
 | 01 | Hero | (없음) | **H1 "대구 프리미엄 웨딩 · 손톱연장 전문 네일드아름"**, 슬로건, 예약/포트폴리오 버튼, 히어로 사진 | 페이지 유일한 H1. 사진은 preload + fetchpriority=high |
-| 02 | Brand Story | `story` | 브랜드 철학, 3 pillars | 경력·자격 등 미확인 → 일반 문구만 |
+| 02 | Brand Story | `story` | 개업 시기(2024년 9월, `<time>`), 브랜드 철학, 3 pillars | 경력·자격 등 미확인 → 일반 문구만 |
 | 03 | Signature Extension | `extension` | 연장 설명, 쉐입 3종, 시술 과정, 연장 가격, **카톡 상담 버튼** + **Before & After**(`#before-after`, 사례 2개 · 사진 7장, Before/Process/After 표시) | 상담 버튼은 `js-kakao` |
 | 04 | Bridal Collection | `bridal` | 웨딩 설명, White/Nude/Pearl, 대표 사진 1장, **카톡 상담 버튼**, **Bridal Picks 6장**(포트폴리오 중 웨딩 무드 추천) | "웨딩네일 추천 디자인"으로 표현 (실제 웨딩 시술 여부는 미확인) |
 | 05 | Portfolio | `portfolio` | 필터(All/Extension/Wedding/Nail Art) + 사진 33장(앞 12장 + "더 보기") | 분류: extension 20·wedding 11·art 19(중복 포함). 필터 선택 시 접힘 해제 |
@@ -101,7 +101,7 @@
 - **메타**: title, description, canonical, robots(`max-image-preview:large`), theme-color, OG(1200×630), Twitter `summary_large_image`, favicon, `lang="ko"`
 - **검색엔진 소유확인**: `google-site-verification`(서치콘솔, URL 접두어 속성 `https://nail-de-areum.pages.dev/`) · `naver-site-verification`(서치어드바이저). 삭제 금지
 - **JSON-LD `@graph`**: `NailSalon` + `WebSite`
-  - NailSalon: name/alternateName, description, url, logo, image[3], **address**(명덕로 327 3층 · 중구 · 대구광역시 · 41953 · KR), **geo**(35.8552293, 128.6058499 — 네이버 플레이스 등록 좌표, OpenStreetMap 역지오코딩으로 명덕로·대봉1동·대봉교 약 50m 확인), **telephone**(+82-507-1426-9612), **openingHoursSpecification**(월–토 10:00–20:00), **hasMap**(구글 지도 `maps.google.com/?cid=16868830461172683848` — 구글 비즈니스 프로필, 공유 링크 리디렉션으로 상호·좌표 일치 확인), **sameAs**(인스타·틱톡·네이버 플레이스·카카오 채널·구글 지도), amenityFeature(주차·반려동물), areaServed, priceRange, knowsAbout(젤 연장 포함 — 포트폴리오13 사진의 "Gel extension" 표기 근거), hasOfferCatalog(가격 12항목)
+  - NailSalon: name/alternateName, description, url, **foundingDate**(2024-09-30 — 사용자 확인, Brand Story 첫 문장 `<time>` 과 일치), logo, image[3], **address**(명덕로 327 3층 · 중구 · 대구광역시 · 41953 · KR), **geo**(35.8552293, 128.6058499 — 네이버 플레이스 등록 좌표, OpenStreetMap 역지오코딩으로 명덕로·대봉1동·대봉교 약 50m 확인), **telephone**(+82-507-1426-9612), **openingHoursSpecification**(월–토 10:00–20:00), **hasMap**(구글 지도 `maps.google.com/?cid=16868830461172683848` — 구글 비즈니스 프로필, 공유 링크 리디렉션으로 상호·좌표 일치 확인), **sameAs**(인스타·틱톡·네이버 플레이스·카카오 채널·구글 지도), amenityFeature(주차·반려동물), areaServed, priceRange, knowsAbout(젤 연장 포함 — 포트폴리오13 사진의 "Gel extension" 표기 근거), hasOfferCatalog(가격 12항목)
   - 없음(의도적): `AggregateRating`/`Review`(자사 리뷰 정책상 금지)
 - **sitemap.xml**: `https://nail-de-areum.pages.dev/` 1개 + 1170px 이미지 127개(웨딩·포트폴리오·전후·이달의 아트 전부), lastmod 2026-10-12
 - **robots.txt**: 전체 허용, Sitemap 명시
