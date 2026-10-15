@@ -1,7 +1,7 @@
 # ARCHITECTURE — 네일드아름 홈페이지 현재 구조
 
 > **이 문서는 "지금 상태"의 스냅샷입니다.** 구조가 바뀌는 작업을 마칠 때마다 갱신합니다.
-> 마지막 갱신: 2026-10-15 · 구글 지도 링크(JSON-LD `hasMap`·`sameAs`, Location `Map` 행, 푸터) 추가
+> 마지막 갱신: 2026-10-15 · 구글 지도 링크(JSON-LD `hasMap`·`sameAs`, Location `Map` 행, 푸터), 틱톡(`sameAs`·푸터) 추가
 
 ---
 
@@ -101,7 +101,7 @@
 - **메타**: title, description, canonical, robots(`max-image-preview:large`), theme-color, OG(1200×630), Twitter `summary_large_image`, favicon, `lang="ko"`
 - **검색엔진 소유확인**: `google-site-verification`(서치콘솔, URL 접두어 속성 `https://nail-de-areum.pages.dev/`) · `naver-site-verification`(서치어드바이저). 삭제 금지
 - **JSON-LD `@graph`**: `NailSalon` + `WebSite`
-  - NailSalon: name/alternateName, description, url, logo, image[3], **address**(명덕로 327 3층 · 중구 · 대구광역시 · 41953 · KR), **geo**(35.8552293, 128.6058499 — 네이버 플레이스 등록 좌표, OpenStreetMap 역지오코딩으로 명덕로·대봉1동·대봉교 약 50m 확인), **telephone**(+82-507-1426-9612), **openingHoursSpecification**(월–토 10:00–20:00), **hasMap**(구글 지도 `maps.google.com/?cid=16868830461172683848` — 구글 비즈니스 프로필, 공유 링크 리디렉션으로 상호·좌표 일치 확인), **sameAs**(인스타·네이버 플레이스·카카오 채널·구글 지도), amenityFeature(주차·반려동물), areaServed, priceRange, knowsAbout(젤 연장 포함 — 포트폴리오13 사진의 "Gel extension" 표기 근거), hasOfferCatalog(가격 12항목)
+  - NailSalon: name/alternateName, description, url, logo, image[3], **address**(명덕로 327 3층 · 중구 · 대구광역시 · 41953 · KR), **geo**(35.8552293, 128.6058499 — 네이버 플레이스 등록 좌표, OpenStreetMap 역지오코딩으로 명덕로·대봉1동·대봉교 약 50m 확인), **telephone**(+82-507-1426-9612), **openingHoursSpecification**(월–토 10:00–20:00), **hasMap**(구글 지도 `maps.google.com/?cid=16868830461172683848` — 구글 비즈니스 프로필, 공유 링크 리디렉션으로 상호·좌표 일치 확인), **sameAs**(인스타·틱톡·네이버 플레이스·카카오 채널·구글 지도), amenityFeature(주차·반려동물), areaServed, priceRange, knowsAbout(젤 연장 포함 — 포트폴리오13 사진의 "Gel extension" 표기 근거), hasOfferCatalog(가격 12항목)
   - 없음(의도적): `AggregateRating`/`Review`(자사 리뷰 정책상 금지)
 - **sitemap.xml**: `https://nail-de-areum.pages.dev/` 1개 + 1170px 이미지 127개(웨딩·포트폴리오·전후·이달의 아트 전부), lastmod 2026-10-12
 - **robots.txt**: 전체 허용, Sitemap 명시
