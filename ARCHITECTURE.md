@@ -1,7 +1,7 @@
 # ARCHITECTURE — 네일드아름 홈페이지 현재 구조
 
 > **이 문서는 "지금 상태"의 스냅샷입니다.** 구조가 바뀌는 작업을 마칠 때마다 갱신합니다.
-> 마지막 갱신: 2026-10-15 · 구글 지도 링크(JSON-LD `hasMap`·`sameAs`, Location `Map` 행, 푸터), 틱톡(`sameAs`·푸터), 개업일(`foundingDate`·Brand Story) 추가
+> 마지막 갱신: 2026-10-15 · 구글 지도·틱톡 링크, 개업일(`foundingDate`), 2026년 10월 이달의 아트 추가
 
 ---
 
@@ -36,12 +36,12 @@
 │   │   ├── gallery/          # 초기 포트폴리오 — 1장
 │   │   ├── portfolio/        # 포트폴리오·웨딩 추천 — 29장 (daegu-nail-<쉐입>-<컬러>-<특징>)
 │   │   ├── before-after/     # 손톱연장 전후 — 7장 (사례 2개)
-│   │   ├── monthly-art/YYYY-MM/  # 이달의 아트 — 87장 / 25개월 (2024-09 ~ 2026-09)
+│   │   ├── monthly-art/YYYY-MM/  # 이달의 아트 — 88장 / 26개월 (2024-09 ~ 2026-10)
 │   │   ├── og-image.jpg      # SNS 공유 썸네일 1200×630
 │   │   └── apple-touch-icon.png
 │   ├── favicon.ico
 │   ├── robots.txt            # 전체 허용 + Sitemap 주소
-│   ├── sitemap.xml           # URL 1개 + image:image 127개
+│   ├── sitemap.xml           # URL 1개 + image:image 128개
 │   └── _headers              # Cloudflare 캐시: images 30일, css/js 매번 재검증(max-age=0, must-revalidate)
 ├── tools/
 │   └── optimize_images.py    # 원본 → WebP 480/800/1170 변환 (출력은 public/images/...)
@@ -65,7 +65,7 @@
 | 03 | Signature Extension | `extension` | 연장 설명, 쉐입 3종, 시술 과정, 연장 가격, **카톡 상담 버튼** + **Before & After**(`#before-after`, 사례 2개 · 사진 7장, Before/Process/After 표시) | 상담 버튼은 `js-kakao` |
 | 04 | Bridal Collection | `bridal` | 웨딩 설명, White/Nude/Pearl, 대표 사진 1장, **카톡 상담 버튼**, **Bridal Picks 6장**(포트폴리오 중 웨딩 무드 추천) | "웨딩네일 추천 디자인"으로 표현 (실제 웨딩 시술 여부는 미확인) |
 | 05 | Portfolio | `portfolio` | 필터(All/Extension/Wedding/Nail Art) + 사진 33장(앞 12장 + "더 보기") | 분류: extension 20·wedding 11·art 19(중복 포함). 필터 선택 시 접힘 해제 |
-| 06 | Monthly Art | `monthly` | **연도(2026/2025/2024) → 월 아카이브**, 25개월 87장. 기본 표시 2026-09. 라벨 `.monthly-month` 는 선택 달로 바뀜. 카톡 문의·네이버 예약 버튼 | 각 달 `<section class="art-month" id="art-YYYY-MM">` + h3. `#art-2025-07` 주소로 바로 열림. JS 없으면 전체가 최신순 |
+| 06 | Monthly Art | `monthly` | **연도(2026/2025/2024) → 월 아카이브**, 26개월 88장. 기본 표시 2026-10(팁 샘플 8종을 담은 사진 1장 — 원본이 채팅 이미지라 폭 778px). 라벨 `.monthly-month` 는 선택 달로 바뀜. 카톡 문의·네이버 예약 버튼 | 각 달 `<section class="art-month" id="art-YYYY-MM">` + h3. `#art-2025-07` 주소로 바로 열림. JS 없으면 전체가 최신순 |
 | 07 | Services & Price | `price` | 6개 블록(Hand/Extension/Foot/Removal/Bridal/Monthly) + 멤버십 | 가격은 JSON-LD `hasOfferCatalog` 와 이중 관리 |
 | 08 | Client Reviews | `reviews` | 키워드 순위 5개, 네이버 방문자 리뷰 발췌 6개, 리뷰 탭 링크 | 닉네임 비표시, 별점·평점 마크업 없음 |
 | 09 | FAQ | `faq` | `<details>` 9개 (연장·가격·짧은 손톱·시간·웨딩·이달의 아트·위치·반려동물·예약) | |
@@ -103,7 +103,7 @@
 - **JSON-LD `@graph`**: `NailSalon` + `WebSite`
   - NailSalon: name/alternateName, description, url, **foundingDate**(2024-09-30 — 사용자 확인, Brand Story 첫 문장 `<time>` 과 일치), logo, image[3], **address**(명덕로 327 3층 · 중구 · 대구광역시 · 41953 · KR), **geo**(35.8552293, 128.6058499 — 네이버 플레이스 등록 좌표, OpenStreetMap 역지오코딩으로 명덕로·대봉1동·대봉교 약 50m 확인), **telephone**(+82-507-1426-9612), **openingHoursSpecification**(월–토 10:00–20:00), **hasMap**(구글 지도 `maps.google.com/?cid=16868830461172683848` — 구글 비즈니스 프로필, 공유 링크 리디렉션으로 상호·좌표 일치 확인), **sameAs**(인스타·틱톡·네이버 플레이스·카카오 채널·구글 지도), amenityFeature(주차·반려동물), areaServed, priceRange, knowsAbout(젤 연장 포함 — 포트폴리오13 사진의 "Gel extension" 표기 근거), hasOfferCatalog(가격 12항목)
   - 없음(의도적): `AggregateRating`/`Review`(자사 리뷰 정책상 금지)
-- **sitemap.xml**: `https://nail-de-areum.pages.dev/` 1개 + 1170px 이미지 127개(웨딩·포트폴리오·전후·이달의 아트 전부), lastmod 2026-10-12
+- **sitemap.xml**: `https://nail-de-areum.pages.dev/` 1개 + 1170px 이미지 128개(웨딩·포트폴리오·전후·이달의 아트 전부), lastmod 2026-10-12
 - **robots.txt**: 전체 허용, Sitemap 명시
 - **이미지**: 내용 설명형 파일명, 구체적 alt, width/height, srcset+sizes, 히어로 외 lazy
 - **404.html**: noindex
