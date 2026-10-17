@@ -11,11 +11,11 @@
 - [ ] **검색 등록 확인 (사용자 진행)** — ✅ 구글: 홈 "URL이 Google에 등록되어 있음"(2026-10-15), 리치 결과 테스트 유효 2개. ✅ 네이버: `site:` 검색 노출. ✅ Bing: 등록, Live URL "can be indexed"·SEO/GEO 문제 없음, 색인 요청 제출. 남은 것:
   1. **2026-10-16 이후** 구글 URL 검사 → 색인 생성 요청 1회 (10/15 할당량 초과분. 안 해도 자연 재수집)
   2. **2026-10-18 전후** 구글 Sitemaps(삭제 후 재제출함)·Bing Sitemaps(Processing) 상태 확인
-  3. **2026-10-29 전후** Bing URL 검사 "Bing Index" 탭 재확인 — 10/15 "Blocked·URL cannot appear on Bing"(이전 기록, Bingbot 접근·robots·meta 정상 확인). 그때도 Blocked면 Bing 지원 요청(? → Raise a support request → Indexing issues), 문의 문구 작성 지원
+  3. ✅ Bing URL 검사 "Bing Index" 탭 — 2026-10-17 **"Indexed successfully · URL can appear on Bing"**, SEO/GEO 문제 없음, 마크업 2종 인식 (10/15 Blocked 에서 해제, 사용자 스크린샷)
   - 참고: 검색결과 사이트 이름이 구글 "Cloudflare"·네이버 "pages.dev" 로 표시. WebSite 구조화 데이터·`og:site_name` 은 있음 → 구글은 재처리 후 바뀔 수 있음(수일~수주), 확실한 해결은 커스텀 도메인
 - [ ] **ChatGPT 접근 실패 후속 확인 (사용자 자료 대기)** — 2026-10-17 진단: 사이트 측 차단·결함 없음(완료 로그 참고). 유력 가설은 "주소가 생긴 지 며칠 안 돼 Bing·OpenAI 색인에 아직 없음". 확정하려면:
-  1. 실패 당시 ChatGPT 화면 문구(스크린샷)·날짜·사용 모드(일반 대화 / 검색 / 에이전트) 받기 — "Check this link is safe" 류 경고였는지, "접근할 수 없음"이었는지로 원인이 갈림
-  2. Bing Index 탭이 Blocked에서 풀린 뒤(위 3번, 10/29 전후) ChatGPT에서 URL 열기·`site:` 검색 재시도 → 결과를 ARCHITECTURE.md 8번에 기록
+  1. ✅ ChatGPT 문구(2026-10-17 사용자 전달): **"is not accessible via this tool"** — HTTP 오류·차단 안내가 아니라 ChatGPT 도구 자체의 열기 제한 문구. 같은 시각 사이트는 모든 테스트 환경에서 200 → 가설 G(도구 측 제한) 쪽으로 무게
+  2. Bing 색인 완료(2026-10-17) → **2026-10-24 전후** ChatGPT 에서 주소 붙여넣기 대신 "네일드아름 대구 손톱연장" 검색으로 결과에 뜨는지, 뜬 링크는 열리는지 재시도 → 결과를 ARCHITECTURE.md 8번에 기록
   3. 사용자 확인(선택): Cloudflare 대시보드 계정 홈에 **추가된 도메인(zone)이 없는지** — 없으면 WAF·Bot Fight Mode·AI Crawl Control 은 이 사이트에 적용될 수 없는 기능
 
 ## ⏭ 다음 할 일 (지금 바로 가능)

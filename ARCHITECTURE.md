@@ -149,7 +149,8 @@
 | robots·meta | robots 전체 허용(배포본 = 저장소, Cloudflare 관리형 robots 주입 없음), meta `index, follow, max-image-preview:large`, X-Robots-Tag 없음 |
 | HTML | 배포본 = `origin/main` index.html, `text/html; charset=utf-8`, br/gzip 지원. JS 없이 본문 약 10,700자, 네일드아름·손톱연장·웨딩네일·주소·전화 포함, img 137개 alt 누락 0, JSON-LD NailSalon·WebSite 파싱 OK |
 | 외부 서버 | Claude WebFetch(미국 데이터센터)·W3C Nu 검사기·Jina Reader(AI용 리더) 모두 실제 본문 수신, 챌린지 없음 |
-| 색인 | DuckDuckGo `site:` 0건(Bing 미색인과 일치). Bing 은 10/15 "Blocked"(사용자 확인). 주소 생성 2026-10-12 → 진단 시점 5일 |
+| 색인 | DuckDuckGo `site:` 0건. Bing 은 10/15 "Blocked" → **10/17 "Indexed successfully"**(사용자 스크린샷). 주소 생성 2026-10-12 → 진단 시점 5일 |
+| ChatGPT | 실패 문구 "is not accessible via this tool"(사용자 전달) — 사이트 응답이 아닌 도구 측 제한 문구. 재시도는 TODO 참고 |
 
 ## 9. 환경 제약 (Claude 작업 시)
 
