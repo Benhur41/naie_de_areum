@@ -2,7 +2,7 @@
 
 > **작업할 때마다 갱신합니다.** 시작할 때 "진행 중"으로 옮기고, 끝나면 "완료 로그"에 날짜·커밋과 함께 기록합니다.
 > 운영자가 줘야 하는 자료는 [`CHECKLIST.md`](CHECKLIST.md) 에서 관리합니다. 여기에는 **Claude가 할 작업**만 적습니다.
-> 마지막 갱신: 2026-10-16 (SEO·GEO 점검 마무리, 카카오맵 완료, 다음 등록 안 함)
+> 마지막 갱신: 2026-10-17 (ChatGPT 웹 접근 실패 진단 — 사이트 측 결함 없음)
 
 ---
 
@@ -13,6 +13,10 @@
   2. **2026-10-18 전후** 구글 Sitemaps(삭제 후 재제출함)·Bing Sitemaps(Processing) 상태 확인
   3. **2026-10-29 전후** Bing URL 검사 "Bing Index" 탭 재확인 — 10/15 "Blocked·URL cannot appear on Bing"(이전 기록, Bingbot 접근·robots·meta 정상 확인). 그때도 Blocked면 Bing 지원 요청(? → Raise a support request → Indexing issues), 문의 문구 작성 지원
   - 참고: 검색결과 사이트 이름이 구글 "Cloudflare"·네이버 "pages.dev" 로 표시. WebSite 구조화 데이터·`og:site_name` 은 있음 → 구글은 재처리 후 바뀔 수 있음(수일~수주), 확실한 해결은 커스텀 도메인
+- [ ] **ChatGPT 접근 실패 후속 확인 (사용자 자료 대기)** — 2026-10-17 진단: 사이트 측 차단·결함 없음(완료 로그 참고). 유력 가설은 "주소가 생긴 지 며칠 안 돼 Bing·OpenAI 색인에 아직 없음". 확정하려면:
+  1. 실패 당시 ChatGPT 화면 문구(스크린샷)·날짜·사용 모드(일반 대화 / 검색 / 에이전트) 받기 — "Check this link is safe" 류 경고였는지, "접근할 수 없음"이었는지로 원인이 갈림
+  2. Bing Index 탭이 Blocked에서 풀린 뒤(위 3번, 10/29 전후) ChatGPT에서 URL 열기·`site:` 검색 재시도 → 결과를 ARCHITECTURE.md 8번에 기록
+  3. 사용자 확인(선택): Cloudflare 대시보드 계정 홈에 **추가된 도메인(zone)이 없는지** — 없으면 WAF·Bot Fight Mode·AI Crawl Control 은 이 사이트에 적용될 수 없는 기능
 
 ## ⏭ 다음 할 일 (지금 바로 가능)
 
@@ -33,7 +37,8 @@ _(지금 바로 할 개발 작업 없음 — 자료 대기·사용자 확인 항
 
 - [ ] (선택·효과 불확실) FAQ `FAQPage` 구조화 데이터 — 구글은 2023-08부터 일반 사이트 FAQ 리치 결과 미표시. 넣으면 FAQ 본문과 이중 관리 필요
 - [ ] (선택·효과 불확실) `llms.txt` — 주요 AI 검색이 실제로 읽는다는 공식 확인 없음
-- [ ] 커스텀 도메인 (당분간 pages.dev 사용 결정) — 검색결과 사이트 이름이 "Cloudflare"/"pages.dev" 로 보이는 문제도 해결될 가능성 높음. 살 경우: 주소 전체 치환, pages.dev → 도메인 301, 서치콘솔 주소 변경 도구·서치어드바이저 재등록
+- [ ] (선택) IndexNow — 키 파일을 `public/` 에 두고 변경 URL 을 api.indexnow.org 에 알리면 Bing·네이버 등이 바로 알림 받음. Bing 웹마스터 "URL 제출"과 겹치므로 Bing Blocked 가 길어질 때 검토. 외부 제출이라 실행 전 사용자 확인
+- [ ] 커스텀 도메인 (당분간 pages.dev 사용 결정) — 검색결과 사이트 이름이 "Cloudflare"/"pages.dev" 로 보이는 문제도 해결될 가능성 높음. 내 zone 이 생기므로 Cloudflare Security Events·AI Crawl Control 로 실제 크롤러 방문·차단 기록도 볼 수 있게 됨(pages.dev 에서는 불가). 살 경우: 주소 전체 치환, pages.dev → 도메인 301, 서치콘솔 주소 변경 도구·서치어드바이저 재등록
 - [ ] 외국인 고객(영문 리뷰 있음)용 짧은 영문 안내 — 필요성 확인 후
 
 ---
@@ -70,9 +75,10 @@ _(지금 바로 할 개발 작업 없음 — 자료 대기·사용자 확인 항
 | 2026-10-15 | 구글 리치 결과 테스트(사용자, 배포본 23:01 크롤링): 유효 항목 2개(지역 업체·회사), 오류·경고 없음 | — |
 | 2026-10-15 | Bing 웹마스터 도구 등록(사용자): 서치콘솔에서 가져오기, sitemap.xml 자동 등록(상태 Processing) | — |
 | 2026-10-15 | 검색 등록 확인: 구글 URL 검사 "등록되어 있음", 구글 사이트맵 삭제 후 재제출, 네이버 `site:` 노출, Bing Live URL 정상·색인 요청 (사용자) | — |
-| 2026-10-15 | 2026년 10월 이달의 아트 추가: 팁 샘플 8종 사진 1장(채팅으로 받음, 778px), 월 링크·section·is-active 이동·라벨, sitemap 이미지 | (이번 커밋) |
+| 2026-10-15 | 2026년 10월 이달의 아트 추가: 팁 샘플 8종 사진 1장(채팅으로 받음, 778px), 월 링크·section·is-active 이동·라벨, sitemap 이미지 | `3c1d889` |
 | 2026-10-15 | 구글 비즈니스 프로필 마무리(사용자): 본인 계정 리뷰 삭제, 소개 문구 반영. 예약 링크 입력란은 이 프로필에 없음 → 생략(예약은 홈페이지·네이버 예약 버튼으로). 10월 아트 화질(778px)은 이대로 확정 | — |
 | 2026-10-15 | 홈페이지 주소를 네이버 플레이스·인스타그램 프로필에 등록(사용자). 네이버 플레이스 페이지 HTML에 `nail-de-areum.pages.dev` 노출 확인(curl) | — |
 | 2026-10-15 | 배포 사이트 점검 마무리(사용자): 카카오톡 공유 미리보기 정상. 링크 동작은 사용 중 문제 보고 없음 | — |
 | 2026-10-15 | SEO·GEO 점검: AI·검색 크롤러(GPTBot·OAI-SearchBot·ChatGPT-User·ClaudeBot·PerplexityBot·Google-Extended·Yeti·Daum) 모두 200, `llms.txt` 없음(404), JSON-LD NailSalon·WebSite, FAQ 9개. 남은 영향 큰 항목은 사이트 밖(구글 리뷰·카카오맵·다음 등록)과 콘텐츠 자료 → CHECKLIST 6번에 추가 | — |
 | 2026-10-16 | 사용자: 카카오맵 매장 정보 완료. 다음(Daum) 검색 등록은 하지 않기로 결정 — 현재 SEO·GEO 수준으로 충분 | — |
+| 2026-10-17 | ChatGPT 웹 접근 실패 진단(P0): DNS(8.8.8.8·1.1.1.1·DoH)·TLS 1.3(Let's Encrypt YE2 → Root YE → ISRG Root X2 → X1 교차서명, 검증 OK, 발급 10/11 = 주소 생성일)·IPv4/IPv6 모두 200, http→https 301 1회, 루프 없음. 크롤러 UA 11종 전부 200·같은 HTML·`cf-mitigated` 없음. robots 전체 허용(Cloudflare 관리형 robots 주입 없음), meta index,follow, X-Robots-Tag 없음. 배포 HTML = `origin/main`. 외부 서버 가져오기(Claude WebFetch·W3C 검사기·Jina Reader) 모두 실제 본문. DuckDuckGo `site:` 0건(Bing 미색인과 일치). 결론: 사이트 측 결함 없음 → 수정 없음. 유력 가설: 새 주소가 Bing·OpenAI 색인에 아직 없음 + OpenAI 링크 안전장치(공개 색인에 없는 URL은 자동으로 안 엶) — 미확정 | (이번 커밋) |
